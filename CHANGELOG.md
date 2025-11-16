@@ -16,3 +16,8 @@
 
 - Updated color and modal border fix
 - Updated preview images
+
+## 1.1.2 - Implements two new themes
+
+- A distinctive coffee theme, focused on visual comfort, was added.
+- A light screen was added, following the standards of the dark theme.

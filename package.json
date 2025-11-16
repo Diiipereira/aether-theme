@@ -1,8 +1,8 @@
 {
   "name": "aether-dark",
   "publisher": "diogo-aether",
-  "displayName": "Aether Dark",
-  "description": "Premium hybrid dark themes for Visual Studio Code.",
+  "displayName": "Aether Themes",
+  "description": "Premium hybrid themes for Visual Studio Code.",
   "version": "1.0.2",
   "license": "MIT",
   "icon": "logo.png",

@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="120" />
+  <img src="https://raw.githubusercontent/Diiipereira/aether-theme/main/logo.png" width="120" />
 </p>
 
-<h1 align="center">🌌 Aether Theme</h1>
-<p align="center">Premium hybrid themes for Visual Studio Code</p>
+<h1 align="center">🌌 Aether Themes</h1>
+<p align="center">Uma coleção de temas híbridos premium para Visual Studio Code</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/theme-dark-blue" />
-  <img src="https://img.shields.io/badge/version-1.0.0-success" />
+  <img src="https://img.shields.io/badge/temas-4-blueviolet" />
+  <img src="https://img.shields.io/badge/version-1.1.0-success" />
   <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
 </p>
 
@@ -15,10 +15,10 @@
 
 ## ✨ Introdução
 
-O **Aether Theme** foi criado com foco absoluto em uma experiência visual moderna, confortável e premium.  
+A coleção **Aether Themes** foi criada com foco absoluto em uma experiência visual moderna, confortável e premium.
 Cores precisas, contraste ideal, sintaxe semântica e integração total com Explorer, Terminal, HTML, Markdown e TypeScript.
 
-Se você busca um tema escuro elegante, com uma paleta moderna e agradável para longas sessões de código, este tema foi feito para você.
+Seja você fã de temas escuros, claros ou quentes com tons de café, esta coleção foi feita para você.
 
 ---
 
@@ -31,6 +31,14 @@ Um tema escuro elegante com tons azulados vivos e legibilidade perfeita.
 ### 🪐 **Aether Dark Space**
 
 Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais criativos.
+
+### ☕ **Aether Coffe**
+
+Um tema escuro e quente, com tons de café, marrons e laranjas, focado no conforto visual.
+
+### ☀️ **Aether Light**
+
+Um tema claro, limpo e moderno que mantém a paleta de cores vibrante do Aether Dark, mas em uma base branca.
 
 ---
 
@@ -47,22 +55,28 @@ Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais c
 
 ## 🖼️ Screenshots
 
-### Aether Dark
+### 🌑 Aether Dark
 
 ![Aether Dark](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png)
 
-### Aether Dark Space
+### 🪐 Aether Dark Space
 
 ![Aether Dark Space](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png)
 
----
+### ☕ Aether Coffe
+
+![Aether Coffe](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png)
+
+### ☀️ Aether Light
+
+![Aether Light](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png)
 
 ## 📦 Instalação
 
 ### Instalar pelo Marketplace
 
 1. Abra a aba **Extensions**
-2. Procure por **Aether Dark**
+2. Procure por **Aether Themes**
 3. Clique em **Install**
 
 ---
@@ -84,7 +98,6 @@ Testado e otimizado para:
 ## ❤️ Contribuições
 
 Feito por [Diogo Pereira](https://github.com/Diiipereira) e [Eliel Douglas](https://github.com/ElielDouglas)
-Em breve: **Aether Light**.
 
 ---
 
