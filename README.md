@@ -36,14 +36,7 @@ Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais c
 
 ## ⭐ Destaques
 
-- Sintaxe altamente refinada para:
-  - Funções
-  - Parâmetros
-  - Variáveis locais
-  - Propriedades
-  - Tipos (TypeScript)
-  - Classes
-  - `this`
+- Sintaxe altamente refinada para: `Funções` `Parâmetros` `Variáveis locais` `Propriedades` `Tipos (TypeScript)` `Classes` `this`
 - HTML totalmente estilizado
 - Markdown completo (Headings, listas, links, blockquotes, inline code)
 - Explorer, Search, Tabs e Terminal 100% integrados
@@ -90,7 +83,7 @@ Testado e otimizado para:
 
 ## ❤️ Contribuições
 
-Sugestões são muito bem-vindas!  
+Feito por [Diogo Pereira](https://github.com/Diiipereira) e [Eliel Douglas](https://github.com/ElielDouglas)
 Em breve: **Aether Light**.
 
 ---

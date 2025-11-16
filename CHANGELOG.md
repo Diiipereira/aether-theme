@@ -1,6 +1,7 @@
 # Changelog
 
 ## 1.0.0 — First Release
+
 - Added Aether Dark
 - Added Aether Dark Space
 - Fully customized:
@@ -10,3 +11,8 @@
   - Explorer, Terminal, Tabs, Search, Hover Widgets
 - Full dark UI integration
 - Icon and banners added
+
+## 1.0.2 - Fix Modal Dark Theme
+
+- Updated color and modal border fix
+- Updated preview images
