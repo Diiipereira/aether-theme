@@ -3,7 +3,7 @@
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
   "description": "Premium hybrid themes for Visual Studio Code.",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "license": "MIT",
   "icon": "logo.png",
   "repository": {
@@ -41,6 +41,16 @@
         "label": "Aether Dark Space",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-darkspace.json"
+      },
+      {
+        "label": "Aether Coffe",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-coffe.json"
+      },
+      {
+        "label": "Aether Light",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-ligh.json"
       }
     ]
   }
