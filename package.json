@@ -1,33 +1,32 @@
 {
-  "name": "aether-theme",
-  "publisher": "Diogo Pereira",
-  "displayName": "Aether Theme",
-  "description": "Premium hybrid themes for Visual Studio Code.",
+  "name": "aether-dark",
+  "publisher": "diogo-aether",
+  "displayName": "Aether Dark",
+  "description": "Premium hybrid dark themes for Visual Studio Code.",
   "version": "1.0.0",
   "license": "MIT",
   "icon": "logo.png",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diiipereira/aether-theme.git"
+  },
+  "homepage": "https://github.com/Diiipereira/aether-theme",
+  "bugs": {
+    "url": "https://github.com/Diiipereira/aether-theme/issues"
+  },
+
   "engines": {
     "vscode": "^1.70.0"
   },
-  "galleryBanner": {
-    "color": "#0f1115",
-    "theme": "dark"
-  },
-  "categories": [
-    "Themes"
-  ],
+
+  "categories": ["Themes"],
+
   "keywords": [
-    "theme",
-    "dark theme",
-    "purple theme",
-    "blue theme",
-    "clean",
-    "minimal",
-    "modern",
-    "typescript",
-    "premium theme",
-    "aether"
+    "theme", "dark theme", "aether", "premium theme",
+    "blue theme", "purple theme", "modern", "clean"
   ],
+
   "contributes": {
     "themes": [
       {

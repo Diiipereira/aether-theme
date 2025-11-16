@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="logo.png" width="120" />
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="120" />
 </p>
 
 <h1 align="center">🌌 Aether Theme</h1>
 <p align="center">Premium hybrid themes for Visual Studio Code</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/theme-dark-blue" />
   <img src="https://img.shields.io/badge/version-1.0.0-success" />
   <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
 </p>
-
 
 ---
 
@@ -25,9 +25,11 @@ Se você busca um tema escuro elegante, com uma paleta moderna e agradável para
 ## 🎨 Temas Inclusos
 
 ### 🌑 **Aether Dark**
+
 Um tema escuro elegante com tons azulados vivos e legibilidade perfeita.
 
 ### 🪐 **Aether Dark Space**
+
 Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais criativos.
 
 ---
@@ -35,43 +37,40 @@ Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais c
 ## ⭐ Destaques
 
 - Sintaxe altamente refinada para:
-  - Funções  
-  - Parâmetros  
-  - Variáveis locais  
-  - Propriedades  
-  - Tipos (TypeScript)  
-  - Classes  
-  - `this`  
-- HTML totalmente estilizado  
-- Markdown completo (Headings, listas, links, blockquotes, inline code)  
-- Explorer, Search, Tabs e Terminal 100% integrados  
-- Cores consistentes e suaves  
-- Design focado em conforto visual  
+  - Funções
+  - Parâmetros
+  - Variáveis locais
+  - Propriedades
+  - Tipos (TypeScript)
+  - Classes
+  - `this`
+- HTML totalmente estilizado
+- Markdown completo (Headings, listas, links, blockquotes, inline code)
+- Explorer, Search, Tabs e Terminal 100% integrados
+- Cores consistentes e suaves
+- Design focado em conforto visual
 
 ---
 
 ## 🖼️ Screenshots
 
-> Coloque suas imagens na pasta `/images` e atualize os caminhos.
+### Aether Dark
 
-### Aether Dark  
-![Aether Dark](images/aether-dark.png)
+![Aether Dark](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png)
 
-### Aether Dark Space  
-![Aether Dark Space](images/aether-darkspace.png)
+### Aether Dark Space
+
+![Aether Dark Space](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png)
 
 ---
 
 ## 📦 Instalação
 
-### VSIX Manual
-1. Pressione **Ctrl + Shift + P**
-2. Selecione **Extensions: Install from VSIX**
-3. Escolha o arquivo gerado
+### Instalar pelo Marketplace
 
-### Marketplace (quando publicar)
-1. Abra a aba Extensions
-2. Pesquise por **Aether Theme**
+1. Abra a aba **Extensions**
+2. Procure por **Aether Dark**
+3. Clique em **Install**
 
 ---
 
@@ -79,13 +78,13 @@ Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais c
 
 Testado e otimizado para:
 
-- TypeScript / JavaScript  
-- React / Vue / Svelte  
-- HTML / CSS  
-- Markdown  
-- NestJS  
-- JSON  
-- Bash / Terminal   
+- TypeScript / JavaScript
+- React / Vue / Svelte
+- HTML / CSS
+- Markdown
+- NestJS
+- JSON
+- Bash / Terminal
 
 ---
 
