@@ -65,6 +65,10 @@
     "statusBar.background": "#211B16",
     "statusBar.foreground": "#EAE0D5",
     "statusBar.border": "#3B3027",
+    "statusBar.remoteBackground": "#211B16",
+    "statusBar.remoteForeground": "#EAE0D5",
+    "statusBarItem.remoteBackground": "#211B16",
+    "statusBarItem.remoteForeground": "#EAE0D5",
     "titleBar.activeBackground": "#211B16",
     "titleBar.activeForeground": "#EAE0D5",
     "titleBar.inactiveBackground": "#211B16",
@@ -137,14 +141,17 @@
     "list.activeSelectionBackground": "#3B3027",
     "list.activeSelectionForeground": "#EAE0D5",
     "list.activeSelectionIconForeground": "#8AB4C9",
-    "list.inactiveSelectionBackground": "#211B16",
-    "list.inactiveSelectionForeground": "#8A7968",
+    "list.inactiveSelectionBackground": "#3B3027",
+    "list.inactiveSelectionForeground": "#EAE0D5",
+    "list.inactiveFocusBackground": "#3B3027",
     "list.hoverBackground": "#3B3027",
     "list.hoverForeground": "#EAE0D5",
     "editorWidget.foreground": "#EAE0D5",
     "editorWidget.border": "#3B3027",
     "editorHoverWidget.background": "#211B16",
     "editorHoverWidget.border": "#3B3027",
+    "list.focusBackground": "#3B3027",
+    "list.focusOutline": "#D17B49",
     "list.focusForeground": "#EAE0D5",
     "list.highlightForeground": "#8AB4C9",
     "terminal.tab.activeForeground": "#EAE0D5",
@@ -161,7 +168,6 @@
   },
   "tokenColors": [
     {
-      "name": "Comments",
       "scope": [
         "comment",
         "punctuation.definition.comment"
@@ -172,7 +178,6 @@
       }
     },
     {
-      "name": "Strings",
       "scope": [
         "string",
         "string.quoted",
@@ -183,7 +188,6 @@
       }
     },
     {
-      "name": "Keywords",
       "scope": [
         "keyword",
         "storage.type",
@@ -194,7 +198,6 @@
       }
     },
     {
-      "name": "Functions",
       "scope": [
         "entity.name.function",
         "meta.function-call",
@@ -206,7 +209,6 @@
       }
     },
     {
-      "name": "This Keyword",
       "scope": [
         "variable.language.this"
       ],
@@ -215,7 +217,6 @@
       }
     },
     {
-      "name": "Object Properties",
       "scope": [
         "variable.other.property",
         "meta.property.object",
@@ -227,7 +228,6 @@
       }
     },
     {
-      "name": "Local Variables",
       "scope": [
         "variable.other.readwrite",
         "meta.objectliteral variable.other.property"
@@ -237,7 +237,6 @@
       }
     },
     {
-      "name": "Function Parameters",
       "scope": [
         "variable.parameter",
         "meta.function.parameters variable.parameter"
@@ -248,7 +247,6 @@
       }
     },
     {
-      "name": "Variables",
       "scope": [
         "variable",
         "entity.name.variable"
@@ -258,7 +256,6 @@
       }
     },
     {
-      "name": "Constants",
       "scope": [
         "constant",
         "variable.other.constant"
@@ -268,7 +265,6 @@
       }
     },
     {
-      "name": "Numbers",
       "scope": [
         "constant.numeric"
       ],
@@ -277,7 +273,6 @@
       }
     },
     {
-      "name": "Types / Interfaces",
       "scope": [
         "entity.name.type",
         "support.type",
@@ -289,7 +284,6 @@
       }
     },
     {
-      "name": "Operators / Punctuation",
       "scope": [
         "keyword.operator",
         "punctuation"
@@ -299,7 +293,6 @@
       }
     },
     {
-      "name": "Decorators",
       "scope": [
         "meta.decorator",
         "entity.name.function.decorator"
@@ -309,7 +302,6 @@
       }
     },
     {
-      "name": "HTML Tags",
       "scope": [
         "entity.name.tag",
         "entity.name.tag.html",
@@ -321,7 +313,6 @@
       }
     },
     {
-      "name": "HTML Tag Brackets",
       "scope": [
         "punctuation.definition.tag",
         "punctuation.definition.tag.begin",
@@ -332,7 +323,6 @@
       }
     },
     {
-      "name": "HTML Attributes",
       "scope": [
         "entity.other.attribute-name",
         "entity.other.attribute-name.html"
@@ -342,7 +332,6 @@
       }
     },
     {
-      "name": "HTML Values",
       "scope": [
         "string.quoted.double.html",
         "string.quoted.single.html",
@@ -354,7 +343,6 @@
       }
     },
     {
-      "name": "HTML Doctype",
       "scope": [
         "meta.tag.sgml.doctype",
         "keyword.other.doctype"
@@ -364,7 +352,6 @@
       }
     },
     {
-      "name": "HTML Comments",
       "scope": [
         "comment.block.html",
         "punctuation.definition.comment.html"
@@ -374,7 +361,6 @@
       }
     },
     {
-      "name": "Markdown Headings",
       "scope": [
         "markup.heading",
         "markup.heading entity.name",
@@ -386,7 +372,6 @@
       }
     },
     {
-      "name": "Markdown Quotes",
       "scope": [
         "markup.quote",
         "punctuation.definition.blockquote"
@@ -396,7 +381,6 @@
       }
     },
     {
-      "name": "Markdown Links",
       "scope": [
         "markup.underline.link",
         "markup.underline"
@@ -407,7 +391,6 @@
       }
     },
     {
-      "name": "Markdown Link Text",
       "scope": [
         "string.other.link.title",
         "markup.link"
@@ -417,7 +400,6 @@
       }
     },
     {
-      "name": "Markdown Lists",
       "scope": [
         "markup.list",
         "punctuation.definition.list.begin"
@@ -427,7 +409,6 @@
       }
     },
     {
-      "name": "Markdown Inline Code",
       "scope": [
         "markup.inline.raw",
         "markup.raw.inline"
@@ -438,7 +419,6 @@
       }
     },
     {
-      "name": "Markdown Bold",
       "scope": [
         "markup.bold"
       ],
@@ -448,7 +428,6 @@
       }
     },
     {
-      "name": "Markdown Italic",
       "scope": [
         "markup.italic"
       ],

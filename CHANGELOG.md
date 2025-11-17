@@ -21,3 +21,15 @@
 
 - A distinctive coffee theme, focused on visual comfort, was added.
 - A light screen was added, following the standards of the dark theme.
+
+## 1.1.3 - Version update
+
+- Version update in package.json.
+
+## 1.1.4 - Correcting import
+
+- Correcting an error in the Light theme import.
+
+## 1.1.5 - Correction in all themes
+
+- Fixed highlighting in File Explorer when a file is being edited for all themes.

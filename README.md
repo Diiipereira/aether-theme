@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent/Diiipereira/aether-theme/main/logo.png" width="120" />
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png?=v1.1.5" width="120" />
 </p>
 
 <h1 align="center">🌌 Aether Themes</h1>
