@@ -43,3 +43,7 @@
 - Refinements in Dark theme (tabs, borders, terminal, UI consistency).
 
 - Updates in Dark Space theme (tab borders, scroll shadows, contrast adjustments).
+
+## 1.2.1 – Atualização de manutenção
+
+- Updated version in package.json to fix the stuck verification process when publishing.
