@@ -45,12 +45,18 @@
     "editorIndentGuide.background": "#20232a",
     "editorIndentGuide.activeBackground": "#2d313b",
     "editorGroup.border": "#20232a",
-    "editorGroupHeader.tabsBackground": "#0f1115",
-    "tab.activeBackground": "#1a1d24",
+    "editorGroupHeader.tabsBackground": "#14161c",
+    "editorGroupHeader.tabsBorder": "#20232a",
+    "explorer.background": "#0f1115",
+    "tab.activeBackground": "#14161c",
     "tab.activeForeground": "#ffffff",
-    "tab.border": "#2d313b",
-    "tab.inactiveBackground": "#14161c",
+    "tab.activeBorder": "#5b7cff",
+    "tab.activeBorderTop": "#00000000",
+    "tab.border": "#20232a",
+    "tab.inactiveBackground": "#0f1115",
     "tab.inactiveForeground": "#868d9b",
+    "tab.hoverBackground": "#1a1d24",
+    "tab.unfocusedHoverBackground": "#1a1d24",
     "sideBar.background": "#0f1115",
     "sideBar.foreground": "#e5e7eb",
     "sideBar.border": "#20232a",
@@ -62,12 +68,12 @@
     "activityBar.foreground": "#e5e7eb",
     "activityBar.activeBorder": "#5b7cff",
     "activityBar.border": "#20232a",
-    "statusBar.background": "#14161c",
+    "statusBar.background": "#0f1115",
     "statusBar.foreground": "#e5e7eb",
     "statusBar.border": "#20232a",
-    "statusBar.remoteBackground": "#14161c",
+    "statusBar.remoteBackground": "#0f1115",
     "statusBar.remoteForeground": "#e5e7eb",
-    "statusBarItem.remoteBackground": "#14161c",
+    "statusBarItem.remoteBackground": "#0f1115",
     "statusBarItem.remoteForeground": "#e5e7eb",
     "titleBar.activeBackground": "#14161c",
     "titleBar.activeForeground": "#e5e7eb",
@@ -89,25 +95,25 @@
     "peekViewTitle.background": "#14161c",
     "peekViewTitleDescription.foreground": "#868d9b",
     "peekViewTitleLabel.foreground": "#e5e7eb",
+    "peekViewTitle.border": "#20232a",
     "panel.background": "#0f1115",
-    "widget.shadow": "#00000080",
-    "peekViewTitle.border": "#00000066",
     "panel.border": "#20232a",
     "panelTitle.activeBorder": "#5b7cff",
     "panelTitle.activeForeground": "#ffffff",
     "panelTitle.inactiveForeground": "#868d9b",
+    "widget.shadow": "#00000080",
     "pickerGroup.border": "#20232a",
     "pickerGroup.foreground": "#e5e7eb",
     "quickInput.background": "#0f1115",
     "quickInput.foreground": "#e5e7eb",
-    "notification.background": "#14161c",
-    "notification.foreground": "#e5e7eb",
-    "notification.border": "#20232a",
+    "notifications.background": "#14161c",
+    "notifications.foreground": "#e5e7eb",
+    "notifications.border": "#20232a",
     "minimap.background": "#14161c",
     "minimap.selectionHighlight": "#7aa2f744",
     "minimap.errorHighlight": "#f7768e",
     "minimap.warningHighlight": "#e0af68",
-    "terminal.background": "#0f1115",
+    "terminal.background": "#14161c",
     "terminal.foreground": "#e5e7eb",
     "terminalCursor.foreground": "#7aa2f7",
     "terminal.ansiBlack": "#1a1d24",
@@ -138,17 +144,18 @@
     "editor.findMatchHighlightBorder": "#7aa2f7",
     "editor.findRangeHighlightBackground": "#7aa2f720",
     "editorWidget.background": "#0f1115",
+    "editorWidget.foreground": "#e5e7eb",
+    "editorWidget.border": "#20232a",
+    "editorHoverWidget.background": "#0f1115",
+    "editorHoverWidget.border": "#20232a",
     "list.activeSelectionBackground": "#1a1d24",
     "list.activeSelectionForeground": "#e5e7eb",
     "list.activeSelectionIconForeground": "#7aa2f7",
     "list.inactiveSelectionBackground": "#14161c",
     "list.inactiveSelectionForeground": "#868d9b",
+    "list.inactiveFocusBackground": "#14161c",
     "list.hoverBackground": "#1a1d24",
     "list.hoverForeground": "#e5e7eb",
-    "editorWidget.foreground": "#e5e7eb",
-    "editorWidget.border": "#20232a",
-    "editorHoverWidget.background": "#0f1115",
-    "editorHoverWidget.border": "#20232a",
     "list.focusForeground": "#e5e7eb",
     "list.highlightForeground": "#7aa2f7",
     "terminal.tab.activeForeground": "#e5e7eb",
@@ -156,16 +163,15 @@
     "terminal.tab.hoverForeground": "#7aa2f7",
     "terminal.tab.unfocusedActiveForeground": "#7aa2f7",
     "terminal.tab.activeBorder": "#5b7cff",
-    "gitDecoration.modifiedResourceForeground": "#7aa2f7",
-    "gitDecoration.addedResourceForeground": "#9ece6a",
-    "gitDecoration.untrackedResourceForeground": "#7dcfff",
-    "gitDecoration.ignoredResourceForeground": "#868d9b",
-    "gitDecoration.deletedResourceForeground": "#f7768e",
-    "gitDecoration.conflictingResourceForeground": "#ff7a93"
+    "gitDecoration.untrackedResourceForeground": "#5B7CFF",
+    "gitDecoration.modifiedResourceForeground": "#3CB5FF",
+    "gitDecoration.addedResourceForeground": "#22C55E",
+    "gitDecoration.deletedResourceForeground": "#EF4444",
+    "gitDecoration.conflictingResourceForeground": "#F97316",
+    "gitDecoration.ignoredResourceForeground": "#9CA3AF"
   },
   "tokenColors": [
     {
-      "name": "Comments",
       "scope": [
         "comment",
         "punctuation.definition.comment"
@@ -175,7 +181,6 @@
       }
     },
     {
-      "name": "Strings",
       "scope": [
         "string",
         "string.quoted",
@@ -186,7 +191,6 @@
       }
     },
     {
-      "name": "Keywords",
       "scope": [
         "keyword",
         "storage.type",
@@ -197,7 +201,6 @@
       }
     },
     {
-      "name": "Functions",
       "scope": [
         "entity.name.function",
         "meta.function-call",
@@ -209,7 +212,6 @@
       }
     },
     {
-      "name": "This Keyword",
       "scope": [
         "variable.language.this"
       ],
@@ -218,7 +220,6 @@
       }
     },
     {
-      "name": "Object Properties",
       "scope": [
         "variable.other.property",
         "meta.property.object",
@@ -230,7 +231,6 @@
       }
     },
     {
-      "name": "Local Variables",
       "scope": [
         "variable.other.readwrite",
         "meta.objectliteral variable.other.property"
@@ -240,7 +240,6 @@
       }
     },
     {
-      "name": "Function Parameters",
       "scope": [
         "variable.parameter",
         "meta.function.parameters variable.parameter"
@@ -250,7 +249,6 @@
       }
     },
     {
-      "name": "Variables",
       "scope": [
         "variable",
         "entity.name.variable"
@@ -260,7 +258,6 @@
       }
     },
     {
-      "name": "Constants",
       "scope": [
         "constant",
         "variable.other.constant"
@@ -270,7 +267,6 @@
       }
     },
     {
-      "name": "Numbers",
       "scope": [
         "constant.numeric"
       ],
@@ -279,7 +275,6 @@
       }
     },
     {
-      "name": "Types / Interfaces",
       "scope": [
         "entity.name.type",
         "support.type",
@@ -291,7 +286,6 @@
       }
     },
     {
-      "name": "Operators / Punctuation",
       "scope": [
         "keyword.operator",
         "punctuation"
@@ -301,7 +295,6 @@
       }
     },
     {
-      "name": "Decorators",
       "scope": [
         "meta.decorator",
         "entity.name.function.decorator"
@@ -311,7 +304,6 @@
       }
     },
     {
-      "name": "HTML Tags",
       "scope": [
         "entity.name.tag",
         "entity.name.tag.html",
@@ -323,7 +315,6 @@
       }
     },
     {
-      "name": "HTML Tag Brackets",
       "scope": [
         "punctuation.definition.tag",
         "punctuation.definition.tag.begin",
@@ -334,7 +325,6 @@
       }
     },
     {
-      "name": "HTML Attributes",
       "scope": [
         "entity.other.attribute-name",
         "entity.other.attribute-name.html"
@@ -344,7 +334,6 @@
       }
     },
     {
-      "name": "HTML Values",
       "scope": [
         "string.quoted.double.html",
         "string.quoted.single.html",
@@ -356,7 +345,6 @@
       }
     },
     {
-      "name": "HTML Doctype",
       "scope": [
         "meta.tag.sgml.doctype",
         "keyword.other.doctype"
@@ -366,7 +354,6 @@
       }
     },
     {
-      "name": "HTML Comments",
       "scope": [
         "comment.block.html",
         "punctuation.definition.comment.html"
@@ -376,7 +363,6 @@
       }
     },
     {
-      "name": "Markdown Headings",
       "scope": [
         "markup.heading",
         "markup.heading entity.name",
@@ -388,7 +374,6 @@
       }
     },
     {
-      "name": "Markdown Quotes",
       "scope": [
         "markup.quote",
         "punctuation.definition.blockquote"
@@ -398,7 +383,6 @@
       }
     },
     {
-      "name": "Markdown Links",
       "scope": [
         "markup.underline.link",
         "markup.underline"
@@ -409,7 +393,6 @@
       }
     },
     {
-      "name": "Markdown Link Text",
       "scope": [
         "string.other.link.title",
         "markup.link"
@@ -419,7 +402,6 @@
       }
     },
     {
-      "name": "Markdown Lists",
       "scope": [
         "markup.list",
         "punctuation.definition.list.begin"
@@ -429,7 +411,6 @@
       }
     },
     {
-      "name": "Markdown Inline Code",
       "scope": [
         "markup.inline.raw",
         "markup.raw.inline"
@@ -440,7 +421,6 @@
       }
     },
     {
-      "name": "Markdown Bold",
       "scope": [
         "markup.bold"
       ],
@@ -450,7 +430,6 @@
       }
     },
     {
-      "name": "Markdown Italic",
       "scope": [
         "markup.italic"
       ],

@@ -33,3 +33,13 @@
 ## 1.1.5 - Correction in all themes
 
 - Fixed highlighting in File Explorer when a file is being edited for all themes.
+
+## 1.2.0 – Complete Theme Refinement
+
+- Full refactor of the Light theme, ensuring semantic color consistency.
+
+- Fixes and visual improvements in Coffee theme (palette, highlights, borders).
+
+- Refinements in Dark theme (tabs, borders, terminal, UI consistency).
+
+- Updates in Dark Space theme (tab borders, scroll shadows, contrast adjustments).

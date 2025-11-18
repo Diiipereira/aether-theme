@@ -79,6 +79,8 @@
     "editor.findMatchHighlightBackground": "#6f42c140",
     "editorBracketMatch.background": "#6f42c120",
     "editorBracketMatch.border": "#6f42c1",
+    "editorGroupHeader.tabsBorder": "#090a0e",
+    "editorGroup.border": "#090a0e",
     "editorGroupHeader.tabsBackground": "#0f111a",
     "explorer.background": "#0c0d14",
     "focusBorder": "#6f42c1",
