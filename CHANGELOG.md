@@ -44,6 +44,15 @@
 
 - Updates in Dark Space theme (tab borders, scroll shadows, contrast adjustments).
 
-## 1.2.1 – Atualização de manutenção
+## 1.2.1 – Maintenance Update
 
 - Updated version in package.json to fix the stuck verification process when publishing.
+
+## 1.2.2 - README restructuring
+
+### Changed
+
+- Improved README layout and visual structure using HTML
+- Enhanced theme preview grid and alignment
+- Updated badges, header formatting, and section dividers
+- General polish for VS Code Marketplace presentation

@@ -1,106 +1,133 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png?=v1.1.5" width="120" />
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="120" />
 </p>
 
-<h1 align="center">🌌 Aether Themes</h1>
-<p align="center">Uma coleção de temas híbridos premium para Visual Studio Code</p>
+<div align="center" style="font-size: 32px; font-weight: 700; margin-top: 8px;">
+  Aether Themes
+</div>
 
-<p align="center">
+<p align="center" style="margin-top: 8px;">
+  Uma coleção premium de temas modernos para Visual Studio Code
+</p>
+
+<p align="center" style="margin-top: 10px;">
   <img src="https://img.shields.io/badge/temas-4-blueviolet" />
-  <img src="https://img.shields.io/badge/version-1.1.0-success" />
+  <img src="https://img.shields.io/badge/version-1.2.2-success" />
   <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
 </p>
 
----
+<br>
 
-## ✨ Introdução
+<div style="font-size: 22px; font-weight: 700;">✨ Introdução</div>
 
-A coleção **Aether Themes** foi criada com foco absoluto em uma experiência visual moderna, confortável e premium.
-Cores precisas, contraste ideal, sintaxe semântica e integração total com Explorer, Terminal, HTML, Markdown e TypeScript.
+<p>
+A coleção <strong>Aether Themes</strong> foi criada com foco absoluto em uma experiência visual moderna, confortável e premium.  
+Com cores precisas, contraste equilibrado, sintaxe refinada e integração completa com Explorer, Terminal, HTML, Markdown e TypeScript.
+</p>
 
-Seja você fã de temas escuros, claros ou quentes com tons de café, esta coleção foi feita para você.
+<p>
+Se você gosta de temas escuros, claros ou quentes com tons de café, esta coleção foi feita pensando em você.
+</p>
 
----
+<br><br>
 
-## 🎨 Temas Inclusos
+<h3 align="center" style="margin: 0; padding: 0; font-size: 26px;">
+  🎨 Temas Inclusos
+</h3>
 
-### 🌑 **Aether Dark**
+<hr style="border: 0; height: 1px; background: rgba(255,255,255,0.08); width: 80%; margin: 16px auto;">
 
-Um tema escuro elegante com tons azulados vivos e legibilidade perfeita.
+<div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
 
-### 🪐 **Aether Dark Space**
+  <div style="text-align: center; width: 380px; min-height: 340px;">
+    <p><strong>Aether Dark</strong></p>
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png" width="350">
+  </div>
 
-Variação premium com tons roxos cósmicos, ideal para ambientes visuais mais criativos.
+  <div style="text-align: center; width: 380px; min-height: 340px;">
+    <p><strong>Aether Dark Space</strong></p>
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png" width="350">
+  </div>
 
-### ☕ **Aether Coffe**
+  <div style="text-align: center; width: 380px; min-height: 340px;">
+    <p><strong>Aether Coffee</strong></p>
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png" width="350">
+  </div>
 
-Um tema escuro e quente, com tons de café, marrons e laranjas, focado no conforto visual.
+  <div style="text-align: center; width: 380px; min-height: 340px;">
+    <p><strong>Aether Light</strong></p>
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png" width="350">
+  </div>
 
-### ☀️ **Aether Light**
+</div>
 
-Um tema claro, limpo e moderno que mantém a paleta de cores vibrante do Aether Dark, mas em uma base branca.
+<br>
 
----
+<div style="font-size: 22px; font-weight: 700;">⭐ Destaques</div>
 
-## ⭐ Destaques
+<ul>
+  <li>Sintaxe altamente refinada para:
+    <ul>
+      <li><code>Funções</code>, <code>Parâmetros</code>, <code>Variáveis</code>, <code>Propriedades</code>, <code>Classes</code>, <code>this</code></li>
+      <li>Tipos e padrões do <strong>TypeScript</strong></li>
+    </ul>
+  </li>
+  <li>HTML totalmente estilizado</li>
+  <li>Markdown completo (headings, listas, links, blockquotes, inline-code)</li>
+  <li>Explorer, Search, Tabs e Terminal integrados visualmente</li>
+  <li>Cores consistentes e suaves</li>
+  <li>Design focado em conforto visual e longas sessões de código</li>
+</ul>
 
-- Sintaxe altamente refinada para: `Funções` `Parâmetros` `Variáveis locais` `Propriedades` `Tipos (TypeScript)` `Classes` `this`
-- HTML totalmente estilizado
-- Markdown completo (Headings, listas, links, blockquotes, inline code)
-- Explorer, Search, Tabs e Terminal 100% integrados
-- Cores consistentes e suaves
-- Design focado em conforto visual
+<br><br>
 
----
+<div style="font-size: 22px; font-weight: 700;">📦 Instalação</div>
 
-## 🖼️ Screenshots
+<p><strong>Instalar pelo Marketplace</strong></p>
 
-### 🌑 Aether Dark
+<ol>
+  <li>Abra a aba <code>Extensions</code> no VS Code</li>
+  <li>Procure por <code>Aether Themes</code></li>
+  <li>Clique em <code>Install</code></li>
+</ol>
 
-![Aether Dark](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png)
+<p><strong>Instalar pelo CLI</strong></p>
 
-### 🪐 Aether Dark Space
+```sh
+code --install-extension diogo-aether.aether-dark
+```
 
-![Aether Dark Space](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png)
+<div style="font-size: 22px; font-weight: 700;">
+🧪 Compatibilidade
+</div>
+<br>
 
-### ☕ Aether Coffe
+<ul>
+  <li>Typescript</li>
+  <li>Javascript</li>
+  <li>NestJS</li>
+  <li>React</li>
+  <li>Vue</li>
+  <li>Svelte</li>
+  <li>HTML / CSS</li>
+  <li>Markdown</li>
+  <li>JSON</li>
+  <li>Bash / Terminal</li>
+</ul>
 
-![Aether Coffe](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png)
+<br><br>
 
-### ☀️ Aether Light
+<div style="font-size: 22px; font-weight: 700;">
+  ❤️ Contribuições
+</div>
 
-![Aether Light](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png)
+<p>Feito por <a href="https://github.com/Diiipereira">Diogo Pereira</a> e <a href="https://github.com/ElielDouglas">Eliel Douglas</a></p>
 
-## 📦 Instalação
+<br>
 
-### Instalar pelo Marketplace
+<div style="font-size: 22px; font-weight: 700;">
+  📄 Licença
+</div>
 
-1. Abra a aba **Extensions**
-2. Procure por **Aether Themes**
-3. Clique em **Install**
-
----
-
-## 🧪 Compatibilidade
-
-Testado e otimizado para:
-
-- TypeScript / JavaScript
-- React / Vue / Svelte
-- HTML / CSS
-- Markdown
-- NestJS
-- JSON
-- Bash / Terminal
-
----
-
-## ❤️ Contribuições
-
-Feito por [Diogo Pereira](https://github.com/Diiipereira) e [Eliel Douglas](https://github.com/ElielDouglas)
-
----
-
-## 📄 Licença
-
-MIT License.
+<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENCE">MIT Licence</a>
+</p>

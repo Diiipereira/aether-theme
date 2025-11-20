@@ -1,35 +1,53 @@
 {
   "name": "aether-dark",
   "publisher": "diogo-aether",
-  "displayName": "Aether Themes",
-  "description": "Premium hybrid themes for Visual Studio Code.",
-  "version": "1.2.1",
-  "license": "MIT",
+  "displayName": "Aether Themes — Premium VS Code Dark & Light Themes",
+  "description": "Coleção premium com 4 temas VS Code (Dark, Dark Space, Coffe e Light). Legibilidade perfeita, sintaxe refinada para TypeScript e integração total com HTML, Markdown, Explorer e Terminal.",
+  "version": "1.2.2",
   "icon": "logo.png",
+
+  "galleryBanner": {
+    "color": "#121212",
+    "theme": "dark"
+  },
+
+  "previewImages": [
+    "images/aether-dark.png",
+    "images/aether-darkspace.png",
+    "images/aether-coffe.png",
+    "images/aether-light.png"
+  ],
+
+  "keywords": [
+    "theme",
+    "themes",
+    "vscode",
+    "vscode theme",
+    "dark theme",
+    "light theme",
+    "typescript",
+    "developer",
+    "modern",
+    "clean",
+    "purple",
+    "blue",
+    "coffee",
+    "aesthetic",
+    "ui",
+    "color",
+    "aether"
+  ],
+
+  "categories": ["Themes"],
   "repository": {
     "type": "git",
     "url": "https://github.com/Diiipereira/aether-theme.git"
   },
-  "homepage": "https://github.com/Diiipereira/aether-theme",
-  "bugs": {
-    "url": "https://github.com/Diiipereira/aether-theme/issues"
-  },
+
   "engines": {
     "vscode": "^1.70.0"
   },
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "theme",
-    "dark theme",
-    "aether",
-    "premium theme",
-    "blue theme",
-    "purple theme",
-    "modern",
-    "clean"
-  ],
+
   "contributes": {
     "themes": [
       {
@@ -49,7 +67,7 @@
       },
       {
         "label": "Aether Light",
-        "uiTheme": "vs-dark",
+        "uiTheme": "vs",
         "path": "./themes/aether-light.json"
       }
     ]
