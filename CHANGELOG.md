@@ -1,58 +1,114 @@
-# Changelog
+<div style="font-size: 32px; font-weight: 700; margin-bottom: 20px;">
+  📜 Changelog
+</div>
 
-## 1.0.0 — First Release
+<!-- ================== 1.2.3 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  1.2.3 — Logo Refinement, Markdown Fixes & Theme Improvements
+</div>
 
-- Added Aether Dark
-- Added Aether Dark Space
-- Fully customized:
-  - TypeScript & JavaScript syntax
-  - HTML tags, attributes & values
-  - Markdown headings, quotes, links & lists
-  - Explorer, Terminal, Tabs, Search, Hover Widgets
-- Full dark UI integration
-- Icon and banners added
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Fixed</div>
+<ul>
+  <li>Corrected broken links in the README markdown.</li>
+  <li>Adjusted color palettes across Dark, Dark Space, Coffee, and Light themes for better consistency.</li>
+</ul>
 
-## 1.0.2 - Fix Modal Dark Theme
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
+<ul>
+  <li>Refactored the main project logo with improved visual quality.</li>
+  <li>General UX/UI improvements and minor bug fixes across all themes.</li>
+</ul>
 
-- Updated color and modal border fix
-- Updated preview images
+<!-- ================== 1.2.2 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.2.2 — README Restructuring
+</div>
 
-## 1.1.2 - Implements two new themes
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
+<ul>
+  <li>Improved README layout and visual structure using HTML.</li>
+  <li>Enhanced theme preview grid and alignment.</li>
+  <li>Updated badges, header formatting, and section dividers.</li>
+  <li>General polish for VS Code Marketplace presentation.</li>
+</ul>
 
-- A distinctive coffee theme, focused on visual comfort, was added.
-- A light screen was added, following the standards of the dark theme.
+<!-- ================== 1.2.1 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.2.1 — Maintenance Update
+</div>
 
-## 1.1.3 - Version update
+<ul>
+  <li>Updated version in <code>package.json</code> to fix the stuck verification process when publishing.</li>
+</ul>
 
-- Version update in package.json.
+<!-- ================== 1.2.0 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.2.0 — Complete Theme Refinement
+</div>
 
-## 1.1.4 - Correcting import
+<ul>
+  <li>Full refactor of the Light theme, ensuring semantic color consistency.</li>
+  <li>Fixes and visual improvements in Coffee theme (palette, highlights, borders).</li>
+  <li>Refinements in Dark theme (tabs, borders, terminal, UI consistency).</li>
+  <li>Updates in Dark Space theme (tab borders, scroll shadows, contrast adjustments).</li>
+</ul>
 
-- Correcting an error in the Light theme import.
+<!-- ================== 1.1.5 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.1.5 — Correction in All Themes
+</div>
 
-## 1.1.5 - Correction in all themes
+<ul>
+  <li>Fixed highlighting in File Explorer when a file is being edited for all themes.</li>
+</ul>
 
-- Fixed highlighting in File Explorer when a file is being edited for all themes.
+<!-- ================== 1.1.4 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.1.4 — Correcting Import
+</div>
 
-## 1.2.0 – Complete Theme Refinement
+<ul>
+  <li>Corrected an error in the Light theme import.</li>
+</ul>
 
-- Full refactor of the Light theme, ensuring semantic color consistency.
+<!-- ================== 1.1.3 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.1.3 — Version Update
+</div>
 
-- Fixes and visual improvements in Coffee theme (palette, highlights, borders).
+<ul>
+  <li>Updated version in <code>package.json</code>.</li>
+</ul>
 
-- Refinements in Dark theme (tabs, borders, terminal, UI consistency).
+<!-- ================== 1.1.2 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.1.2 — New Themes Added
+</div>
 
-- Updates in Dark Space theme (tab borders, scroll shadows, contrast adjustments).
+<ul>
+  <li>Added Aether Coffee (warm, comfortable palette).</li>
+  <li>Added Aether Light, following the same visual principles of the dark themes.</li>
+</ul>
 
-## 1.2.1 – Maintenance Update
+<!-- ================== 1.0.2 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.0.2 — Fix Modal Dark Theme
+</div>
 
-- Updated version in package.json to fix the stuck verification process when publishing.
+<ul>
+  <li>Updated modal colors and border.</li>
+  <li>Updated preview images.</li>
+</ul>
 
-## 1.2.2 - README restructuring
+<!-- ================== 1.0.0 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
+  1.0.0 — First Release
+</div>
 
-### Changed
-
-- Improved README layout and visual structure using HTML
-- Enhanced theme preview grid and alignment
-- Updated badges, header formatting, and section dividers
-- General polish for VS Code Marketplace presentation
+<ul>
+  <li>Added Aether Dark.</li>
+  <li>Added Aether Dark Space.</li>
+  <li>Custom syntax highlighting for TypeScript, JavaScript, HTML, Markdown.</li>
+  <li>UI integration for Explorer, Terminal, Tabs, Search, Hover Widgets.</li>
+  <li>Added project icons and banners.</li>
+</ul>

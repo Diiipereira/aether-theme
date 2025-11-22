@@ -1,9 +1,9 @@
 {
   "name": "aether-dark",
   "publisher": "diogo-aether",
-  "displayName": "Aether Themes — Premium VS Code Dark & Light Themes",
+  "displayName": "Aether Themes",
   "description": "Coleção premium com 4 temas VS Code (Dark, Dark Space, Coffe e Light). Legibilidade perfeita, sintaxe refinada para TypeScript e integração total com HTML, Markdown, Explorer e Terminal.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "icon": "logo.png",
 
   "galleryBanner": {

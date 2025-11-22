@@ -12,7 +12,7 @@
 
 <p align="center" style="margin-top: 10px;">
   <img src="https://img.shields.io/badge/temas-4-blueviolet" />
-  <img src="https://img.shields.io/badge/version-1.2.2-success" />
+  <img src="https://img.shields.io/badge/version-1.2.3-success" />
   <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
 </p>
 
@@ -39,24 +39,24 @@ Se você gosta de temas escuros, claros ou quentes com tons de café, esta cole�
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
 
-  <div style="text-align: center; width: 380px; min-height: 340px;">
+  <div style="text-align: center;">
     <p><strong>Aether Dark</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png" width="350">
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png">
   </div>
 
-  <div style="text-align: center; width: 380px; min-height: 340px;">
+  <div style="text-align: center;">
     <p><strong>Aether Dark Space</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png" width="350">
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png">
   </div>
 
-  <div style="text-align: center; width: 380px; min-height: 340px;">
+  <div style="text-align: center;">
     <p><strong>Aether Coffee</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png" width="350">
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png">
   </div>
 
-  <div style="text-align: center; width: 380px; min-height: 340px;">
+  <div style="text-align: center;">
     <p><strong>Aether Light</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png" width="350">
+    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png">
   </div>
 
 </div>
@@ -91,31 +91,15 @@ Se você gosta de temas escuros, claros ou quentes com tons de café, esta cole�
   <li>Clique em <code>Install</code></li>
 </ol>
 
-<p><strong>Instalar pelo CLI</strong></p>
+<br><br>
+
+<p><strong>Instalação alternativa pelo CLI</strong></p>
 
 ```sh
 code --install-extension diogo-aether.aether-dark
 ```
 
-<div style="font-size: 22px; font-weight: 700;">
-🧪 Compatibilidade
-</div>
 <br>
-
-<ul>
-  <li>Typescript</li>
-  <li>Javascript</li>
-  <li>NestJS</li>
-  <li>React</li>
-  <li>Vue</li>
-  <li>Svelte</li>
-  <li>HTML / CSS</li>
-  <li>Markdown</li>
-  <li>JSON</li>
-  <li>Bash / Terminal</li>
-</ul>
-
-<br><br>
 
 <div style="font-size: 22px; font-weight: 700;">
   ❤️ Contribuições
@@ -129,5 +113,5 @@ code --install-extension diogo-aether.aether-dark
   📄 Licença
 </div>
 
-<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENCE">MIT Licence</a>
+<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENSE">MIT Licence</a>
 </p>
