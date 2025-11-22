@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="120" />
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="150" />
 </p>
 
 <div align="center" style="font-size: 32px; font-weight: 700; margin-top: 8px;">
