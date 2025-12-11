@@ -14,15 +14,15 @@ export const coffeeDarkPalette: AetherPalette = {
     button_muted_hover: "#4A3C33",
   },
   accent: {
-    primary: "#D17B49",
-    primary_hover: "#E5AD4C",
+    primary: "#855132",
+    primary_hover: "#705018",
     secondary: "#7AA0B9",
     tertiary: "#B2C96A",
     selection: "#4A3C33",
     highlight: "#B58A66",
   },
   fg: {
-    primary: "#EAE0D5",
+    primary: "#b9aa9a",
     secondary: "#6D5B51",
     code: "#EAE0D5",
     muted: "#8A7968",
