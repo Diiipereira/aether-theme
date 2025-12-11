@@ -3,67 +3,74 @@
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
   "description": "Coleção premium com 4 temas VS Code (Dark, Dark Space, Coffe e Light). Legibilidade perfeita, sintaxe refinada para TypeScript e integração total com HTML, Markdown, Explorer e Terminal.",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "icon": "logo.png",
-
   "galleryBanner": {
     "color": "#121212",
     "theme": "dark"
   },
-
   "previewImages": [
     "images/aether-dark.png",
     "images/aether-darkspace.png",
     "images/aether-coffe.png",
     "images/aether-light.png"
   ],
-
   "keywords": [
     "theme",
-    "themes",
     "vscode",
-    "vscode theme",
     "dark theme",
-    "light theme",
     "typescript",
     "developer",
     "modern",
     "clean",
     "purple",
-    "blue",
-    "coffee",
-    "aesthetic",
-    "ui",
-    "color",
+    "neon",
     "aether"
   ],
-
-  "categories": ["Themes"],
+  "categories": [
+    "Themes"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Diiipereira/aether-theme.git"
   },
-
   "engines": {
     "vscode": "^1.70.0"
   },
-
+  "scripts": {
+    "build": "ts-node src/index.ts",
+    "package": "npm run build && vsce package",
+    "publish": "npm run build && vsce publish",
+    "watch": "ts-node-dev --respawn src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vscode/vsce": "^2.22.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
   "contributes": {
     "themes": [
       {
-        "label": "Aether Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aether-dark.json"
-      },
-      {
         "label": "Aether Dark Space",
         "uiTheme": "vs-dark",
-        "path": "./themes/aether-darkspace.json"
+        "path": "./themes/aether-dark-space.json"
       },
       {
         "label": "Aether Coffe",
         "uiTheme": "vs-dark",
-        "path": "./themes/aether-coffe.json"
+        "path": "./themes/aether-coffee.json"
+      },
+      {
+        "label": "Aether Coffe Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-coffee-dark.json"
+      },
+      {
+        "label": "Aether Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-dark.json"
       },
       {
         "label": "Aether Light",

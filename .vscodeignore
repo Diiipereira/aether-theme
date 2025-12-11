@@ -1,0 +1,14 @@
+# tudo isso será ignorado no pacote
+
+.vscode/**
+.vscode-test/**
+src/**
+node_modules/**
+out/**
+.gitignore
+.vscodeignore
+tsconfig.json
+package-lock.json
+npm-debug.log
+*.map
+**/*.ts

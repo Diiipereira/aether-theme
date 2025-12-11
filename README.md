@@ -11,8 +11,8 @@
 </p>
 
 <p align="center" style="margin-top: 10px;">
-  <img src="https://img.shields.io/badge/temas-4-blueviolet" />
-  <img src="https://img.shields.io/badge/version-1.2.3-success" />
+  <img src="https://img.shields.io/badge/temas-5-blueviolet" />
+  <img src="https://img.shields.io/badge/version-1.3.0-success" />
   <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
 </p>
 

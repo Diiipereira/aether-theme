@@ -2,9 +2,14 @@
   📜 Changelog
 </div>
 
+<!-- ================== 1.3.0 ================== -->
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  [1.3.0]
+</div>
+
 <!-- ================== 1.2.3 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  1.2.3 — Logo Refinement, Markdown Fixes & Theme Improvements
+  [1.2.3] — Logo Refinement, Markdown Fixes & Theme Improvements
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Fixed</div>
@@ -21,7 +26,7 @@
 
 <!-- ================== 1.2.2 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.2.2 — README Restructuring
+  [1.2.2] — README Restructuring
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
@@ -34,7 +39,7 @@
 
 <!-- ================== 1.2.1 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.2.1 — Maintenance Update
+  [1.2.1] — Maintenance Update
 </div>
 
 <ul>
@@ -43,7 +48,7 @@
 
 <!-- ================== 1.2.0 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.2.0 — Complete Theme Refinement
+  [1.2.0] — Complete Theme Refinement
 </div>
 
 <ul>
@@ -55,7 +60,7 @@
 
 <!-- ================== 1.1.5 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.1.5 — Correction in All Themes
+  [1.1.5] — Correction in All Themes
 </div>
 
 <ul>
@@ -64,7 +69,7 @@
 
 <!-- ================== 1.1.4 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.1.4 — Correcting Import
+  [1.1.4] — Correcting Import
 </div>
 
 <ul>
@@ -73,7 +78,7 @@
 
 <!-- ================== 1.1.3 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.1.3 — Version Update
+  [1.1.3] — Version Update
 </div>
 
 <ul>
@@ -82,7 +87,7 @@
 
 <!-- ================== 1.1.2 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.1.2 — New Themes Added
+  [1.1.2] — New Themes Added
 </div>
 
 <ul>
@@ -92,7 +97,7 @@
 
 <!-- ================== 1.0.2 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.0.2 — Fix Modal Dark Theme
+  [1.0.2] — Fix Modal Dark Theme
 </div>
 
 <ul>
@@ -102,7 +107,7 @@
 
 <!-- ================== 1.0.0 ================== -->
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  1.0.0 — First Release
+  [1.0.0] — First Release
 </div>
 
 <ul>
