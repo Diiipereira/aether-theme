@@ -1,67 +1,159 @@
 import { AetherPalette } from "../types";
 
 export const darkSpacePalette: AetherPalette = {
-  bg: {
-    base: "#14091b",
-    surface: "#110817",
-    border: "#1e0d28",
-    command_border: "#351747",
-    input: "#1a0e25",
-    overlay: "rgba(10, 4, 18, 0.8)",
-    badge: "#1c0e2a",
-    dropdown: "#16091f",
-    button_muted: "#2b2238",
-    button_muted_hover: "#3a2d4c",
-  },
-  accent: {
-    primary: "#8a3cff",
-    primary_hover: "#a765ff",
-    secondary: "#32e6ff",
-    tertiary: "#96ffe7",
-    selection: "#4f1c9e",
-    highlight: "#8a3cff",
+  // --- 1. CORE / BASE ---
+  core: {
+    bg: "#14091b",
+    fg: "#f0f0f0",
+    border: "#2b1836",
+    overlay: "#0a0412cc",
   },
 
-  fg: {
-    primary: "#f0f0f0",
-    secondary: "#c3c0ca",
-    code: "#e2def0",
-    muted: "#8b8597",
-    link: "#9aff47",
-    active: "#ffffff",
+  // --- 2. LAYOUT MODULES ---
+  activityBar: {
+    bg: "#14091b",
+    fg: "#c3c0ca",
+    activeBorder: "#8a3cff",
+    activeBg: "#1e0d28",
+    badgeBg: "#8a3cff",
+    badgeFg: "#ffffff",
   },
-  status: {
-    green: "#6ce6b3",
-    yellow: "#e3c472",
-    red: "#ff6d6d",
-    error: "#ff5f5f",
-    error_dark: "#d44242",
-    error_bg: "#3d1117",
-    warning: "#ffdf4f",
-    warning_bg: "#3a2e0b",
-    info: "#77bfff",
-    info_bg: "#10263c",
-    submodule: "#b58aff",
-    added_gutter: "#3b7a4a",
-    modified_gutter: "#8b7042",
-    deleted_gutter: "#8c2a1e",
+
+  sideBar: {
+    bg: "#14091b",
+    fg: "#c3c0ca",
+    border: "#2b1836",
+    titleFg: "#8b8597",
+    sectionHeaderBg: "#110817",
   },
-  diff: {
-    removed_bg: "#4f1e2a",
-    marker_info: "#8db9e2",
+
+  statusBar: {
+    bg: "#1a0e25",
+    fg: "#f0f0f0",
+    border: "#2b1836",
+    itemHover: "#3a2d4c",
+    remoteBg: "#8a3cff",
   },
+
+  titleBar: {
+    bg: "#14091b",
+    fg: "#c3c0ca",
+    inactiveBg: "#0f0614",
+  },
+
+  panel: {
+    bg: "#110817",
+    headerFg: "#c3c0ca",
+    border: "#2b1836",
+  },
+
+  // --- 3. EDITOR ---
+  editor: {
+    bg: "#110817",
+    fg: "#f0f0f0",
+    lineHighlight: "#2b183680",
+    selection: "#4f1c9e80",
+    findMatch: "#8a3cff",
+    cursor: "#32e6ff",
+    gutter: {
+      bg: "#110817",
+      fg: "#4b3e55",
+      activeFg: "#f0f0f0",
+    },
+    indentGuide: {
+      active: "#5f2ea0",
+      inactive: "#2b1836",
+    },
+    bracketMatch: {
+      bg: "#351747",
+      border: "#8a3cff",
+    },
+  },
+
+  // --- 4. UI COMPONENTS ---
+  button: {
+    primary: {
+      bg: "#8a3cff",
+      fg: "#ffffff",
+      hover: "#a765ff",
+    },
+    secondary: {
+      bg: "#2b2238",
+      fg: "#f0f0f0",
+      hover: "#3a2d4c",
+    },
+  },
+
+  input: {
+    bg: "#1a0e25",
+    fg: "#f0f0f0",
+    border: "#351747",
+    placeholder: "#6b5a75",
+    focusBorder: "#8a3cff",
+    validation: {
+      errorBg: "#3d1117",
+      errorBorder: "#ff5f5f",
+    },
+  },
+
+  list: {
+    hoverBg: "#2b1836",
+    focusBg: "#351747",
+    activeSelectionBg: "#4f1c9e",
+    activeSelectionFg: "#ffffff",
+    inactiveSelectionBg: "#2b1836",
+  },
+
+  tabs: {
+    activeBg: "#110817",
+    activeFg: "#f0f0f0",
+    activeBorderTop: "#8a3cff",
+    inactiveBg: "#14091b",
+    inactiveFg: "#6b5a75",
+    border: "#2b1836",
+  },
+
+  scrollBar: {
+    shadow: "#00000060",
+    sliderBg: "#35174760",
+    sliderHover: "#351747",
+    sliderActive: "#8a3cff80",
+  },
+
+  // --- 5. SYNTAX HIGHLIGHTING ---
   syntax: {
     variables: "#2cffb5",
     keywords: "#d066ff",
-    numbers: "#4bd7ff",
-    constants: "#ff57d6",
     functions: "#ffca5e",
     strings: "#f28fad",
+    numbers: "#4bd7ff",
+    constants: "#ff57d6",
+    types: "#32e6ff",
+    classes: "#32e6ff",
     operators: "#c64dff",
     comments: "#6b5a75",
+    tags: "#d066ff",
   },
+
+  // --- 6. STATUS & GIT ---
+  status: {
+    info: "#77bfff",
+    warning: "#ffdf4f",
+    error: "#ff5f5f",
+    success: "#6ce6b3",
+  },
+
+  git: {
+    added: "#3b7a4a",
+    modified: "#e3c472",
+    deleted: "#ff6d6d",
+    ignored: "#554b60",
+    conflict: "#ff57d6",
+  },
+
+  // --- 7. TERMINAL ---
   terminal: {
-    black: "#000000",
+    black: "#110817",
     red: "#d44646",
     green: "#19c98f",
     yellow: "#e6e65c",
@@ -77,11 +169,5 @@ export const darkSpacePalette: AetherPalette = {
     brightMagenta: "#a76cff",
     brightCyan: "#48d5f2",
     brightWhite: "#ffffff",
-  },
-  misc: {
-    selection_weak: "#4f1c9e",
-    debug_border: "#5f2ea0",
-    special_border: "#8a3cff",
-    diff_common: "#a7b2d2",
   },
 };

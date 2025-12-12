@@ -4,260 +4,219 @@ import { alpha } from "../lib/utils";
 export const getUiColors = (palette: AetherPalette) => {
   const p = palette;
 
+  // Helper para texto secundário (ex: 65% da opacidade do texto principal)
+  // Usado quando não há uma cor "muted" específica no componente
+  const mutedFg = alpha(p.core.fg, 65);
+
   // --- BASE / CORE ---
   const base = {
-    foreground: p.fg.primary,
-    focusBorder: p.accent.primary,
-    descriptionForeground: p.fg.muted,
+    foreground: p.core.fg,
+    focusBorder: p.input.focusBorder, // Foco global segue o padrão de input
+    descriptionForeground: mutedFg,
     errorForeground: p.status.error,
-    "icon.foreground": p.fg.secondary,
-    "selection.background": alpha(p.misc.selection_weak, 16),
-    "widget.shadow": alpha(p.accent.primary, 7),
-    "scrollbar.shadow": alpha(p.accent.primary, 31),
-    "scrollbarSlider.background": alpha(p.accent.primary, 40),
-    "scrollbarSlider.hoverBackground": alpha(p.accent.primary, 55),
-    "scrollbarSlider.activeBackground": alpha(p.accent.primary, 75),
-    "window.activeBorder": p.bg.border,
-    "window.inactiveBorder": p.bg.border,
+    "icon.foreground": mutedFg,
+    "widget.shadow": p.core.overlay,
+    "selection.background": p.editor.selection,
+    "scrollbar.shadow": p.scrollBar.shadow,
+    "scrollbarSlider.background": p.scrollBar.sliderBg,
+    "scrollbarSlider.hoverBackground": p.scrollBar.sliderHover,
+    "scrollbarSlider.activeBackground": p.scrollBar.sliderActive,
+    "window.activeBorder": p.core.border,
+    "window.inactiveBorder": alpha(p.core.border, 60),
+    "sash.hoverBorder": p.tabs.activeBorderTop, // Geralmente a cor de destaque
+    "progressBar.background": p.tabs.activeBorderTop, // Barra de loading
   };
 
   // --- ACTIVITY BAR ---
   const activityBar = {
-    "activityBar.background": p.bg.surface,
-    "activityBar.foreground": p.fg.primary,
-    "activityBar.border": p.bg.border,
-    "activityBar.dropBackground": alpha(p.bg.border, 8),
-    "activityBar.activeBorder": p.accent.primary_hover,
-    "activityBar.activeBackground": p.bg.border,
-    "activityBar.inactiveForeground": alpha(p.fg.secondary, 70),
-    "activityBarBadge.background": p.accent.primary_hover,
-    "activityBarBadge.foreground": p.fg.primary,
+    "activityBar.background": p.activityBar.bg,
+    "activityBar.foreground": p.activityBar.fg,
+    "activityBar.border": p.sideBar.border,
+    "activityBar.dropBackground": alpha(p.activityBar.fg, 10),
+    "activityBar.activeBorder": p.activityBar.activeBorder,
+    "activityBar.activeBackground": p.activityBar.activeBg,
+    "activityBar.inactiveForeground": alpha(p.activityBar.fg, 50),
+    "activityBarBadge.background": p.activityBar.badgeBg,
+    "activityBarBadge.foreground": p.activityBar.badgeFg,
   };
 
   // --- SIDEBAR ---
   const sidebar = {
-    "sideBar.background": p.bg.base,
-    "sideBar.foreground": p.fg.primary,
-    "sideBar.border": p.bg.border,
-    "sideBar.dropBackground": alpha(p.bg.border, 6),
-    "sideBarTitle.foreground": p.fg.secondary,
-    "sideBarSectionHeader.background": p.bg.surface,
-    "sideBarSectionHeader.foreground": p.fg.secondary,
-    "sideBarSectionHeader.border": p.bg.border,
-    "sideBarTitle.background": p.bg.base,
+    "sideBar.background": p.sideBar.bg,
+    "sideBar.foreground": p.sideBar.fg,
+    "sideBar.border": p.sideBar.border,
+    "sideBar.dropBackground": alpha(p.sideBar.fg, 10),
+    "sideBarTitle.foreground": p.sideBar.titleFg,
+    "sideBarSectionHeader.background": p.sideBar.sectionHeaderBg,
+    "sideBarSectionHeader.foreground": p.sideBar.titleFg,
+    "sideBarSectionHeader.border": p.sideBar.border,
   };
 
   // --- STATUS BAR ---
   const statusBar = {
-    "statusBar.foreground": p.fg.primary,
-    "statusBar.background": p.bg.base,
-    "statusBarItem.hoverBackground": p.accent.primary_hover,
-    "statusBar.border": p.bg.command_border,
-    "statusBar.debuggingBackground": p.status.submodule ?? p.status.submodule,
-    "statusBar.debuggingForeground": p.fg.primary,
-    "statusBar.debuggingBorder": p.accent.highlight,
-    "statusBar.noFolderBackground": p.bg.border,
-    "statusBar.noFolderForeground": p.fg.primary,
-    "statusBar.noFolderBorder": p.bg.command_border,
-    "statusBarItem.remoteBackground": alpha(p.accent.primary, 80),
-    "statusBarItem.remoteForeground": p.fg.primary,
+    "statusBar.foreground": p.statusBar.fg,
+    "statusBar.background": p.statusBar.bg,
+    "statusBar.border": p.statusBar.border,
+    "statusBarItem.hoverBackground": p.statusBar.itemHover,
+    "statusBarItem.remoteBackground": p.statusBar.remoteBg,
+    "statusBarItem.remoteForeground": p.statusBar.fg,
+    // Debugging herda do status padrão ou usa warning/info se preferir destacar
+    "statusBar.debuggingBackground": p.status.warning,
+    "statusBar.debuggingForeground": p.core.bg,
+    "statusBar.debuggingBorder": p.status.warning,
+    "statusBar.noFolderBackground": p.statusBar.bg,
+    "statusBar.noFolderForeground": mutedFg,
   };
 
   // --- TITLE BAR & MENUS ---
   const titleBar = {
-    "titleBar.activeBackground": p.bg.surface,
-    "titleBar.activeForeground": p.fg.primary,
-    "titleBar.inactiveBackground": alpha(p.bg.surface, 85),
-    "titleBar.inactiveForeground": p.fg.secondary,
-    "titleBar.border": p.bg.border,
-    "menu.background": p.bg.surface,
-    "menu.foreground": p.fg.primary,
-    "menu.border": p.bg.border,
-    "menu.selectionBackground": alpha(p.accent.primary, 14),
-    "menu.selectionForeground": p.fg.primary,
-    "menu.separatorBackground": p.bg.border,
+    "titleBar.activeBackground": p.titleBar.bg,
+    "titleBar.activeForeground": p.titleBar.fg,
+    "titleBar.inactiveBackground": p.titleBar.inactiveBg,
+    "titleBar.inactiveForeground": alpha(p.titleBar.fg, 60),
+    "titleBar.border": p.core.border,
+    // Menus (File, Edit...)
+    "menu.background": p.input.bg, // Geralmente igual inputs ou dropdowns
+    "menu.foreground": p.core.fg,
+    "menu.border": p.core.border,
+    "menu.selectionBackground": p.list.activeSelectionBg,
+    "menu.selectionForeground": p.list.activeSelectionFg,
+    "menu.separatorBackground": p.core.border,
   };
 
   // --- BUTTONS / BADGES / TOOLBAR ---
   const buttons = {
-    "button.background": p.accent.primary,
-    "button.foreground": p.fg.primary,
-    "button.hoverBackground": p.accent.primary_hover,
-    "button.secondaryBackground": p.bg.surface,
-    "button.secondaryForeground": p.fg.primary,
-    "button.secondaryHoverBackground": p.bg.command_border,
-    "button.border": alpha(p.accent.primary, 24),
-    "badge.foreground": p.fg.primary,
-    "badge.background": p.bg.badge,
-    "toolbar.hoverBackground": alpha(p.bg.border, 6),
-    "textLink.foreground": p.fg.link,
+    "button.background": p.button.primary.bg,
+    "button.foreground": p.button.primary.fg,
+    "button.hoverBackground": p.button.primary.hover,
+    "button.secondaryBackground": p.button.secondary.bg,
+    "button.secondaryForeground": p.button.secondary.fg,
+    "button.secondaryHoverBackground": p.button.secondary.hover,
+    "badge.foreground": p.activityBar.badgeFg,
+    "badge.background": p.activityBar.badgeBg,
+    "toolbar.hoverBackground": alpha(p.core.fg, 10),
+    "textLink.foreground": p.button.primary.bg, // Links geralmente usam cor primária
   };
 
   // --- INPUTS / DROPDOWNS / VALIDATION ---
   const inputs = {
-    "input.background": p.bg.input,
-    "input.border": p.bg.border,
-    "input.foreground": p.fg.primary,
-    "input.placeholderForeground": p.fg.muted,
-    "inputOption.activeBackground": alpha(p.accent.primary, 10),
-    "inputOption.activeBorder": p.bg.command_border,
-    "inputOption.activeForeground": p.fg.primary,
-    "inputValidation.errorBackground": alpha(p.status.error, 10),
-    "inputValidation.errorForeground": p.status.error,
-    "dropdown.background": p.bg.dropdown,
-    "dropdown.foreground": p.fg.primary,
-    "dropdown.border": p.bg.border,
+    "input.background": p.input.bg,
+    "input.border": p.input.border,
+    "input.foreground": p.input.fg,
+    "input.placeholderForeground": p.input.placeholder,
+    "inputOption.activeBackground": alpha(p.input.focusBorder, 20),
+    "inputOption.activeBorder": p.input.focusBorder,
+    "inputOption.activeForeground": p.input.fg,
+    "inputValidation.errorBackground": p.input.validation.errorBg,
+    "inputValidation.errorForeground": p.input.fg,
+    "inputValidation.errorBorder": p.input.validation.errorBorder,
+    "dropdown.background": p.input.bg,
+    "dropdown.foreground": p.input.fg,
+    "dropdown.border": p.input.border,
+    "dropdown.listBackground": p.input.bg,
   };
 
-  // --- LISTS / TREES / EXPLORER ---
+  // --- FORM CONTROLS (Checkboxes & Radios) ---
+  const formControls = {
+    "checkbox.background": p.input.bg,
+    "checkbox.foreground": p.input.fg,
+    "checkbox.border": p.input.border,
+    "checkbox.selectBackground": p.input.focusBorder,
+    "checkbox.selectBorder": p.input.focusBorder,
+    "radio.activeForeground": p.input.fg,
+    "radio.activeBackground": alpha(p.input.focusBorder, 20),
+    "radio.activeBorder": p.input.focusBorder,
+    "radio.inactiveForeground": mutedFg,
+    "radio.inactiveBackground": alpha(p.input.bg, 50),
+    "radio.inactiveBorder": alpha(p.input.border, 50),
+  };
+
+  // --- LISTS / TREES ---
   const lists = {
-    "list.hoverBackground": alpha(p.accent.primary, 20),
-    "list.hoverForeground": p.fg.primary,
-    "list.activeSelectionBackground": alpha(p.accent.primary, 30),
-    "list.activeSelectionForeground": p.fg.primary,
-    "list.inactiveSelectionBackground": alpha(p.accent.primary, 10),
-    "list.inactiveSelectionForeground": p.fg.secondary,
-    "listFilterWidget.background": p.bg.base,
-    "listFilterWidget.outline": alpha(p.accent.primary, 30),
-    "listFilterWidget.noMatchesOutline": alpha(p.accent.primary, 45),
-    "list.focusBackground": alpha(p.accent.primary, 10),
-    "list.focusForeground": p.fg.primary,
-    "list.dropBackground": alpha(p.accent.primary, 30),
-    "list.highlightForeground": p.accent.primary,
-    "list.deemphasizedForeground": alpha(p.fg.secondary, 60),
-    "tree.indentGuidesStroke": alpha(p.accent.primary, 35),
-    "tree.tableOddRowsBackground": alpha(p.bg.surface, 3),
-    "list.errorForeground": p.status.red,
-    "list.warningForeground": p.status.yellow,
+    "list.hoverBackground": p.list.hoverBg,
+    "list.hoverForeground": p.core.fg,
+    "list.activeSelectionBackground": p.list.activeSelectionBg,
+    "list.activeSelectionForeground": p.list.activeSelectionFg,
+    "list.inactiveSelectionBackground": p.list.inactiveSelectionBg,
+    "list.inactiveSelectionForeground": p.core.fg,
+    "list.focusBackground": p.list.focusBg,
+    "list.focusForeground": p.core.fg,
+    "list.dropBackground": alpha(p.list.activeSelectionBg, 40),
+    "list.highlightForeground": p.editor.findMatch,
+    "tree.indentGuidesStroke": alpha(p.core.fg, 15),
+    "list.errorForeground": p.status.error,
+    "list.warningForeground": p.status.warning,
   };
 
   // --- TABS / EDITOR GROUPS ---
   const tabs = {
-    "editorGroupHeader.tabsBorder": p.bg.border,
-    "editorGroupHeader.tabsBackground": p.bg.surface,
-    "editorGroup.border": p.bg.border,
-    "tab.activeForeground": p.fg.primary,
-    "tab.border": p.bg.border,
-    "tab.activeBorder": p.accent.primary,
-    "tab.inactiveBackground": p.bg.base,
-    "tab.inactiveForeground": p.fg.secondary,
-    "tab.hoverBackground": p.bg.border,
-    "tab.hoverForeground": p.fg.primary,
-    "tab.activeBackground": p.bg.surface,
-    "tab.hoverBorder": alpha(p.accent.primary, 45),
-    "tab.unfocusedHoverBackground": alpha(p.bg.border, 4),
+    "editorGroupHeader.tabsBackground": p.titleBar.bg, // Fundo atrás das abas
+    "editorGroupHeader.tabsBorder": p.tabs.border,
+    "editorGroup.border": p.core.border,
+    "tab.activeForeground": p.tabs.activeFg,
+    "tab.border": p.tabs.border,
+    "tab.activeBorderTop": p.tabs.activeBorderTop,
+    "tab.activeBackground": p.tabs.activeBg,
+    "tab.inactiveBackground": p.tabs.inactiveBg,
+    "tab.inactiveForeground": p.tabs.inactiveFg,
+    "tab.hoverBackground": alpha(p.tabs.activeBg, 50),
+    "tab.hoverForeground": p.tabs.activeFg,
   };
 
-  // --- EDITOR (UI parts - not tokens) ---
+  // --- EDITOR ---
   const editor = {
-    "editor.background": p.bg.surface,
-    "editor.foreground": p.fg.primary,
-    "editorWidget.background": p.bg.base,
-    "editorWidget.foreground": p.fg.secondary,
-    "editorWidget.border": p.accent.primary,
-    "editorGroup.border": p.bg.border,
+    "editor.background": p.editor.bg,
+    "editor.foreground": p.editor.fg,
+    "editorWidget.background": p.input.bg, // Widgets tipo Find/Replace
+    "editorWidget.foreground": p.input.fg,
+    "editorWidget.border": p.input.border,
     "editorError.foreground": p.status.error,
     "editorWarning.foreground": p.status.warning,
     "editorInfo.foreground": p.status.info,
-    "editorLink.activeForeground": p.fg.link,
-    "editorLineNumber.foreground": alpha(p.fg.secondary, 80),
-    "editorLineNumber.activeForeground": p.fg.primary,
-    "editorLineNumber.dimmedForeground": alpha(p.fg.secondary, 50),
-    "editorCursor.foreground": p.accent.primary_hover,
-    "editorWhitespace.foreground": alpha(p.fg.secondary, 18),
-    "editorIndentGuide.background": alpha(p.accent.primary, 15),
-    "editorIndentGuide.activeBackground": alpha(p.accent.primary, 60),
-    "editor.selectionBackground": alpha(p.misc.selection_weak, 16),
-    "editor.inactiveSelectionBackground": alpha(p.misc.selection_weak, 8),
-    "editor.selectionHighlightBackground": alpha(p.accent.primary, 8),
-    "editor.lineHighlightBackground": alpha(p.bg.border, 40),
-    "editor.lineHighlightBorder": alpha(p.bg.command_border, 80),
-    "editorOverviewRuler.border": p.bg.border,
-    "editorOverviewRuler.findMatchForeground": p.accent.primary,
-    "editorOverviewRuler.modifiedForeground":
-      p.status.modified_gutter ?? p.status.modified_gutter,
-    "editorOverviewRuler.addedForeground": p.status.added_gutter,
-    "editorOverviewRuler.deletedForeground": p.status.deleted_gutter,
-    "editorOverviewRuler.errorForeground": p.status.red,
-    "editorOverviewRuler.warningForeground": p.status.yellow,
-    "editorBracketMatch.border": alpha(p.accent.primary, 24),
-    "editorBracketMatch.background": alpha(p.accent.primary, 6),
-    "editorUnnecessaryCode.opacity": "0.6",
-    "editorCodeLens.foreground": p.fg.secondary,
-    "editorGutter.background": p.bg.surface,
-    "editorGutter.foldingControlForeground": p.fg.secondary,
-    "editorGutter.modifiedBackground": p.status.modified_gutter,
-    "editorGutter.addedBackground": p.status.added_gutter,
-    "editorGutter.deletedBackground": p.status.deleted_gutter,
-    "editor.findMatchBackground": alpha(p.accent.primary, 18),
-    "editor.findMatchHighlightBackground": alpha(p.accent.primary, 12),
-    "editor.findRangeHighlightBackground": alpha(p.accent.primary, 8),
-    "debugToolBar.background": p.bg.surface,
-    "debugToolBar.border": p.accent.primary,
+    "editorLineNumber.foreground": p.editor.gutter.fg,
+    "editorLineNumber.activeForeground": p.editor.gutter.activeFg,
+    "editorCursor.foreground": p.editor.cursor,
+    "editorIndentGuide.background": p.editor.indentGuide.inactive,
+    "editorIndentGuide.activeBackground": p.editor.indentGuide.active,
+    "editor.selectionBackground": p.editor.selection,
+    "editor.lineHighlightBackground": p.editor.lineHighlight,
+    "editor.findMatchBackground": alpha(p.editor.findMatch, 30),
+    "editor.findMatchHighlightBackground": alpha(p.editor.findMatch, 15),
+    "editorBracketMatch.border": p.editor.bracketMatch.border,
+    "editorBracketMatch.background": p.editor.bracketMatch.bg,
+    "editorGutter.background": p.editor.gutter.bg,
+    "editorGutter.modifiedBackground": p.git.modified,
+    "editorGutter.addedBackground": p.git.added,
+    "editorGutter.deletedBackground": p.git.deleted,
   };
 
-  // --- DIFF EDITOR / MERGE CONFLICTS ---
+  // --- DIFF EDITOR ---
   const diffAndMerge = {
-    "diffEditor.insertedTextBackground": alpha(p.status.green, 12),
-    "diffEditor.insertedTextBorder": alpha(p.status.green, 24),
-    "diffEditor.removedTextBackground": alpha(p.status.red, 12),
-    "diffEditor.removedTextBorder": alpha(p.status.red, 24),
-    "diffEditor.border": p.bg.border,
-    "merge.border": p.bg.border,
-    "merge.commonContentBackground": alpha(p.misc.diff_common, 6),
-    "merge.commonHeaderBackground": alpha(p.misc.diff_common, 8),
-    "merge.incomingContentBackground": alpha(p.accent.primary, 6),
-    "merge.currentContentBackground": alpha(p.bg.border, 8),
-    "mergeEditor.changeBase.background": alpha(p.bg.border, 5),
-    "mergeEditor.conflict.input1.background": alpha(
-      p.status.modified_gutter,
-      8
-    ),
-    "mergeEditor.conflict.input2.background": alpha(p.status.added_gutter, 8),
-    "editorOverviewRuler.incomingContentForeground": p.accent.primary,
-    "editorOverviewRuler.currentContentForeground": p.bg.border,
-    "editorOverviewRuler.commonContentForeground": p.misc.diff_common,
+    "diffEditor.insertedTextBackground": alpha(p.git.added, 15),
+    "diffEditor.removedTextBackground": alpha(p.git.deleted, 15),
+    "diffEditor.border": p.core.border,
+    "merge.border": p.core.border,
+    "merge.currentContentBackground": alpha(p.git.conflict, 10),
+    "merge.incomingContentBackground": alpha(p.git.modified, 10),
   };
 
-  // COMMAND CENTER
-  const commandCenter = {
-    "commandCenter.foreground": p.fg.secondary,
-    "commandCenter.activeForeground": p.fg.primary,
-    "commandCenter.background": p.bg.base,
-    "commandCenter.activeBackground": p.bg.base,
-    "commandCenter.border": alpha(p.bg.border, 60),
-    "commandCenter.inactiveForeground": "#0000ff",
-    "commandCenter.inactiveBorder": alpha(p.bg.border, 20),
-    "commandCenter.activeBorder": p.bg.command_border,
-    "commandCenter.debuggingBackground": "#00ff00",
-  };
-
-  // --- PANEL / OUTPUT / PROBLEMS / TERMINAL (panel background uses darker surface) ---
+  // --- PANEL / TERMINAL ---
   const panel = {
-    "panel.background": p.bg.surface,
-    "panel.border": p.bg.border,
-    "panelTitle.activeBorder": p.accent.primary,
-    "panelTitle.activeForeground": p.fg.primary,
-    "panelTitle.inactiveForeground": p.fg.secondary,
-    "terminal.selectionBackground": p.bg.command_border,
-    "terminalCursor.foreground": p.fg.primary,
-    "terminalCursor.background": p.bg.command_border,
-    "badge.background": p.accent.primary_hover,
-    "badge.foreground": p.fg.primary,
-    "terminal.border": p.bg.command_border,
-    "panel.dropBorder": alpha(p.bg.border, 10),
-    "panelInput.border": p.bg.border,
-    "panelSectionHeader.background": p.bg.base,
-    "panelSectionHeader.foreground": p.fg.secondary,
-    "panelSection.border": p.bg.border,
-    "outputView.background": p.bg.surface,
+    "panel.background": p.panel.bg,
+    "panel.border": p.panel.border,
+    "panelTitle.activeBorder": p.tabs.activeBorderTop, // Linha abaixo da aba do painel
+    "panelTitle.activeForeground": p.panel.headerFg,
+    "panelTitle.inactiveForeground": alpha(p.panel.headerFg, 60),
+    "terminal.background": p.panel.bg,
+    "terminal.foreground": p.core.fg,
+    "terminal.border": p.panel.border,
+    "terminalCursor.foreground": p.editor.cursor,
+    "terminalCursor.background": p.editor.bg,
+    "terminal.selectionBackground": p.editor.selection,
   };
 
-  // --- TERMINAL ---
+  // --- TERMINAL ANSI COLORS ---
   const terminal = {
-    "terminal.background": p.bg.surface,
-    "terminal.foreground": p.fg.primary,
-    "terminal.border": p.bg.border,
     "terminal.ansiBlack": p.terminal.black,
     "terminal.ansiRed": p.terminal.red,
     "terminal.ansiGreen": p.terminal.green,
@@ -274,141 +233,101 @@ export const getUiColors = (palette: AetherPalette) => {
     "terminal.ansiBrightMagenta": p.terminal.brightMagenta,
     "terminal.ansiBrightCyan": p.terminal.brightCyan,
     "terminal.ansiBrightWhite": p.terminal.brightWhite,
-    "terminal.selectionBackground": alpha(p.misc.selection_weak, 14),
-    "terminalCursor.background": p.bg.surface,
-    "terminalCursor.foreground": p.fg.primary,
   };
 
-  // --- QUICK PICK / INPUTS / SUGGEST / HOVER / WIDGETS ---
+  // --- WIDGETS (Quick Pick, Suggest) ---
   const quickAndWidgets = {
-    "quickInput.background": p.bg.surface,
-    "quickInput.foreground": p.fg.primary,
-    "quickInputTitle.background": alpha(p.bg.border, 6),
-    "quickInputList.focusBackground": alpha(p.accent.primary, 12),
-    "quickInputList.focusForeground": p.fg.primary,
-    "editorHoverWidget.background": p.bg.surface,
-    "editorHoverWidget.foreground": p.fg.primary,
-    "editorHoverWidget.border": p.bg.border,
-    "editorSuggestWidget.background": p.bg.surface,
-    "editorSuggestWidget.foreground": p.fg.primary,
-    "editorSuggestWidget.border": p.bg.border,
-    "editorSuggestWidget.selectedBackground": alpha(p.accent.primary, 12),
-    "editorSuggestWidget.highlightForeground": p.accent.primary,
-    "widget.background": p.bg.surface,
-    "widget.border": p.bg.border,
-    "widget.shadow": alpha(p.accent.primary, 7),
+    "quickInput.background": p.input.bg,
+    "quickInput.foreground": p.input.fg,
+    "quickInputList.focusBackground": p.list.activeSelectionBg,
+    "quickInputList.focusForeground": p.list.activeSelectionFg,
+    "editorSuggestWidget.background": p.input.bg,
+    "editorSuggestWidget.foreground": p.input.fg,
+    "editorSuggestWidget.border": p.input.border,
+    "editorSuggestWidget.selectedBackground": p.list.activeSelectionBg,
+    "editorSuggestWidget.highlightForeground": p.editor.findMatch,
   };
 
-  // --- HOVER / PEAK / FIND WIDGET / SNIPPETS ---
-  const peekAndFind = {
-    "peekViewEditor.background": p.bg.surface,
-    "peekViewEditorGutter.background": alpha(p.bg.border, 6),
-    "peekViewEditor.matchHighlightBackground": alpha(p.accent.primary, 14),
-    "peekViewResult.background": p.bg.base,
-    "peekViewTitle.background": p.bg.surface,
-    "peekViewTitleLabel.foreground": p.fg.primary,
-    "peekViewTitleDescription.foreground": p.fg.secondary,
-    "findWidget.background": p.bg.surface,
-    "findWidget.searchBackground": alpha(p.accent.primary, 10),
-    "findWidget.replaceBackground": alpha(p.bg.border, 6),
-    "editor.snippetTabstopHighlightBackground": alpha(p.accent.primary, 8),
-    "editor.snippetTabstopHighlightBorder": alpha(p.accent.primary, 24),
+  // --- SYMBOL ICONS (Mapeados para cores de sintaxe para consistência) ---
+  const symbolIcons = {
+    "symbolIcon.classForeground": p.syntax.classes,
+    "symbolIcon.constructorForeground": p.syntax.functions,
+    "symbolIcon.enumeratorForeground": p.syntax.types,
+    "symbolIcon.fieldForeground": p.syntax.variables,
+    "symbolIcon.functionForeground": p.syntax.functions,
+    "symbolIcon.interfaceForeground": p.syntax.types,
+    "symbolIcon.methodForeground": p.syntax.functions,
+    "symbolIcon.variableForeground": p.syntax.variables,
+    "symbolIcon.constantForeground": p.syntax.constants,
+    "symbolIcon.stringForeground": p.syntax.strings,
+    "symbolIcon.keywordForeground": p.syntax.keywords,
+    "symbolIcon.numberForeground": p.syntax.numbers,
+    "symbolIcon.booleanForeground": p.syntax.constants,
+    "symbolIcon.arrayForeground": p.syntax.types,
+    "symbolIcon.operatorForeground": p.syntax.operators,
   };
 
-  // --- NOTIFICATIONS / TOASTS ---
-  const notifications = {
-    "notifications.foreground": p.fg.primary,
-    "notifications.background": p.bg.surface,
-    "notificationToast.border": p.bg.border,
-    "notificationsErrorIcon.foreground": p.status.error,
-    "notificationsWarninIcon.foreground": p.status.warning,
-    "notificationsInfoIcon.foreground": p.status.info,
-    "notificationCenterHeader.foreground": p.fg.secondary,
-    "notificationCenterHeader.background": p.bg.base,
-    "notification.border": p.bg.border,
-    "notificationCenter.border": p.bg.command_border,
-    "notificationLink.foreground": p.accent.primary,
-    "notificationButton.background": alpha(p.accent.primary, 10),
-    "notificationButton.foreground": p.fg.primary,
+  // --- DEBUG ICONS ---
+  const debugIcons = {
+    "debugIcon.breakpointForeground": p.status.error,
+    "debugIcon.startForeground": p.status.success,
+    "debugIcon.pauseForeground": p.status.warning,
+    "debugIcon.stopForeground": p.status.error,
+    "debugToolBar.background": p.panel.bg,
   };
 
-  // --- GIT / SCM / DECORATIONS ---
+  // --- GIT DECORATIONS ---
   const git = {
-    "gitDecoration.addedResourceForeground": p.status.added_gutter,
-    "gitDecoration.modifiedResourceForeground": p.status.modified_gutter,
-    "gitDecoration.deletedResourceForeground": p.status.deleted_gutter,
-    "gitDecoration.renamedResourceForeground": p.status.info,
-    "gitDecoration.untrackedResourceForeground": alpha(p.status.green, 70),
-    "gitDecoration.ignoredResourceForeground": alpha(p.fg.secondary, 40),
-    "gitDecoration.conflictingResourceForeground": p.status.red,
-    "git.blame.editorDecorationForeground": alpha(p.fg.secondary, 60),
+    "gitDecoration.addedResourceForeground": p.git.added,
+    "gitDecoration.modifiedResourceForeground": p.git.modified,
+    "gitDecoration.deletedResourceForeground": p.git.deleted,
+    "gitDecoration.conflictingResourceForeground": p.git.conflict,
+    "gitDecoration.ignoredResourceForeground": p.git.ignored,
   };
 
-  // --- BREADCRUMBS / NAVIGATION ---
-  const breadcrumbs = {
-    "breadcrumb.background": p.bg.surface,
-    "breadcrumb.foreground": p.fg.secondary,
-    "breadcrumb.focusForeground": p.fg.primary,
-    "breadcrumb.activeSelectionForeground": p.fg.primary,
-    "breadcrumbPicker.background": p.bg.surface,
-    "editorGroupHeader.border": p.bg.command_border,
-  };
-
-  // --- SCHEMAS / SETTINGS / TABLES / CHARTS / NOTEBOOKS (basic UI tokens) ---
+  // --- MISC / TEXT RICH ---
   const misc = {
-    "settings.headerForeground": p.fg.primary,
-    "settings.modifiedItemIndicator": p.accent.primary,
-    "settings.dropdownBackground": p.bg.dropdown,
-    "settings.rowHoverBackground": alpha(p.bg.border, 6),
-    "keybindingLabel.background": alpha(p.bg.border, 6),
-    "charts.foreground": p.fg.primary,
-    "charts.lines": alpha(p.fg.secondary, 30),
-    "notebook.editorBackground": p.bg.surface,
-    "notebook.cellBorderColor": p.bg.border,
-    "notebook.cellHoverBackground": alpha(p.bg.border, 6),
-    "notebook.outputContainerBackgroundColor": alpha(p.bg.surface, 6),
-    "ports.iconRunningProcessForeground": p.status.green,
+    "textBlockQuote.background": alpha(p.sideBar.bg, 50),
+    "textBlockQuote.border": p.tabs.activeBorderTop,
+    "textCodeBlock.background": p.input.bg,
+    "textLink.activeForeground": p.button.primary.hover,
+    "keybindingLabel.background": p.input.bg,
+    "keybindingLabel.foreground": p.core.fg,
+    "keybindingLabel.border": p.core.border,
+    "keybindingLabel.bottomBorder": p.core.border,
+    "notifications.background": p.input.bg,
+    "notifications.foreground": p.core.fg,
+    "notificationToast.border": p.core.border,
   };
 
-  // --- MINIMAP ---
-  const minimap = {
-    "minimap.background": p.bg.surface,
-    "minimap.findMatchHighlight": alpha(p.accent.secondary, 80),
-    "minimap.selectionHighlight": alpha(p.accent.primary, 60),
-    "minimap.errorHighlight": alpha(p.status.error, 80),
-    "minimap.warningHighlight": alpha(p.status.warning, 80),
-    "minimap.selectionOccurrenceHighlight": alpha(p.accent.primary, 35),
-    "minimap.cursorHighlight": alpha(p.fg.primary, 60),
-    "minimapGutter.addedBackground": p.status.added_gutter,
-    "minimapGutter.modifiedBackground": p.status.modified_gutter,
-    "minimapGutter.deletedBackground": p.status.deleted_gutter,
-    "minimap.foregroundOpacity": "0.6",
+  // --- BREADCRUMBS ---
+  const breadcrumbs = {
+    "breadcrumb.background": p.editor.bg,
+    "breadcrumb.foreground": mutedFg,
+    "breadcrumb.focusForeground": p.core.fg,
+    "breadcrumb.activeSelectionForeground": p.core.fg,
   };
 
-  // --- RETURN (flattened by spreading sections) ---
   return {
     ...base,
-
-    // major UI sections
     ...activityBar,
     ...sidebar,
     ...statusBar,
     ...titleBar,
     ...buttons,
     ...inputs,
+    ...formControls,
     ...lists,
     ...tabs,
     ...editor,
     ...diffAndMerge,
-    ...commandCenter,
     ...panel,
     ...terminal,
     ...quickAndWidgets,
-    ...peekAndFind,
-    ...notifications,
+    ...symbolIcons,
+    ...debugIcons,
     ...git,
-    ...breadcrumbs,
     ...misc,
-    ...minimap,
+    ...breadcrumbs,
   } as Record<string, string | undefined>;
 };

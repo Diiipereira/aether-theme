@@ -1,64 +1,150 @@
 import { AetherPalette } from "../types";
 
 export const coffeePalette: AetherPalette = {
-  bg: {
-    base: "#211b16",
-    surface: "#2a221c",
+  core: {
+    bg: "#211b16",
+    fg: "#fde9d4",
     border: "#3b3027",
-    command_border: "#524338",
-    input: "#1c1713",
-    overlay: "#14100d",
-    badge: "#3b3027",
-    dropdown: "#2a221c",
-    button_muted: "#3b3027",
-    button_muted_hover: "#4f4034",
+    overlay: "#14100dcc",
   },
-  accent: {
-    primary: "#9c7955",
-    primary_hover: "#7e5a34",
-    secondary: "#8ab4c9",
-    tertiary: "#99b898",
+
+  activityBar: {
+    bg: "#211b16",
+    fg: "#b09e90",
+    activeBorder: "#9c7955",
+    activeBg: "#2a221c",
+    badgeBg: "#9c7955",
+    badgeFg: "#ffffff",
+  },
+
+  sideBar: {
+    bg: "#211b16",
+    fg: "#b09e90",
+    border: "#3b3027",
+    titleFg: "#8a7968",
+    sectionHeaderBg: "#2a221c",
+  },
+
+  statusBar: {
+    bg: "#2a221c",
+    fg: "#fde9d4",
+    border: "#3b3027",
+    itemHover: "#3b3027",
+    remoteBg: "#9c7955",
+  },
+
+  titleBar: {
+    bg: "#211b16",
+    fg: "#b09e90",
+    inactiveBg: "#1c1713",
+  },
+
+  panel: {
+    bg: "#2a221c",
+    headerFg: "#b09e90",
+    border: "#3b3027",
+  },
+
+  editor: {
+    bg: "#2a221c",
+    fg: "#fde9d4",
+    lineHighlight: "#362c26",
     selection: "#4a3b30",
-    highlight: "#362c26",
+    findMatch: "#9c7955",
+    cursor: "#fde9d4",
+    gutter: {
+      bg: "#2a221c",
+      fg: "#6e6056",
+      activeFg: "#fde9d4",
+    },
+    indentGuide: {
+      active: "#9c7955",
+      inactive: "#3b3027",
+    },
+    bracketMatch: {
+      bg: "#3b3027",
+      border: "#9c7955",
+    },
   },
-  fg: {
-    primary: "#fde9d4",
-    secondary: "#b09e90",
-    code: "#e8dccf",
-    muted: "#8a7968",
-    link: "#8ab4c9",
-    active: "#ffffff",
+
+  button: {
+    primary: {
+      bg: "#9c7955",
+      fg: "#ffffff",
+      hover: "#7e5a34",
+    },
+    secondary: {
+      bg: "#3b3027",
+      fg: "#fde9d4",
+      hover: "#4f4034",
+    },
   },
-  status: {
-    green: "#a7c080",
-    yellow: "#dbbc7f",
-    red: "#e67e80",
-    error: "#e67e80",
-    error_bg: "#422425",
-    warning: "#dbbc7f",
-    warning_bg: "#423924",
-    info: "#7fbbb3",
-    info_bg: "#1f3336",
-    submodule: "#d699b6",
-    error_dark: "#d65d60",
-    added_gutter: "#a7c080",
-    modified_gutter: "#dbbc7f",
-    deleted_gutter: "#e67e80",
+
+  input: {
+    bg: "#1c1713",
+    fg: "#fde9d4",
+    border: "#3b3027",
+    placeholder: "#8a7968",
+    focusBorder: "#9c7955",
+    validation: {
+      errorBg: "#422425",
+      errorBorder: "#e67e80",
+    },
   },
-  diff: {
-    removed_bg: "#422425",
-    marker_info: "#7fbbb3",
+
+  list: {
+    hoverBg: "#3b3027",
+    focusBg: "#3b3027",
+    activeSelectionBg: "#4a3b30",
+    activeSelectionFg: "#fde9d4",
+    inactiveSelectionBg: "#2a221c",
   },
+
+  tabs: {
+    activeBg: "#2a221c",
+    activeFg: "#fde9d4",
+    activeBorderTop: "#9c7955",
+    inactiveBg: "#211b16",
+    inactiveFg: "#8a7968",
+    border: "#3b3027",
+  },
+
+  scrollBar: {
+    shadow: "#00000040",
+    sliderBg: "#4f403460",
+    sliderHover: "#4f4034",
+    sliderActive: "#9c7955",
+  },
+
   syntax: {
     variables: "#d6dbe5",
     keywords: "#e6b88a",
-    numbers: "#d699b6",
-    constants: "#8ab4c9",
     functions: "#a7c080",
     strings: "#dbbc7f",
+    numbers: "#d699b6",
+    constants: "#8ab4c9",
+    types: "#8ab4c9",
+    classes: "#8ab4c9",
     operators: "#7fbbb3",
     comments: "#6e6056",
+    tags: "#e6b88a",
   },
+
+  status: {
+    info: "#7fbbb3",
+    warning: "#dbbc7f",
+    error: "#e67e80",
+    success: "#a7c080",
+  },
+
+  git: {
+    added: "#a7c080",
+    modified: "#dbbc7f",
+    deleted: "#e67e80",
+    ignored: "#8a7968",
+    conflict: "#d699b6",
+  },
+
   terminal: {
     black: "#2a221c",
     red: "#e67e80",
@@ -76,11 +162,5 @@ export const coffeePalette: AetherPalette = {
     brightMagenta: "#eebad5",
     brightCyan: "#a3dcd7",
     brightWhite: "#ffffff",
-  },
-  misc: {
-    selection_weak: "#4a3b30",
-    debug_border: "#e67e80",
-    special_border: "#7fbbb3",
-    diff_common: "#8a7968",
   },
 };

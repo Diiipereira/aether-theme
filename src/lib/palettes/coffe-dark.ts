@@ -1,86 +1,166 @@
 import { AetherPalette } from "../types";
 
 export const coffeeDarkPalette: AetherPalette = {
-  bg: {
-    base: "#130e0f",
-    surface: "#0c0705",
-    border: "#191411",
-    command_border: "#312722",
-    input: "#120D0B",
-    overlay: "#000000",
-    badge: "#261B1A",
-    dropdown: "#261B1A",
-    button_muted: "#3A2F28",
-    button_muted_hover: "#4A3C33",
+  core: {
+    bg: "#181513",
+    fg: "#c0b2a4",
+    border: "#2b231f",
+    overlay: "#000000cc",
   },
-  accent: {
-    primary: "#855132",
-    primary_hover: "#705018",
-    secondary: "#7AA0B9",
-    tertiary: "#B2C96A",
-    selection: "#4A3C33",
-    highlight: "#B58A66",
+
+  activityBar: {
+    bg: "#181513",
+    fg: "#7d6a5e",
+    activeBorder: "#9e6744",
+    activeBg: "#211d1a",
+    badgeBg: "#9e6744",
+    badgeFg: "#ece2d6",
   },
-  fg: {
-    primary: "#b9aa9a",
-    secondary: "#6D5B51",
-    code: "#EAE0D5",
-    muted: "#8A7968",
-    link: "#7AA0B9",
-    active: "#EAE0D5",
+
+  sideBar: {
+    bg: "#181513",
+    fg: "#7d6a5e",
+    border: "#2b231f",
+    titleFg: "#948375",
+    sectionHeaderBg: "#110e0d",
   },
-  status: {
-    green: "#909973",
-    yellow: "#E5AD4C",
-    red: "#D17B49",
-    error: "#D17B49",
-    error_bg: "#D17B49",
-    error_dark: "#D17B49",
-    warning: "#E5AD4C",
-    warning_bg: "#E5AD4C",
-    info: "#7AA0B9",
-    info_bg: "#7AA0B9",
-    submodule: "#B58A66",
-    added_gutter: "#909973",
-    modified_gutter: "#E5AD4C",
-    deleted_gutter: "#D17B49",
+
+  statusBar: {
+    bg: "#110e0d",
+    fg: "#c0b2a4",
+    border: "#2b231f",
+    itemHover: "#2b231f",
+    remoteBg: "#9e6744",
   },
-  diff: {
-    removed_bg: "#D17B49",
-    marker_info: "#7AA0B9",
+
+  titleBar: {
+    bg: "#181513",
+    fg: "#7d6a5e",
+    inactiveBg: "#110e0d",
   },
+
+  panel: {
+    bg: "#110e0d",
+    headerFg: "#c0b2a4",
+    border: "#2b231f",
+  },
+
+  editor: {
+    bg: "#110e0d",
+    fg: "#c0b2a4",
+    lineHighlight: "#211d1a",
+    selection: "#3d2e26",
+    findMatch: "#9e6744",
+    cursor: "#ece2d6",
+    gutter: {
+      bg: "#110e0d",
+      fg: "#52443d",
+      activeFg: "#c0b2a4",
+    },
+    indentGuide: {
+      active: "#9e6744",
+      inactive: "#2b231f",
+    },
+    bracketMatch: {
+      bg: "#2b231f",
+      border: "#9e6744",
+    },
+  },
+
+  button: {
+    primary: {
+      bg: "#9e6744",
+      fg: "#ece2d6",
+      hover: "#875638",
+    },
+    secondary: {
+      bg: "#332924",
+      fg: "#c0b2a4",
+      hover: "#40332d",
+    },
+  },
+
+  input: {
+    bg: "#1d1917",
+    fg: "#c0b2a4",
+    border: "#2b231f",
+    placeholder: "#7d6a5e",
+    focusBorder: "#9e6744",
+    validation: {
+      errorBg: "#331f1f",
+      errorBorder: "#d17b49",
+    },
+  },
+
+  list: {
+    hoverBg: "#211d1a",
+    focusBg: "#211d1a",
+    activeSelectionBg: "#3d2e26",
+    activeSelectionFg: "#ece2d6",
+    inactiveSelectionBg: "#181513",
+  },
+
+  tabs: {
+    activeBg: "#110e0d",
+    activeFg: "#c0b2a4",
+    activeBorderTop: "#9e6744",
+    inactiveBg: "#181513",
+    inactiveFg: "#7d6a5e",
+    border: "#2b231f",
+  },
+
+  scrollBar: {
+    shadow: "#000000",
+    sliderBg: "#33292460",
+    sliderHover: "#332924",
+    sliderActive: "#9e6744",
+  },
+
   syntax: {
-    variables: "#B58A66",
-    keywords: "#D17B49",
-    numbers: "#E5AD4C",
+    variables: "#c29d7e",
+    keywords: "#d17b49",
+    functions: "#e5ad4c",
+    strings: "#d17b49",
+    numbers: "#e5ad4c",
     constants: "#909973",
-    functions: "#E5AD4C",
-    strings: "#D17B49",
-    operators: "#7AA0B9",
-    comments: "#8A7968",
+    types: "#909973",
+    classes: "#909973",
+    operators: "#7aa0b9",
+    comments: "#8a7968",
+    tags: "#d17b49",
   },
+
+  status: {
+    info: "#7aa0b9",
+    warning: "#e5ad4c",
+    error: "#d17b49",
+    success: "#909973",
+  },
+
+  git: {
+    added: "#909973",
+    modified: "#e5ad4c",
+    deleted: "#d17b49",
+    ignored: "#6d5b51",
+    conflict: "#b58a66",
+  },
+
   terminal: {
-    black: "#0B0706",
-    red: "#D17B49",
+    black: "#110e0d",
+    red: "#d17b49",
     green: "#909973",
-    yellow: "#E5AD4C",
-    blue: "#7AA0B9",
-    magenta: "#B58A66",
-    cyan: "#7AA0B9",
-    white: "#EAE0D5",
-    brightBlack: "#6D5B51",
-    brightRed: "#D17B49",
+    yellow: "#e5ad4c",
+    blue: "#7aa0b9",
+    magenta: "#b58a66",
+    cyan: "#7aa0b9",
+    white: "#ece2d6",
+    brightBlack: "#6d5b51",
+    brightRed: "#d17b49",
     brightGreen: "#909973",
-    brightYellow: "#E5AD4C",
-    brightBlue: "#7AA0B9",
-    brightMagenta: "#B58A66",
-    brightCyan: "#7AA0B9",
-    brightWhite: "#EAE0D5",
-  },
-  misc: {
-    selection_weak: "#7AA0B9",
-    debug_border: "#D17B49",
-    special_border: "#3A2F28",
-    diff_common: "#6D5B51",
+    brightYellow: "#e5ad4c",
+    brightBlue: "#7aa0b9",
+    brightMagenta: "#b58a66",
+    brightCyan: "#7aa0b9",
+    brightWhite: "#ece2d6",
   },
 };
