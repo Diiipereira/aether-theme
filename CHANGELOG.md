@@ -3,6 +3,15 @@
 </div>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  [1.3.1] — Description adjustment in the package.json file
+</div>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
+<ul>
+  <li>Corrections to the description in package.json and some other improvements.</li>
+</ul>
+
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
   [1.3.0] — The Semantic Update & Coffee Dark
 </div>
 
