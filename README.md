@@ -22,7 +22,7 @@
 
 <p>
 A coleção <strong>Aether Themes</strong> foi criada com foco absoluto em uma experiência visual moderna, confortável e premium.  
-Com cores precisas, contraste equilibrado, sintaxe refinada e integração completa com Explorer, Terminal, HTML, Markdown e TypeScript.
+Com cores precisas, contraste equilibrado e suporte abrangente para as linguagens mais populares do mercado.
 </p>
 
 <p>
@@ -32,51 +32,49 @@ Se você gosta de temas escuros, claros ou quentes com tons de café, esta cole�
 <br><br>
 
 <h3 align="center" style="margin: 0; padding: 0; font-size: 26px;">
-  🎨 Temas Inclusos
+  🎨 Preview
 </h3>
 
 <hr style="border: 0; height: 1px; background: rgba(255,255,255,0.08); width: 80%; margin: 16px auto;">
 
-<div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-themes.gif" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" alt="Aether Themes Preview" />
+</p>
 
-  <div style="text-align: center;">
-    <p><strong>Aether Dark</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-dark.png">
-  </div>
-
-  <div style="text-align: center;">
-    <p><strong>Aether Dark Space</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-darkspace.png">
-  </div>
-
-  <div style="text-align: center;">
-    <p><strong>Aether Coffee</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-coffe.png">
-  </div>
-
-  <div style="text-align: center;">
-    <p><strong>Aether Light</strong></p>
-    <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-light.png">
-  </div>
-
-</div>
+<p align="center" style="color: #94a3b8; font-size: 14px; margin-top: 10px;">
+  Incluso na coleção:
+  <br>
+  <strong>Aether Dark</strong> • 
+  <strong>Aether Dark Space</strong> • 
+  <strong>Aether Coffee</strong> • 
+  <strong>Aether Coffee Dark</strong> <span style="color: #4ade80; font-size: 10px; vertical-align: super;">NOVO</span> • 
+  <strong>Aether Light</strong>
+</p>
 
 <br>
 
 <div style="font-size: 22px; font-weight: 700;">⭐ Destaques</div>
 
 <ul>
-  <li>Sintaxe altamente refinada para:
+  <li><strong>Sintaxe Refinada (Tokens):</strong> Cores dedicadas para diferenciar lógica, tipos e dados em:
     <ul>
-      <li><code>Funções</code>, <code>Parâmetros</code>, <code>Variáveis</code>, <code>Propriedades</code>, <code>Classes</code>, <code>this</code></li>
-      <li>Tipos e padrões do <strong>TypeScript</strong></li>
+      <li><code>JavaScript</code>, <code>TypeScript</code>, <code>React (JSX/TSX)</code>, <code>Svelte</code></li>
+      <li><code>Python</code>, <code>Java</code>, <code>Go</code>, <code>Rust</code>, <code>PHP</code></li>
+      <li><code>C</code>, <code>C++</code>, <code>C#</code></li>
+      <li><code>HTML</code>, <code>CSS</code>, <code>SCSS</code>, <code>Tailwind</code></li>
+      <li><code>SQL</code>, <code>JSON</code>, <code>YAML</code>, <code>TOML</code></li>
     </ul>
   </li>
-  <li>HTML totalmente estilizado</li>
-  <li>Markdown completo (headings, listas, links, blockquotes, inline-code)</li>
-  <li>Explorer, Search, Tabs e Terminal integrados visualmente</li>
-  <li>Cores consistentes e suaves</li>
-  <li>Design focado em conforto visual e longas sessões de código</li>
+  <li><strong>Interface (UI) Profunda:</strong> Não é apenas o editor. Estilizamos tudo:
+    <ul>
+      <li>Botões, Inputs, Dropdowns e Badges</li>
+      <li>Terminal Integrado e Search</li>
+      <li>Barras de rolagem (Scrollbars) sutis</li>
+      <li>Diff View (Git) com cores claras para adição/remoção</li>
+    </ul>
+  </li>
+  <li><strong>Markdown Premium:</strong> Headings, Blockquotes, Links, Listas e Code Blocks com visual limpo para documentação.</li>
+  <li><strong>Semantic Highlighting:</strong> Suporte total à inteligência do VS Code para distinguir variáveis, parâmetros e propriedades readonly.</li>
 </ul>
 
 <br><br>
@@ -99,19 +97,10 @@ Se você gosta de temas escuros, claros ou quentes com tons de café, esta cole�
 code --install-extension diogo-aether.aether-dark
 ```
 
-<br>
-
-<div style="font-size: 22px; font-weight: 700;">
-  ❤️ Contribuições
-</div>
+<div style="font-size: 22px; font-weight: 700;"> ❤️ Contribuições </div>
 
 <p>Feito por <a href="https://github.com/Diiipereira">Diogo Pereira</a> e <a href="https://github.com/ElielDouglas">Eliel Douglas</a></p>
 
-<br>
+<div style="font-size: 22px; font-weight: 700;"> 📄 Licença </div>
 
-<div style="font-size: 22px; font-weight: 700;">
-  📄 Licença
-</div>
-
-<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENSE">MIT Licence</a>
-</p>
+<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENSE">MIT Licence</a> </p>
