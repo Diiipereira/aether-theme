@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/logo.png" width="150" />
+  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/assets/logo-full.png" width="300" alt="Aether Themes Logo" />
 </p>
-
-<div align="center" style="font-size: 32px; font-weight: 700; margin-top: 8px;">
-  Aether Themes
-</div>
 
 <p align="center" style="margin-top: 8px;">
   Uma coleção premium de temas modernos para Visual Studio Code

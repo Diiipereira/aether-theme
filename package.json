@@ -4,7 +4,7 @@
   "displayName": "Aether Themes",
   "description": "Coleção premium com 4 temas VS Code (Dark, Dark Space, Coffe e Light). Legibilidade perfeita, sintaxe refinada para TypeScript e integração total com HTML, Markdown, Explorer e Terminal.",
   "version": "1.3.0",
-  "icon": "logo.png",
+  "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#121212",
     "theme": "dark"
