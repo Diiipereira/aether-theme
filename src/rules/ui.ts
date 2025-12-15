@@ -6,10 +6,10 @@ export const getUiColors = (palette: AetherPalette) => {
 
   const mutedFg = alpha(p.core.fg, 65);
 
-  // --- BASE / CORE ---
+  // BASE / CORE
   const base = {
     foreground: p.core.fg,
-    focusBorder: p.input.focusBorder, // Foco global segue o padrão de input
+    focusBorder: p.input.focusBorder,
     descriptionForeground: mutedFg,
     errorForeground: p.status.error,
     "icon.foreground": mutedFg,
@@ -21,11 +21,11 @@ export const getUiColors = (palette: AetherPalette) => {
     "scrollbarSlider.activeBackground": p.scrollBar.sliderActive,
     "window.activeBorder": p.core.border,
     "window.inactiveBorder": alpha(p.core.border, 60),
-    "sash.hoverBorder": p.tabs.activeBorderTop, // Geralmente a cor de destaque
-    "progressBar.background": p.tabs.activeBorderTop, // Barra de loading
+    "sash.hoverBorder": p.tabs.activeBorderTop,
+    "progressBar.background": p.tabs.activeBorderTop,
   };
 
-  // --- ACTIVITY BAR ---
+  // ACTIVITY BAR
   const activityBar = {
     "activityBar.background": p.activityBar.bg,
     "activityBar.foreground": p.activityBar.fg,
@@ -38,7 +38,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "activityBarBadge.foreground": p.activityBar.badgeFg,
   };
 
-  // --- SIDEBAR ---
+  // SIDEBAR
   const sidebar = {
     "sideBar.background": p.sideBar.bg,
     "sideBar.foreground": p.sideBar.fg,
@@ -50,7 +50,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "sideBarSectionHeader.border": p.sideBar.border,
   };
 
-  // --- STATUS BAR ---
+  // STATUS BAR
   const statusBar = {
     "statusBar.foreground": p.statusBar.fg,
     "statusBar.background": p.statusBar.bg,
@@ -58,7 +58,6 @@ export const getUiColors = (palette: AetherPalette) => {
     "statusBarItem.hoverBackground": p.statusBar.itemHover,
     "statusBarItem.remoteBackground": p.statusBar.remoteBg,
     "statusBarItem.remoteForeground": p.statusBar.fg,
-    // Debugging herda do status padrão ou usa warning/info se preferir destacar
     "statusBar.debuggingBackground": p.status.warning,
     "statusBar.debuggingForeground": p.core.bg,
     "statusBar.debuggingBorder": p.status.warning,
@@ -66,15 +65,14 @@ export const getUiColors = (palette: AetherPalette) => {
     "statusBar.noFolderForeground": mutedFg,
   };
 
-  // --- TITLE BAR & MENUS ---
+  // TITLE BAR & MENUS
   const titleBar = {
     "titleBar.activeBackground": p.titleBar.bg,
     "titleBar.activeForeground": p.titleBar.fg,
     "titleBar.inactiveBackground": p.titleBar.inactiveBg,
     "titleBar.inactiveForeground": alpha(p.titleBar.fg, 60),
     "titleBar.border": p.core.border,
-    // Menus (File, Edit...)
-    "menu.background": p.input.bg, // Geralmente igual inputs ou dropdowns
+    "menu.background": p.input.bg,
     "menu.foreground": p.core.fg,
     "menu.border": p.core.border,
     "menu.selectionBackground": p.list.activeSelectionBg,
@@ -82,7 +80,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "menu.separatorBackground": p.core.border,
   };
 
-  // --- BUTTONS / BADGES / TOOLBAR ---
+  // BUTTONS / BADGES / TOOLBAR
   const buttons = {
     "button.background": p.button.primary.bg,
     "button.foreground": p.button.primary.fg,
@@ -93,10 +91,10 @@ export const getUiColors = (palette: AetherPalette) => {
     "badge.foreground": p.activityBar.badgeFg,
     "badge.background": p.activityBar.badgeBg,
     "toolbar.hoverBackground": alpha(p.core.fg, 10),
-    "textLink.foreground": p.button.primary.bg, // Links geralmente usam cor primária
+    "textLink.foreground": p.button.primary.bg,
   };
 
-  // --- INPUTS / DROPDOWNS / VALIDATION ---
+  // INPUTS / DROPDOWNS / VALIDATION
   const inputs = {
     "input.background": p.input.bg,
     "input.border": p.input.border,
@@ -114,7 +112,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "dropdown.listBackground": p.input.bg,
   };
 
-  // --- FORM CONTROLS (Checkboxes & Radios) ---
+  // FORM CONTROLS (Checkboxes & Radios)
   const formControls = {
     "checkbox.background": p.input.bg,
     "checkbox.foreground": p.input.fg,
@@ -129,7 +127,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "radio.inactiveBorder": alpha(p.input.border, 50),
   };
 
-  // --- LISTS / TREES ---
+  // LISTS / TREES
   const lists = {
     "list.hoverBackground": p.list.hoverBg,
     "list.hoverForeground": p.core.fg,
@@ -146,9 +144,9 @@ export const getUiColors = (palette: AetherPalette) => {
     "list.warningForeground": p.status.warning,
   };
 
-  // --- TABS / EDITOR GROUPS ---
+  // TABS / EDITOR GROUPS
   const tabs = {
-    "editorGroupHeader.tabsBackground": p.titleBar.bg, // Fundo atrás das abas
+    "editorGroupHeader.tabsBackground": p.titleBar.bg,
     "editorGroupHeader.tabsBorder": p.tabs.border,
     "editorGroup.border": p.core.border,
     "tab.activeForeground": p.tabs.activeFg,
@@ -161,11 +159,11 @@ export const getUiColors = (palette: AetherPalette) => {
     "tab.hoverForeground": p.tabs.activeFg,
   };
 
-  // --- EDITOR ---
+  // EDITOR
   const editor = {
     "editor.background": p.editor.bg,
     "editor.foreground": p.editor.fg,
-    "editorWidget.background": p.input.bg, // Widgets tipo Find/Replace
+    "editorWidget.background": p.input.bg,
     "editorWidget.foreground": p.input.fg,
     "editorWidget.border": p.input.border,
     "editorError.foreground": p.status.error,
@@ -188,7 +186,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "editorGutter.deletedBackground": p.git.deleted,
   };
 
-  // --- DIFF EDITOR ---
+  // DIFF EDITOR
   const diffAndMerge = {
     "diffEditor.insertedTextBackground": alpha(p.git.added, 15),
     "diffEditor.removedTextBackground": alpha(p.git.deleted, 15),
@@ -198,11 +196,53 @@ export const getUiColors = (palette: AetherPalette) => {
     "merge.incomingContentBackground": alpha(p.git.modified, 10),
   };
 
-  // --- PANEL / TERMINAL ---
+  // MINIMAP
+  const minimap = {
+    "minimap.findMatchhighlight": p.editor.findMatch,
+    "minimap.selectionHighlight": p.editor.selection,
+    "minimap.errorhighlight": p.status.error,
+    "minimap.warningHighlght": p.status.warning,
+    "minimapSlider.background": alpha(p.scrollBar.sliderBg, 50),
+    "minimapSlider.hoverBackground": alpha(p.scrollBar.sliderHover, 50),
+    "minimapSlider.activeBackground": alpha(p.scrollBar.sliderActive, 50),
+  };
+
+  // EDITOR OVERVIEW RULER
+  const overviewRuler = {
+    "editorOverviewRuler.border": alpha(p.core.border, 0),
+    "editorOverviewRuler.findMatchForeground": p.editor.findMatch,
+    "editorOverviewRuler.rangeHighlightForeground": alpha(
+      p.editor.findMatch,
+      0
+    ),
+    "editorOverviewRuler.selectionHighlightForeground": alpha(
+      p.editor.selection,
+      0
+    ),
+    "editorOverviewRuler.wordHighlightForeground": alpha(
+      p.editor.findMatch,
+      20
+    ),
+    "editorOverviewRuler.bracketMatchForeground": p.editor.bracketMatch.border,
+    "editorOverviewRuler.errorForeground": p.status.error,
+    "editorOverviewRuler.warningForeground": p.status.warning,
+    "editorOverviewRuler.infoForeground": p.status.info,
+  };
+
+  // COMMAND CENTER
+  const commandCenter = {
+    "commandCenter.foreground": p.core.fg,
+    "commandCenter.activeForeground": p.tabs.activeFg,
+    "commandCenter.background": p.input.bg,
+    "commandCenter.border": p.core.border,
+    "commandCenter.activeBackground": alpha(p.input.bg, 80),
+  };
+
+  // PANEL / TERMINAL
   const panel = {
     "panel.background": p.panel.bg,
     "panel.border": p.panel.border,
-    "panelTitle.activeBorder": p.tabs.activeBorderTop, // Linha abaixo da aba do painel
+    "panelTitle.activeBorder": p.tabs.activeBorderTop,
     "panelTitle.activeForeground": p.panel.headerFg,
     "panelTitle.inactiveForeground": alpha(p.panel.headerFg, 60),
     "terminal.background": p.panel.bg,
@@ -213,7 +253,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "terminal.selectionBackground": p.editor.selection,
   };
 
-  // --- TERMINAL ANSI COLORS ---
+  // TERMINAL ANSI COLORS
   const terminal = {
     "terminal.ansiBlack": p.terminal.black,
     "terminal.ansiRed": p.terminal.red,
@@ -233,7 +273,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "terminal.ansiBrightWhite": p.terminal.brightWhite,
   };
 
-  // --- WIDGETS (Quick Pick, Suggest) ---
+  // WIDGETS (Quick Pick, Suggest)
   const quickAndWidgets = {
     "quickInput.background": p.input.bg,
     "quickInput.foreground": p.input.fg,
@@ -246,7 +286,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "editorSuggestWidget.highlightForeground": p.editor.findMatch,
   };
 
-  // --- SYMBOL ICONS (Mapeados para cores de sintaxe para consistência) ---
+  // SYMBOL ICONS (Mapeados para cores de sintaxe para consistência)
   const symbolIcons = {
     "symbolIcon.classForeground": p.syntax.classes,
     "symbolIcon.constructorForeground": p.syntax.functions,
@@ -265,7 +305,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "symbolIcon.operatorForeground": p.syntax.operators,
   };
 
-  // --- DEBUG ICONS ---
+  // DEBUG ICONS
   const debugIcons = {
     "debugIcon.breakpointForeground": p.status.error,
     "debugIcon.startForeground": p.status.success,
@@ -274,7 +314,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "debugToolBar.background": p.panel.bg,
   };
 
-  // --- GIT DECORATIONS ---
+  // GIT DECORATIONS
   const git = {
     "gitDecoration.addedResourceForeground": p.git.added,
     "gitDecoration.modifiedResourceForeground": p.git.modified,
@@ -283,7 +323,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "gitDecoration.ignoredResourceForeground": p.git.ignored,
   };
 
-  // --- MISC / TEXT RICH ---
+  // MISC / TEXT RICH
   const misc = {
     "textBlockQuote.background": alpha(p.sideBar.bg, 50),
     "textBlockQuote.border": p.tabs.activeBorderTop,
@@ -298,7 +338,7 @@ export const getUiColors = (palette: AetherPalette) => {
     "notificationToast.border": p.core.border,
   };
 
-  // --- BREADCRUMBS ---
+  // BREADCRUMBS
   const breadcrumbs = {
     "breadcrumb.background": p.editor.bg,
     "breadcrumb.foreground": mutedFg,
@@ -319,6 +359,9 @@ export const getUiColors = (palette: AetherPalette) => {
     ...tabs,
     ...editor,
     ...diffAndMerge,
+    ...minimap,
+    ...overviewRuler,
+    ...commandCenter,
     ...panel,
     ...terminal,
     ...quickAndWidgets,
@@ -327,5 +370,5 @@ export const getUiColors = (palette: AetherPalette) => {
     ...git,
     ...misc,
     ...breadcrumbs,
-  } as Record<string, string | undefined>;
+  };
 };

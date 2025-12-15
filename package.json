@@ -35,6 +35,10 @@
     "type": "git",
     "url": "https://github.com/Diiipereira/aether-theme.git"
   },
+  "bugs": {
+    "url": "https://github.com/Diiipereira/aether-theme/issues"
+  },
+  "homepage": "https://github.com/Diiipereira/aether-theme/blob/main/README.md",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -42,7 +46,8 @@
     "build": "ts-node src/index.ts",
     "package": "npm run build && vsce package",
     "publish": "npm run build && vsce publish",
-    "watch": "ts-node-dev --respawn src/index.ts"
+    "watch": "ts-node-dev --respawn src/index.ts",
+    "test": "ts-node src/test/test-theme.ts"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",

@@ -1,88 +1,81 @@
 export interface AetherPalette {
-  // --- 1. CORE / BASE ---
-  // Cores globais usadas como fallback ou base da aplicação
+  // 1. CORE / BASE
   core: {
-    bg: string; // Fundo principal da janela
-    fg: string; // Texto principal padrão
-    border: string; // Borda padrão usada na maioria dos divisores
-    overlay: string; // Fundo escurecido para modais/sombras
+    bg: string;
+    fg: string;
+    border: string;
+    overlay: string;
   };
 
-  // --- 2. LAYOUT MODULES (Estrutura da Janela) ---
-  // Controle individual de cada painel
+  // 2. LAYOUT MODULES (Estrutura da Janela)
   activityBar: {
     bg: string;
-    fg: string; // Ícones inativos
-    activeBorder: string; // Borda lateral do ícone ativo
-    activeBg: string; // Fundo do ícone ativo (opcional)
-    badgeBg: string; // Bolinha de notificação
-    badgeFg: string; // Texto da bolinha
+    fg: string;
+    activeBorder: string;
+    activeBg: string;
+    badgeBg: string;
+    badgeFg: string;
   };
 
   sideBar: {
     bg: string;
     fg: string;
-    border: string; // Borda separando sidebar do editor
-    titleFg: string; // "EXPLORER", "SEARCH"
-    sectionHeaderBg: string; // Fundo do título das seções colapsáveis
+    border: string;
+    titleFg: string;
+    sectionHeaderBg: string;
   };
 
   statusBar: {
     bg: string;
     fg: string;
-    border: string; // Borda superior
-    itemHover: string; // Hover nos itens clicáveis
-    remoteBg: string; // Botão de conexão remota (canto esquerdo)
+    border: string;
+    itemHover: string;
+    remoteBg: string;
   };
 
   titleBar: {
-    bg: string; // Barra de título (onde ficam os menus no Windows/Linux)
+    bg: string;
     fg: string;
-    inactiveBg: string; // Quando a janela perde o foco
+    inactiveBg: string;
   };
 
   panel: {
-    // Painel inferior (Terminal, Output, Problems)
     bg: string;
-    headerFg: string; // Títulos das abas do painel
+    headerFg: string;
     border: string;
   };
 
-  // --- 3. EDITOR (Área de código) ---
+  // 3. EDITOR (Área de código)
   editor: {
     bg: string;
     fg: string;
-    lineHighlight: string; // Fundo da linha onde o cursor está
-    selection: string; // Cor da seleção de texto
-    findMatch: string; // Cor do destaque da busca (Ctrl+F)
+    lineHighlight: string;
+    selection: string;
+    findMatch: string;
     cursor: string;
     gutter: {
-      // Margem esquerda (números de linha)
       bg: string;
-      fg: string; // Cor dos números
-      activeFg: string; // Cor do número da linha ativa
+      fg: string;
+      activeFg: string;
     };
     indentGuide: {
-      active: string; // Linha vertical de indentação ativa
-      inactive: string; // Linha vertical de indentação normal
+      active: string;
+      inactive: string;
     };
     bracketMatch: {
-      bg: string; // Fundo do parêntese correspondente
-      border: string; // Borda do parêntese correspondente
+      bg: string;
+      border: string;
     };
   };
 
-  // --- 4. UI COMPONENTS (Elementos interativos) ---
-  // Aqui resolvemos o problema de buttons e inputs usarem a mesma cor
+  // 4. UI COMPONENTS (Elementos interativos)
   button: {
     primary: {
-      // Botões de ação principal (azul, verde, etc)
       bg: string;
       fg: string;
       hover: string;
     };
     secondary: {
-      // Botões cancel ou secundários (cinza, outline)
       bg: string;
       fg: string;
       hover: string;
@@ -90,79 +83,73 @@ export interface AetherPalette {
   };
 
   input: {
-    // Caixas de texto e pesquisa
     bg: string;
     fg: string;
     border: string;
-    placeholder: string; // Texto cinza "Search..."
-    focusBorder: string; // Borda quando clicado
+    placeholder: string;
+    focusBorder: string;
     validation: {
-      // Erro de validação dentro do input
       errorBg: string;
       errorBorder: string;
     };
   };
 
   list: {
-    // Árvore de arquivos, menus, sugestões
-    hoverBg: string; // Mouse em cima
-    focusBg: string; // Item focado (teclado)
-    activeSelectionBg: string; // Item selecionado (clicado)
+    hoverBg: string;
+    focusBg: string;
+    activeSelectionBg: string;
     activeSelectionFg: string;
-    inactiveSelectionBg: string; // Selecionado mas janela sem foco
+    inactiveSelectionBg: string;
   };
 
   tabs: {
-    // Abas dos arquivos abertos
     activeBg: string;
     activeFg: string;
-    activeBorderTop: string; // Linha colorida no topo da aba ativa
+    activeBorderTop: string;
     inactiveBg: string;
     inactiveFg: string;
-    border: string; // Divisor entre abas
+    border: string;
   };
 
   scrollBar: {
-    shadow: string; // Sombra quando há scroll
-    sliderBg: string; // A barra em si (normal)
-    sliderHover: string; // A barra ao passar o mouse
-    sliderActive: string; // A barra ao arrastar
+    shadow: string;
+    sliderBg: string;
+    sliderHover: string;
+    sliderActive: string;
   };
 
-  // --- 5. SYNTAX HIGHLIGHTING (Coloração do código) ---
+  // 5. SYNTAX HIGHLIGHTING (Coloração do código)
   syntax: {
-    keywords: string; // if, else, export, return
-    functions: string; // getUiColors, console.log
-    variables: string; // const myVar
-    constants: string; // MY_CONST, true, false
-    strings: string; // "Hello"
-    numbers: string; // 123, 0.5
-    types: string; // interface AetherPalette, string, boolean
-    classes: string; // class User
-    operators: string; // Operadpres
-    comments: string; // // Comentários
-    tags: string; // <div>, <Component>
+    keywords: string;
+    functions: string;
+    variables: string;
+    constants: string;
+    strings: string;
+    numbers: string;
+    types: string;
+    classes: string;
+    operators: string;
+    comments: string;
+    tags: string;
   };
 
-  // --- 6. STATUS & GIT ---
-  // Cores semânticas para feedback
+  // 6. STATUS & GIT
   status: {
     info: string;
     warning: string;
     error: string;
-    success: string; // Geralmente verde
+    success: string;
   };
 
   git: {
-    added: string; // Arquivo novo (verde)
-    modified: string; // Arquivo alterado (amarelo/azul)
-    deleted: string; // Arquivo deletado (vermelho)
-    ignored: string; // Arquivo no .gitignore (cinza)
-    conflict: string; // Conflito de merge
+    added: string;
+    modified: string;
+    deleted: string;
+    ignored: string;
+    conflict: string;
   };
 
-  // --- 7. TERMINAL ---
-  // Padrão ANSI (Mantenha como está, pois é padrão da indústria)
+  // 7. TERMINAL
   terminal: {
     black: string;
     red: string;

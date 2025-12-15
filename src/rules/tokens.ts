@@ -1,8 +1,7 @@
 import { AetherPalette } from "../lib/types";
 
 export const getSemanticRules = (palette: AetherPalette) => ({
-  // --- SEMANTIC HIGHLIGHTING (A "Inteligência" do VS Code) ---
-  // Usado por: TS, JS, Java, C#, Python, Go (quando o LSP está ativo)
+  // SEMANTIC HIGHLIGHTING
 
   // Classes e Tipos
   class: { foreground: palette.syntax.classes },
@@ -389,5 +388,32 @@ export const getTokenRules = (palette: AetherPalette) => [
     name: "Diff Headers",
     scope: "meta.diff.header",
     settings: { foreground: palette.syntax.comments },
+  },
+
+  // SHELL / BASH / ENV
+  {
+    name: "Shell Variables",
+    scope:
+      "variable.other.normal.shell, variable.other.positional.shell, source.env variable",
+    settings: { foreground: palette.syntax.variables },
+  },
+  {
+    name: "Shell Commands",
+    scope: "support.function.builtin.shell, entity.name.command.shell",
+    settings: { foreground: palette.syntax.functions },
+  },
+
+  // DOCKER
+  {
+    name: "Docker Keywords (FROM, RUN)",
+    scope: "keyword.other.special-method.dockerfile",
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // GRAPHQL
+  {
+    name: "GraphQL Types",
+    scope: "entity.name.type.graphql, support.type.graphql",
+    settings: { foreground: palette.syntax.types },
   },
 ];

@@ -221,6 +221,27 @@
     "merge.border": "#272a36",
     "merge.currentContentBackground": "#d8b4fe1a",
     "merge.incomingContentBackground": "#fde0471a",
+    "minimap.findMatchhighlight": "#5eead4",
+    "minimap.selectionHighlight": "#232836",
+    "minimap.errorhighlight": "#f87171",
+    "minimap.warningHighlght": "#fde047",
+    "minimapSlider.background": "#2a2d386080",
+    "minimapSlider.hoverBackground": "#2a2d3880",
+    "minimapSlider.activeBackground": "#79739280",
+    "editorOverviewRuler.border": "#272a3600",
+    "editorOverviewRuler.findMatchForeground": "#5eead4",
+    "editorOverviewRuler.rangeHighlightForeground": "#5eead400",
+    "editorOverviewRuler.selectionHighlightForeground": "#23283600",
+    "editorOverviewRuler.wordHighlightForeground": "#5eead433",
+    "editorOverviewRuler.bracketMatchForeground": "#5eead4",
+    "editorOverviewRuler.errorForeground": "#f87171",
+    "editorOverviewRuler.warningForeground": "#fde047",
+    "editorOverviewRuler.infoForeground": "#7dd3fc",
+    "commandCenter.foreground": "#e2e8f0",
+    "commandCenter.activeForeground": "#e2e8f0",
+    "commandCenter.background": "#0f1116",
+    "commandCenter.border": "#272a36",
+    "commandCenter.activeBackground": "#0f1116cc",
     "panel.background": "#101014",
     "panel.border": "#272a36",
     "panelTitle.activeBorder": "#797392",
@@ -748,6 +769,34 @@
       "scope": "meta.diff.header",
       "settings": {
         "foreground": "#475569"
+      }
+    },
+    {
+      "name": "Shell Variables",
+      "scope": "variable.other.normal.shell, variable.other.positional.shell, source.env variable",
+      "settings": {
+        "foreground": "#ff9e8a"
+      }
+    },
+    {
+      "name": "Shell Commands",
+      "scope": "support.function.builtin.shell, entity.name.command.shell",
+      "settings": {
+        "foreground": "#c4b5fd"
+      }
+    },
+    {
+      "name": "Docker Keywords (FROM, RUN)",
+      "scope": "keyword.other.special-method.dockerfile",
+      "settings": {
+        "foreground": "#5eead4"
+      }
+    },
+    {
+      "name": "GraphQL Types",
+      "scope": "entity.name.type.graphql, support.type.graphql",
+      "settings": {
+        "foreground": "#93c5fd"
       }
     }
   ]

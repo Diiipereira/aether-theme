@@ -3,6 +3,22 @@
 </div>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  [1.3.2] — Stability, Polish & Typos
+</div>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed & Fixed</div>
+<ul>
+  <li><strong>Typo Fixes:</strong> Corrected the spelling of "Coffee" in file paths and configuration labels (was "Coffe").</li>
+  <li><strong>Code Refactoring:</strong> Removed forced type casting in UI rules for better TypeScript inference and safety.</li>
+  <li><strong>Maintenance:</strong> Cleaned up project configuration and <code>.gitignore</code>.</li>
+</ul>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Internal</div>
+<ul>
+  <li><strong>Testing:</strong> Added an automated test script to verify the integrity of generated theme files before publishing.</li>
+</ul>
+
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
   [1.3.1] — Description adjustment in the package.json file
 </div>
 
