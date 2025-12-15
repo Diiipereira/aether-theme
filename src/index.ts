@@ -4,7 +4,7 @@ import { getUiColors } from "./rules/ui";
 import { getTokenRules, getSemanticRules } from "./rules/tokens";
 import { darkSpacePalette } from "./lib/palettes/dark-space";
 import { coffeePalette } from "./lib/palettes/coffee";
-import { coffeeDarkPalette } from "./lib/palettes/coffe-dark";
+import { coffeeDarkPalette } from "./lib/palettes/coffee-dark";
 import { darkPalette } from "./lib/palettes/dark";
 import { lightPalette } from "./lib/palettes/light";
 
@@ -61,10 +61,9 @@ themes.forEach((themeConfig) => {
 
   try {
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(themeJson, null, 2));
-    console.log(`✅ ${themeConfig.name} gerado em: ${OUTPUT_PATH}`);
+    console.log(`✅ ${themeConfig.name} gerado...`);
   } catch (error) {
     console.error(`❌ Erro ao gerar ${themeConfig.name}:`, error);
+    process.exit(1);
   }
 });
-
-console.log("---------------------------------------------------");

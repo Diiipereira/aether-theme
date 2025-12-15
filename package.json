@@ -2,18 +2,15 @@
   "name": "aether-dark",
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
-  "description": "Coleção premium com temas modernos para VS Code (Dark, Dark Space, Coffe, Coffe Dark e Light). Legibilidade perfeita, sintaxe refinada para TypeScript e integração total com HTML, Markdown, Explorer, Terminal e muito mais.",
-  "version": "1.3.1",
+  "description": "Coleção premium com temas modernos para Visual Studio Code. Legibilidade perfeita, sintaxe refinada e integração total com diversas linguagens de programação e muito mais.",
+  "version": "1.3.2",
   "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#121212",
     "theme": "dark"
   },
   "previewImages": [
-    "images/aether-dark.png",
-    "images/aether-darkspace.png",
-    "images/aether-coffe.png",
-    "images/aether-light.png"
+    "images/aether-themes.gif"
   ],
   "keywords": [
     "theme",
@@ -25,7 +22,11 @@
     "clean",
     "purple",
     "neon",
-    "aether"
+    "aether",
+    "productivity",
+    "minimalist",
+    "syntax-highlighting",
+    "dark-mode"
   ],
   "categories": [
     "Themes"
@@ -58,12 +59,12 @@
         "path": "./themes/aether-dark-space.json"
       },
       {
-        "label": "Aether Coffe",
+        "label": "Aether Coffee",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee.json"
       },
       {
-        "label": "Aether Coffe Dark",
+        "label": "Aether Coffee Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee-dark.json"
       },

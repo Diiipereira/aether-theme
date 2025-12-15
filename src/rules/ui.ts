@@ -4,8 +4,6 @@ import { alpha } from "../lib/utils";
 export const getUiColors = (palette: AetherPalette) => {
   const p = palette;
 
-  // Helper para texto secundário (ex: 65% da opacidade do texto principal)
-  // Usado quando não há uma cor "muted" específica no componente
   const mutedFg = alpha(p.core.fg, 65);
 
   // --- BASE / CORE ---
