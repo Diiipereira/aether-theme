@@ -3,6 +3,15 @@
 </div>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  [1.3.3] — The Emerald Update
+</div>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">New Features</div>
+<ul>
+  <li><strong>New Theme:</strong> Added <code>Aether Emerald</code> — A balanced dark theme inspired by deep forests and gemstones, featuring a subtle green-tinted background with vibrant emerald, mint, and purple highlights.</li>
+</ul>
+
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
   [1.3.2] — Stability, Polish & Typos
 </div>
 

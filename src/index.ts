@@ -6,6 +6,7 @@ import { darkSpacePalette } from "./lib/palettes/dark-space";
 import { coffeePalette } from "./lib/palettes/coffee";
 import { coffeeDarkPalette } from "./lib/palettes/coffee-dark";
 import { darkPalette } from "./lib/palettes/dark";
+import { emeraldPalette } from "./lib/palettes/emerald";
 import { lightPalette } from "./lib/palettes/light";
 
 const THEME_DIR = path.join(__dirname, "../themes");
@@ -16,31 +17,37 @@ if (!fs.existsSync(THEME_DIR)) {
 
 const themes = [
   {
-    name: "Aether Dark Space",
-    slug: "aether-dark-space",
-    palette: darkSpacePalette,
-    type: "dark",
-  },
-  {
-    name: "Aether Coffee",
+    name: "Coffee",
     slug: "aether-coffee",
     palette: coffeePalette,
     type: "dark",
   },
   {
-    name: "Aether Coffee Dark",
+    name: "Coffee Dark",
     slug: "aether-coffee-dark",
     palette: coffeeDarkPalette,
     type: "dark",
   },
   {
-    name: "Aether Dark",
+    name: "Dark",
     slug: "aether-dark",
     palette: darkPalette,
     type: "dark",
   },
   {
-    name: "Aether Light",
+    name: "Dark Space",
+    slug: "aether-dark-space",
+    palette: darkSpacePalette,
+    type: "dark",
+  },
+  {
+    name: "Emerald",
+    slug: "aether-emerald",
+    palette: emeraldPalette,
+    type: "dark",
+  },
+  {
+    name: "Light",
     slug: "aether-light",
     palette: lightPalette,
     type: "light",

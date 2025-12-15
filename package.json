@@ -3,7 +3,7 @@
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
   "description": "Coleção premium com temas modernos para Visual Studio Code. Legibilidade perfeita, sintaxe refinada e integração total com diversas linguagens de programação e muito mais.",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#121212",
@@ -59,27 +59,32 @@
   "contributes": {
     "themes": [
       {
-        "label": "Aether Dark Space",
-        "uiTheme": "vs-dark",
-        "path": "./themes/aether-dark-space.json"
-      },
-      {
-        "label": "Aether Coffee",
+        "label": "Coffee",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee.json"
       },
       {
-        "label": "Aether Coffee Dark",
+        "label": "Coffee Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee-dark.json"
       },
       {
-        "label": "Aether Dark",
+        "label": "Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-dark.json"
       },
       {
-        "label": "Aether Light",
+        "label": "Dark Space",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-dark-space.json"
+      },
+      {
+        "label": "Emerald",
+        "uiTheme": "vs-dark",
+        "path": "./themes/aether-emerald.json"
+      },
+      {
+        "label": "Light",
         "uiTheme": "vs",
         "path": "./themes/aether-light.json"
       }
