@@ -111,7 +111,7 @@ export const darkPalette: AetherPalette = {
 
   scrollBar: {
     shadow: "#000000",
-    sliderBg: "#2a2d3860",
+    sliderBg: "#2a2d38",
     sliderHover: "#2a2d38",
     sliderActive: "#797392",
   },

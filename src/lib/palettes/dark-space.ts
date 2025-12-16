@@ -1,15 +1,13 @@
 import { AetherPalette } from "../types";
 
 export const darkSpacePalette: AetherPalette = {
-  // --- 1. CORE / BASE ---
   core: {
     bg: "#14091b",
     fg: "#f0f0f0",
     border: "#2b1836",
-    overlay: "#0a0412cc",
+    overlay: "#0a0412",
   },
 
-  // --- 2. LAYOUT MODULES ---
   activityBar: {
     bg: "#14091b",
     fg: "#c3c0ca",
@@ -47,12 +45,11 @@ export const darkSpacePalette: AetherPalette = {
     border: "#2b1836",
   },
 
-  // --- 3. EDITOR ---
   editor: {
     bg: "#110817",
     fg: "#f0f0f0",
-    lineHighlight: "#2b183680",
-    selection: "#4f1c9e80",
+    lineHighlight: "#2b1836",
+    selection: "#4f1c9e",
     findMatch: "#8a3cff",
     cursor: "#32e6ff",
     gutter: {
@@ -70,7 +67,6 @@ export const darkSpacePalette: AetherPalette = {
     },
   },
 
-  // --- 4. UI COMPONENTS ---
   button: {
     primary: {
       bg: "#8a3cff",
@@ -114,13 +110,12 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   scrollBar: {
-    shadow: "#00000060",
-    sliderBg: "#35174760",
+    shadow: "#000000",
+    sliderBg: "#351747",
     sliderHover: "#351747",
-    sliderActive: "#8a3cff80",
+    sliderActive: "#8a3cff",
   },
 
-  // --- 5. SYNTAX HIGHLIGHTING ---
   syntax: {
     variables: "#2cffb5",
     keywords: "#d066ff",
@@ -135,7 +130,6 @@ export const darkSpacePalette: AetherPalette = {
     tags: "#d066ff",
   },
 
-  // --- 6. STATUS & GIT ---
   status: {
     info: "#77bfff",
     warning: "#ffdf4f",
@@ -151,7 +145,6 @@ export const darkSpacePalette: AetherPalette = {
     conflict: "#ff57d6",
   },
 
-  // --- 7. TERMINAL ---
   terminal: {
     black: "#110817",
     red: "#d44646",

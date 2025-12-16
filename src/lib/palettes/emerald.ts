@@ -1,7 +1,6 @@
 import { AetherPalette } from "../types";
 
 export const emeraldPalette: AetherPalette = {
-  // BASE
   core: {
     bg: "#0d1110",
     fg: "#e2e8f0",
@@ -9,7 +8,6 @@ export const emeraldPalette: AetherPalette = {
     overlay: "#00000080",
   },
 
-  // UI
   activityBar: {
     bg: "#0d1110",
     fg: "#5c756a",
@@ -69,7 +67,6 @@ export const emeraldPalette: AetherPalette = {
     },
   },
 
-  // BUTTONS
   button: {
     primary: {
       bg: "#10b981",
@@ -114,12 +111,11 @@ export const emeraldPalette: AetherPalette = {
 
   scrollBar: {
     shadow: "#000000",
-    sliderBg: "#1f292580",
+    sliderBg: "#1f2925",
     sliderHover: "#1f2925",
     sliderActive: "#10b981",
   },
 
-  // SYNTAX
   syntax: {
     variables: "#e2e8f0",
     keywords: "#c084fc",

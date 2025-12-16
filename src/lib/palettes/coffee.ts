@@ -111,7 +111,7 @@ export const coffeePalette: AetherPalette = {
 
   scrollBar: {
     shadow: "#00000040",
-    sliderBg: "#4f403460",
+    sliderBg: "#4f4034",
     sliderHover: "#4f4034",
     sliderActive: "#9c7955",
   },

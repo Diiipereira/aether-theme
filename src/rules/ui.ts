@@ -186,6 +186,24 @@ export const getUiColors = (palette: AetherPalette) => {
     "editorGutter.deletedBackground": p.git.deleted,
   };
 
+  // PEEKVIEW
+  const peekView = {
+    "peekView.border": p.editor.bracketMatch.border,
+    "peekViewEditor.background": p.core.bg,
+    "peekViewEditorGutter.background": p.core.bg,
+    "peekViewEditor.matchHighlightBackground": p.editor.gutter.fg,
+    "peekViewEditor.matchHighlightBorder": p.editor.bracketMatch.border,
+    "peekViewResult.background": p.editor.bg,
+    "peekViewResult.fileForeground": p.editor.fg,
+    "peekViewResult.lineForeground": p.editor.fg,
+    "peekViewResult.matchHighlightBackground": p.editor.gutter.fg,
+    "peekViewResult.selectionBackground": p.editor.bg,
+    "peekViewResult.selectionForeground": p.editor.fg,
+    "peekViewTitle.background": p.core.bg,
+    "peekViewTitleDescription.foreground": p.editor.fg,
+    "peekViewTitleLabel.foreground": p.titleBar.fg,
+  };
+
   // DIFF EDITOR
   const diffAndMerge = {
     "diffEditor.insertedTextBackground": alpha(p.git.added, 15),
@@ -202,9 +220,9 @@ export const getUiColors = (palette: AetherPalette) => {
     "minimap.selectionHighlight": p.editor.selection,
     "minimap.errorhighlight": p.status.error,
     "minimap.warningHighlght": p.status.warning,
-    "minimapSlider.background": alpha(p.scrollBar.sliderBg, 50),
+    "minimapSlider.background": alpha(p.scrollBar.sliderBg, 30),
     "minimapSlider.hoverBackground": alpha(p.scrollBar.sliderHover, 50),
-    "minimapSlider.activeBackground": alpha(p.scrollBar.sliderActive, 50),
+    "minimapSlider.activeBackground": alpha(p.scrollBar.sliderActive, 20),
   };
 
   // EDITOR OVERVIEW RULER
@@ -363,6 +381,7 @@ export const getUiColors = (palette: AetherPalette) => {
     ...overviewRuler,
     ...commandCenter,
     ...panel,
+    ...peekView,
     ...terminal,
     ...quickAndWidgets,
     ...symbolIcons,
