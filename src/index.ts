@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { getUiColors } from "./rules/ui";
-import { getTokenRules, getSemanticRules } from "./rules/tokens";
+import { getSemanticRules, getTextMateRules } from "./rules/syntax";
 import { darkSpacePalette } from "./lib/palettes/dark-space";
 import { coffeePalette } from "./lib/palettes/coffee";
 import { coffeeDarkPalette } from "./lib/palettes/coffee-dark";
@@ -63,7 +63,7 @@ themes.forEach((themeConfig) => {
     semanticHighlighting: true,
     semanticTokenColors: getSemanticRules(themeConfig.palette),
     colors: getUiColors(themeConfig.palette),
-    tokenColors: getTokenRules(themeConfig.palette),
+    tokenColors: getTextMateRules(themeConfig.palette),
   };
 
   try {

@@ -1,70 +1,29 @@
-import { AetherPalette } from "../lib/types";
+import { AetherPalette } from "../../lib/types";
 
-export const getSemanticRules = (palette: AetherPalette) => ({
-  // SEMANTIC HIGHLIGHTING
-
-  // Classes e Tipos
-  class: { foreground: palette.syntax.classes },
-  interface: { foreground: palette.syntax.types },
-  type: { foreground: palette.syntax.types },
-  enum: { foreground: palette.syntax.classes },
-  enumMember: { foreground: palette.syntax.constants },
-  typeParameter: { foreground: palette.syntax.types },
-  struct: { foreground: palette.syntax.classes },
-
-  // Funções e Métodos
-  function: { foreground: palette.syntax.functions },
-  member: { foreground: palette.syntax.functions },
-  macro: { foreground: palette.syntax.functions },
-  method: { foreground: palette.syntax.functions },
-
-  // Variáveis e Propriedades
-  variable: { foreground: palette.syntax.variables },
-  "variable.readonly": { foreground: palette.syntax.constants },
-  "variable.constant": { foreground: palette.syntax.constants },
-  property: { foreground: palette.syntax.variables },
-  parameter: { foreground: palette.syntax.variables },
-
-  // Primitivos
-  string: { foreground: palette.syntax.strings },
-  number: { foreground: palette.syntax.numbers },
-  boolean: { foreground: palette.syntax.constants },
-  keyword: { foreground: palette.syntax.keywords },
-  operator: { foreground: palette.syntax.operators },
-  comment: { foreground: palette.syntax.comments, fontStyle: "italic" },
-
-  // JSX / React
-  "jsx-tag": { foreground: palette.syntax.classes },
-  "jsx-attribute": {
-    foreground: palette.syntax.variables,
-    fontStyle: "italic",
-  },
-});
-
-export const getTokenRules = (palette: AetherPalette) => [
-  // GLOBAL / GENERIC (O "Fallback" para todas as linguagens)
+export const getTextMateRules = (palette: AetherPalette) => [
+  // GLOBAL
   {
-    name: "Keywords (if, else, return, public)",
+    name: "Keywords",
     scope: "keyword, storage.type, storage.modifier",
     settings: { foreground: palette.syntax.keywords },
   },
   {
-    name: "Control Flow (try, catch, loop)",
+    name: "Control Flow",
     scope: "keyword.control",
     settings: { foreground: palette.syntax.keywords, fontStyle: "italic" },
   },
   {
-    name: "Operators (=, +, -, >, ?)",
+    name: "Operators",
     scope: "keyword.operator, punctuation.separator, punctuation.terminator",
     settings: { foreground: palette.syntax.operators },
   },
   {
-    name: "Functions & Methods",
+    name: "Functions",
     scope: "entity.name.function, support.function",
     settings: { foreground: palette.syntax.functions },
   },
   {
-    name: "Variables & Properties",
+    name: "Variables",
     scope: "variable, support.variable, meta.object-literal.key",
     settings: { foreground: palette.syntax.variables },
   },
@@ -74,7 +33,7 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.classes },
   },
   {
-    name: "Types & Interfaces",
+    name: "Types",
     scope: "entity.name.type.interface, support.type",
     settings: { foreground: palette.syntax.types },
   },
@@ -89,7 +48,7 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.numbers },
   },
   {
-    name: "Constants, Booleans, Null",
+    name: "Constants",
     scope: "constant.language, constant.other",
     settings: { foreground: palette.syntax.constants },
   },
@@ -99,30 +58,25 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.comments, fontStyle: "italic" },
   },
 
-  // JAVASCRIPT / TYPESCRIPT / REACT
+  // JS/TS
   {
-    name: "JS/TS Import/Export",
+    name: "JS/TS Imports",
     scope:
       "keyword.control.import, keyword.control.export, keyword.control.from",
     settings: { foreground: palette.syntax.keywords },
   },
   {
-    name: "JS/TS `this`, `super`",
+    name: "JS/TS this/super",
     scope: "variable.language.this, variable.language.super",
     settings: { foreground: palette.syntax.constants, fontStyle: "italic" },
   },
   {
-    name: "JS/TS Console",
-    scope: "support.type.object.console",
+    name: "JS/TS Console/DOM",
+    scope: "support.type.object.console, support.type.object.dom",
     settings: { foreground: palette.syntax.classes },
   },
   {
-    name: "JS/TS DOM Objects",
-    scope: "support.type.object.dom",
-    settings: { foreground: palette.syntax.classes },
-  },
-  {
-    name: "JSX Component Tag",
+    name: "JSX Tags",
     scope:
       "support.class.component, entity.name.tag.tsx, entity.name.tag.js.jsx",
     settings: { foreground: palette.syntax.classes },
@@ -133,12 +87,12 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.variables, fontStyle: "italic" },
   },
   {
-    name: "Template Strings Punctuation ${}",
+    name: "Template Strings",
     scope: "punctuation.definition.template-expression",
     settings: { foreground: palette.syntax.operators },
   },
 
-  // HTML / XML
+  // HTML/CSS
   {
     name: "HTML Tags",
     scope: "entity.name.tag",
@@ -150,7 +104,7 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.variables, fontStyle: "italic" },
   },
   {
-    name: "HTML Brackets < >",
+    name: "HTML Brackets",
     scope: "punctuation.definition.tag",
     settings: { foreground: palette.syntax.operators },
   },
@@ -159,10 +113,8 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "meta.tag.sgml.doctype",
     settings: { foreground: palette.syntax.comments },
   },
-
-  // CSS / SCSS / LESS
   {
-    name: "CSS Classes",
+    name: "CSS Selectors",
     scope: "entity.other.attribute-name.class.css",
     settings: { foreground: palette.syntax.classes },
   },
@@ -183,7 +135,7 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.variables },
   },
   {
-    name: "CSS Values & Units",
+    name: "CSS Values",
     scope: "support.constant.property-value, keyword.other.unit",
     settings: { foreground: palette.syntax.numbers },
   },
@@ -196,7 +148,7 @@ export const getTokenRules = (palette: AetherPalette) => [
 
   // PYTHON
   {
-    name: "Python Self/Cls",
+    name: "Python Self",
     scope:
       "variable.parameter.function.language.special.self.python, variable.parameter.function.language.special.cls.python",
     settings: { foreground: palette.syntax.constants, fontStyle: "italic" },
@@ -207,19 +159,19 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.functions },
   },
   {
-    name: "Python Magic Methods (__init__)",
+    name: "Python Magic",
     scope: "support.function.magic.python",
     settings: { foreground: palette.syntax.operators },
   },
 
-  // JAVA
+  // JAVA/PHP/Go/Rust/C++
   {
-    name: "Java Annotations @",
+    name: "Java Annotations",
     scope: "storage.type.annotation",
     settings: { foreground: palette.syntax.operators },
   },
   {
-    name: "Java Imports/Package",
+    name: "Java Imports",
     scope: "storage.modifier.import, storage.modifier.package",
     settings: { foreground: palette.syntax.keywords },
   },
@@ -228,10 +180,8 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "storage.type.primitive.java",
     settings: { foreground: palette.syntax.types },
   },
-
-  // PHP
   {
-    name: "PHP Variables ($var)",
+    name: "PHP Variables",
     scope: "variable.other.php, punctuation.definition.variable.php",
     settings: { foreground: palette.syntax.variables },
   },
@@ -241,36 +191,32 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.classes },
   },
   {
-    name: "PHP Static/Const",
+    name: "PHP Static",
     scope: "constant.other.php",
     settings: { foreground: palette.syntax.constants },
   },
   {
-    name: "Laravel Blade Tags",
+    name: "Blade Tags",
     scope: "entity.name.tag.laravel-blade, support.constant.laravel-blade",
     settings: { foreground: palette.syntax.tags },
   },
-
-  // C / C++
   {
     name: "C++ Macros",
     scope: "entity.name.function.preprocessor",
     settings: { foreground: palette.syntax.operators },
   },
   {
-    name: "C++ Include/Pragma",
+    name: "C++ Include",
     scope: "keyword.control.directive",
     settings: { foreground: palette.syntax.keywords },
   },
   {
-    name: "C++ Std Lib Types",
+    name: "C++ Types",
     scope: "support.type.std.cpp",
     settings: { foreground: palette.syntax.classes },
   },
-
-  // GO
   {
-    name: "Go Package Name",
+    name: "Go Package",
     scope: "entity.name.package.go",
     settings: { foreground: palette.syntax.classes },
   },
@@ -279,20 +225,18 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "support.function.go",
     settings: { foreground: palette.syntax.functions },
   },
-
-  // RUST
   {
-    name: "Rust Lifetimes ('a)",
+    name: "Rust Lifetimes",
     scope: "entity.name.lifetime.rust, storage.modifier.lifetime.rust",
     settings: { foreground: palette.syntax.operators, fontStyle: "italic" },
   },
   {
-    name: "Rust Macros (println!)",
+    name: "Rust Macros",
     scope: "entity.name.function.macro.rust, support.function.macro.rust",
     settings: { foreground: palette.syntax.operators },
   },
   {
-    name: "Rust Primitives (u8, i32)",
+    name: "Rust Primitives",
     scope: "storage.type.core.rust",
     settings: { foreground: palette.syntax.types },
   },
@@ -319,12 +263,12 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.functions },
   },
   {
-    name: "Markdown Link Title",
+    name: "Markdown Title",
     scope: "string.other.link.title.markdown",
     settings: { foreground: palette.syntax.strings },
   },
   {
-    name: "Markdown Code Block",
+    name: "Markdown Code",
     scope: "markup.raw.block, markup.inline.raw",
     settings: { foreground: palette.syntax.constants },
   },
@@ -334,9 +278,9 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.comments },
   },
 
-  // JSON / YAML / TOML
+  // DATA (JSON/YAML/SQL)
   {
-    name: "JSON Property Keys",
+    name: "JSON Keys",
     scope: "support.type.property-name.json",
     settings: { foreground: palette.syntax.variables },
   },
@@ -355,8 +299,6 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "entity.other.attribute-name.table.toml",
     settings: { foreground: palette.syntax.classes },
   },
-
-  // SQL
   {
     name: "SQL Keywords",
     scope: "keyword.other.DML.sql, keyword.other.DDL.sql",
@@ -368,7 +310,7 @@ export const getTokenRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.functions },
   },
 
-  // DIFF / GIT
+  // TOOLS (Git/Shell/Docker)
   {
     name: "Diff Inserted",
     scope: "markup.inserted.diff",
@@ -389,8 +331,6 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "meta.diff.header",
     settings: { foreground: palette.syntax.comments },
   },
-
-  // SHELL / BASH / ENV
   {
     name: "Shell Variables",
     scope:
@@ -402,15 +342,11 @@ export const getTokenRules = (palette: AetherPalette) => [
     scope: "support.function.builtin.shell, entity.name.command.shell",
     settings: { foreground: palette.syntax.functions },
   },
-
-  // DOCKER
   {
-    name: "Docker Keywords (FROM, RUN)",
+    name: "Docker Keywords",
     scope: "keyword.other.special-method.dockerfile",
     settings: { foreground: palette.syntax.keywords },
   },
-
-  // GRAPHQL
   {
     name: "GraphQL Types",
     scope: "entity.name.type.graphql, support.type.graphql",

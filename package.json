@@ -89,5 +89,8 @@
         "path": "./themes/aether-light.json"
       }
     ]
+  },
+  "dependencies": {
+    "polished": "^4.3.1"
   }
 }
