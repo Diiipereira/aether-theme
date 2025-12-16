@@ -67,6 +67,18 @@ export const coffeePalette: AetherPalette = {
     },
   },
 
+  peekView: {
+    border: "#9c7955", // Usa o activeBorder
+    headerBg: "#2a221c", // Usa o panel.bg para diferenciar
+    titleFg: "#fde9d4", // Texto padrão
+    descFg: "#b09e90", // Texto secundário
+    editorBg: "#1c1713", // Usa o input.bg (mais escuro que o bg normal)
+    resultBg: "#211b16", // Fundo padrão para a lista
+    selectionBg: "#3b3027", // Hover padrão
+    selectionFg: "#fde9d4",
+    matchHighlight: "#dbbc7f", // Usa a cor de warning/strings (amarelo) para destaque
+  },
+
   button: {
     primary: {
       bg: "#9c7955",

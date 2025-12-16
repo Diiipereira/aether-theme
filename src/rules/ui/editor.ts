@@ -4,7 +4,7 @@ import { alpha } from "../../lib/utils";
 export const getEditorColors = (p: AetherPalette) => {
   return {
     // Editor Base
-    "editor.background": alpha(p.editor.bg, 60),
+    "editor.background": p.editor.bg,
     "editor.foreground": p.editor.fg,
     "editorCursor.foreground": p.editor.cursor,
     "editorLineNumber.foreground": p.editor.gutter.fg,
@@ -27,7 +27,7 @@ export const getEditorColors = (p: AetherPalette) => {
     "editorBracketMatch.background": p.editor.bracketMatch.bg,
 
     // Gutter & Indent
-    "editorGutter.background": alpha(p.editor.gutter.bg, 40),
+    "editorGutter.background": p.editor.gutter.bg,
     "editorGutter.modifiedBackground": p.git.modified,
     "editorGutter.addedBackground": p.git.added,
     "editorGutter.deletedBackground": p.git.deleted,
@@ -76,5 +76,25 @@ export const getEditorColors = (p: AetherPalette) => {
     "breadcrumb.foreground": alpha(p.core.fg, 65),
     "breadcrumb.focusForeground": p.core.fg,
     "breadcrumb.activeSelectionForeground": p.core.fg,
+
+    // Peek View
+    "peekView.border": p.peekView.border,
+    "peekViewTitle.background": p.peekView.headerBg,
+    "peekViewTitleLabel.foreground": p.peekView.titleFg,
+    "peekViewTitleDescription.foreground": p.peekView.descFg,
+    "peekViewEditor.background": p.peekView.editorBg,
+    "peekViewResult.background": p.peekView.resultBg,
+    "peekViewResult.lineForeground": p.core.fg,
+    "peekViewResult.fileForeground": p.peekView.descFg,
+    "peekViewResult.selectionBackground": p.peekView.selectionBg,
+    "peekViewResult.selectionForeground": p.peekView.selectionFg,
+    "peekViewEditor.matchHighlightBackground": alpha(
+      p.peekView.matchHighlight,
+      30
+    ),
+    "peekViewResult.matchHighlightBackground": alpha(
+      p.peekView.matchHighlight,
+      30
+    ),
   };
 };

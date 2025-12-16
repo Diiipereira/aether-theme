@@ -68,6 +68,18 @@ export interface AetherPalette {
     };
   };
 
+  peekView: {
+    border: string;
+    headerBg: string;
+    titleFg: string;
+    descFg: string;
+    editorBg: string;
+    resultBg: string;
+    selectionBg: string;
+    selectionFg: string;
+    matchHighlight: string;
+  };
+
   // 4. UI COMPONENTS (Elementos interativos)
   button: {
     primary: {

@@ -68,6 +68,18 @@ export const darkPalette: AetherPalette = {
     },
   },
 
+  peekView: {
+    border: "#797392",
+    headerBg: "#13151a",
+    titleFg: "#e2e8f0",
+    descFg: "#94a3b8",
+    editorBg: "#0c0e12",
+    resultBg: "#101014",
+    selectionBg: "#232836",
+    selectionFg: "#e2e8f0",
+    matchHighlight: "#5eead4",
+  },
+
   button: {
     primary: {
       bg: "#797392",

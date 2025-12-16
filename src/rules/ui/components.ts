@@ -25,13 +25,13 @@ export const getComponentColors = (p: AetherPalette) => {
     "scrollbarSlider.activeBackground": p.scrollBar.sliderActive,
 
     // Tabs
-    "editorGroupHeader.tabsBackground": alpha(p.titleBar.bg, 60),
+    "editorGroupHeader.tabsBackground": p.titleBar.bg,
     "editorGroupHeader.tabsBorder": p.tabs.border,
     "editorGroup.border": p.core.border,
     "tab.activeForeground": p.tabs.activeFg,
     "tab.border": p.tabs.border,
     "tab.activeBorderTop": p.tabs.activeBorderTop,
-    "tab.activeBackground": alpha(p.tabs.activeBg, 75),
+    "tab.activeBackground": p.tabs.activeBg,
     "tab.inactiveBackground": alpha(p.tabs.inactiveBg, 60),
     "tab.inactiveForeground": p.tabs.inactiveFg,
     "tab.hoverBackground": alpha(p.tabs.activeBg, 50),

@@ -15,7 +15,7 @@ export const getLayoutColors = (p: AetherPalette) => {
     "activityBarBadge.foreground": p.activityBar.badgeFg,
 
     // Side Bar
-    "sideBar.background": alpha(p.sideBar.bg, 75),
+    "sideBar.background": p.sideBar.bg,
     "sideBar.foreground": p.sideBar.fg,
     "sideBar.border": p.sideBar.border,
     "sideBar.dropBackground": alpha(p.sideBar.fg, 10),

@@ -2,165 +2,177 @@ import { AetherPalette } from "../types";
 
 export const coffeeDarkPalette: AetherPalette = {
   core: {
-    bg: "#181513",
-    fg: "#c0b2a4",
-    border: "#2b231f",
+    bg: "#0c0b0a", // Espresso Profundo (Quase preto, muito elegante)
+    fg: "#e6dccb", // Creme / Leite de Aveia
+    border: "#26201b", // Marrom escuro para divisões sutis
     overlay: "#000000cc",
   },
 
   activityBar: {
-    bg: "#181513",
-    fg: "#7d6a5e",
-    activeBorder: "#9e6744",
-    activeBg: "#211d1a",
-    badgeBg: "#9e6744",
-    badgeFg: "#ece2d6",
+    bg: "#0c0b0a",
+    fg: "#9e9285", // Cinza quente
+    activeBorder: "#d4a373", // Caramelo (Accent principal)
+    activeBg: "#161412",
+    badgeBg: "#d4a373",
+    badgeFg: "#0c0b0a", // Texto escuro no badge para contraste
   },
 
   sideBar: {
-    bg: "#181513",
-    fg: "#7d6a5e",
-    border: "#2b231f",
-    titleFg: "#948375",
-    sectionHeaderBg: "#110e0d",
+    bg: "#0c0b0a",
+    fg: "#9e9285",
+    border: "#26201b",
+    titleFg: "#c7bcae",
+    sectionHeaderBg: "#161412",
   },
 
   statusBar: {
-    bg: "#181513",
-    fg: "#c0b2a4",
-    border: "#2b231f",
-    itemHover: "#2b231f",
-    remoteBg: "#9e6744",
+    bg: "#0c0b0a",
+    fg: "#e6dccb",
+    border: "#26201b",
+    itemHover: "#26201b",
+    remoteBg: "#d4a373",
   },
 
   titleBar: {
-    bg: "#181513",
-    fg: "#7d6a5e",
-    inactiveBg: "#110e0d",
+    bg: "#0c0b0a",
+    fg: "#9e9285",
+    inactiveBg: "#12100e",
   },
 
   panel: {
-    bg: "#110e0d",
-    headerFg: "#c0b2a4",
-    border: "#2b231f",
+    bg: "#12100e",
+    headerFg: "#e6dccb",
+    border: "#26201b",
   },
 
   editor: {
-    bg: "#181513",
-    fg: "#c0b2a4",
-    lineHighlight: "#211d1a",
-    selection: "#3d2e26",
-    findMatch: "#9e6744",
-    cursor: "#ece2d6",
+    bg: "#0c0b0a",
+    fg: "#e6dccb",
+    lineHighlight: "#1a1714", // Destaque de linha sutil
+    selection: "#302822", // Seleção marrom café
+    findMatch: "#d4a373",
+    cursor: "#e6dccb",
     gutter: {
-      bg: "#181513",
-      fg: "#52443d",
-      activeFg: "#c0b2a4",
+      bg: "#0c0b0a",
+      fg: "#5c5046",
+      activeFg: "#e6dccb",
     },
     indentGuide: {
-      active: "#9e6744",
-      inactive: "#2b231f",
+      active: "#5c5046",
+      inactive: "#26201b",
     },
     bracketMatch: {
-      bg: "#2b231f",
-      border: "#9e6744",
+      bg: "#26201b",
+      border: "#e0c080",
     },
+  },
+
+  peekView: {
+    border: "#d4a373", // Caramelo
+    headerBg: "#161412", // Levemente mais claro que o fundo
+    titleFg: "#e6dccb",
+    descFg: "#9e9285",
+    editorBg: "#12100e", // Fundo do editor do peek
+    resultBg: "#161412", // Fundo da lista de resultados
+    selectionBg: "#302822",
+    selectionFg: "#e6dccb",
+    matchHighlight: "#d4a373",
   },
 
   button: {
     primary: {
-      bg: "#9e6744",
-      fg: "#ece2d6",
-      hover: "#875638",
+      bg: "#d4a373", // Botão Caramelo
+      fg: "#0c0b0a",
+      hover: "#cfa986",
     },
     secondary: {
-      bg: "#332924",
-      fg: "#c0b2a4",
-      hover: "#40332d",
+      bg: "#26201b",
+      fg: "#e6dccb",
+      hover: "#302822",
     },
   },
 
   input: {
-    bg: "#1d1917",
-    fg: "#c0b2a4",
-    border: "#2b231f",
-    placeholder: "#7d6a5e",
-    focusBorder: "#9e6744",
+    bg: "#12100e",
+    fg: "#e6dccb",
+    border: "#26201b",
+    placeholder: "#5c5046",
+    focusBorder: "#d4a373",
     validation: {
-      errorBg: "#331f1f",
-      errorBorder: "#d17b49",
+      errorBg: "#331818",
+      errorBorder: "#cc6666",
     },
   },
 
   list: {
-    hoverBg: "#211d1a",
-    focusBg: "#211d1a",
-    activeSelectionBg: "#3d2e26",
-    activeSelectionFg: "#ece2d6",
-    inactiveSelectionBg: "#181513",
+    hoverBg: "#1a1714",
+    focusBg: "#1a1714",
+    activeSelectionBg: "#302822",
+    activeSelectionFg: "#e6dccb",
+    inactiveSelectionBg: "#0c0b0a",
   },
 
   tabs: {
-    activeBg: "#181513",
-    activeFg: "#c0b2a4",
-    activeBorderTop: "#9e6744",
-    inactiveBg: "#181513",
-    inactiveFg: "#7d6a5e",
-    border: "#2b231f",
+    activeBg: "#0c0b0a",
+    activeFg: "#e6dccb",
+    activeBorderTop: "#d4a373",
+    inactiveBg: "#0c0b0a",
+    inactiveFg: "#5c5046",
+    border: "#26201b",
   },
 
   scrollBar: {
     shadow: "#000000",
-    sliderBg: "#332924",
-    sliderHover: "#332924",
-    sliderActive: "#9e6744",
+    sliderBg: "#26201b",
+    sliderHover: "#302822",
+    sliderActive: "#d4a373",
   },
 
   syntax: {
-    variables: "#c29d7e",
-    keywords: "#d17b49",
-    functions: "#e5ad4c",
-    strings: "#d17b49",
-    numbers: "#e5ad4c",
-    constants: "#909973",
-    types: "#909973",
-    classes: "#909973",
-    operators: "#7aa0b9",
-    comments: "#8a7968",
-    tags: "#d17b49",
+    variables: "#e6dccb", // Creme (limpo)
+    keywords: "#d8966c", // Canela (Laranja queimado)
+    functions: "#e0c080", // Mel (Dourado suave)
+    strings: "#a7b886", // Matcha (Verde orgânico)
+    numbers: "#b095ad", // Figo (Roxo desaturado - ótimo contraste)
+    constants: "#d4a373", // Caramelo
+    types: "#d4a373", // Caramelo
+    classes: "#d4a373", // Caramelo
+    operators: "#9e9285", // Cinza Quente
+    comments: "#5c5046", // Marrom Café com Leite escuro (bem sutil)
+    tags: "#d8966c", // Canela
   },
 
   status: {
-    info: "#7aa0b9",
-    warning: "#e5ad4c",
-    error: "#d17b49",
-    success: "#909973",
+    info: "#8fa3a3", // Azul Petróleo suave
+    warning: "#e0c080", // Mel
+    error: "#cc6666", // Vermelho Tijolo suave
+    success: "#a7b886", // Matcha
   },
 
   git: {
-    added: "#909973",
-    modified: "#e5ad4c",
-    deleted: "#d17b49",
-    ignored: "#6d5b51",
-    conflict: "#b58a66",
+    added: "#a7b886",
+    modified: "#e0c080",
+    deleted: "#cc6666",
+    ignored: "#5c5046",
+    conflict: "#b095ad",
   },
 
   terminal: {
-    black: "#110e0d",
-    red: "#d17b49",
-    green: "#909973",
-    yellow: "#e5ad4c",
-    blue: "#7aa0b9",
-    magenta: "#b58a66",
-    cyan: "#7aa0b9",
-    white: "#ece2d6",
-    brightBlack: "#6d5b51",
-    brightRed: "#d17b49",
-    brightGreen: "#909973",
-    brightYellow: "#e5ad4c",
-    brightBlue: "#7aa0b9",
-    brightMagenta: "#b58a66",
-    brightCyan: "#7aa0b9",
-    brightWhite: "#ece2d6",
+    black: "#161412",
+    red: "#cc6666",
+    green: "#a7b886",
+    yellow: "#e0c080",
+    blue: "#8fa3a3",
+    magenta: "#b095ad",
+    cyan: "#8abeb7",
+    white: "#e6dccb",
+    brightBlack: "#5c5046",
+    brightRed: "#d46c6c",
+    brightGreen: "#b8c997",
+    brightYellow: "#ebd2a0",
+    brightBlue: "#a0b5b5",
+    brightMagenta: "#c2a8bf",
+    brightCyan: "#9bd4cd",
+    brightWhite: "#ffffff",
   },
 };
