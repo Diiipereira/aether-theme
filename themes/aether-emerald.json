@@ -88,7 +88,7 @@
     "activityBar.inactiveForeground": "#5c756a80",
     "activityBarBadge.background": "#10b981",
     "activityBarBadge.foreground": "#ffffff",
-    "sideBar.background": "#0d1110",
+    "sideBar.background": "#0d1110bf",
     "sideBar.foreground": "#94a3b8",
     "sideBar.border": "#1f2925",
     "sideBar.dropBackground": "#94a3b81a",
@@ -97,7 +97,7 @@
     "sideBarSectionHeader.foreground": "#e2e8f0",
     "sideBarSectionHeader.border": "#1f2925",
     "statusBar.foreground": "#e2e8f0",
-    "statusBar.background": "#111614",
+    "statusBar.background": "#0d1110",
     "statusBar.border": "#1f2925",
     "statusBarItem.hoverBackground": "#1f2925",
     "statusBarItem.remoteBackground": "#10b981",
@@ -105,7 +105,7 @@
     "statusBar.debuggingBackground": "#fcd34d",
     "statusBar.debuggingForeground": "#0d1110",
     "statusBar.debuggingBorder": "#fcd34d",
-    "statusBar.noFolderBackground": "#111614",
+    "statusBar.noFolderBackground": "#0d1110",
     "statusBar.noFolderForeground": "#e2e8f0a6",
     "titleBar.activeBackground": "#0d1110",
     "titleBar.activeForeground": "#94a3b8",
@@ -117,18 +117,22 @@
     "panelTitle.activeBorder": "#10b981",
     "panelTitle.activeForeground": "#e2e8f0",
     "panelTitle.inactiveForeground": "#e2e8f099",
-    "editor.background": "#0d1110",
+    "editor.background": "#0d111099",
     "editor.foreground": "#e2e8f0",
     "editorCursor.foreground": "#10b981",
     "editorLineNumber.foreground": "#4b5563",
     "editorLineNumber.activeForeground": "#e2e8f0",
     "editor.selectionBackground": "#10b98133",
     "editor.lineHighlightBackground": "#16201d",
+    "editorStickyScroll.background": "#0d1110",
+    "editorStickyScrollHover.background": "#16201d",
+    "editorInlayHint.foreground": "#e2e8f066",
+    "editorInlayHint.background": "#0d111000",
     "editor.findMatchBackground": "#10b9814d",
     "editor.findMatchHighlightBackground": "#10b98126",
     "editorBracketMatch.border": "#10b981",
     "editorBracketMatch.background": "#1f2925",
-    "editorGutter.background": "#0d1110",
+    "editorGutter.background": "#0d111066",
     "editorGutter.modifiedBackground": "#fcd34d",
     "editorGutter.addedBackground": "#34d399",
     "editorGutter.deletedBackground": "#f87171",
@@ -175,14 +179,14 @@
     "scrollbarSlider.background": "#1f2925",
     "scrollbarSlider.hoverBackground": "#1f2925",
     "scrollbarSlider.activeBackground": "#10b981",
-    "editorGroupHeader.tabsBackground": "#0d1110",
+    "editorGroupHeader.tabsBackground": "#0d111099",
     "editorGroupHeader.tabsBorder": "#1f2925",
     "editorGroup.border": "#1f2925",
     "tab.activeForeground": "#10b981",
     "tab.border": "#1f2925",
     "tab.activeBorderTop": "#10b981",
-    "tab.activeBackground": "#0d1110",
-    "tab.inactiveBackground": "#111614",
+    "tab.activeBackground": "#0d1110bf",
+    "tab.inactiveBackground": "#11161499",
     "tab.inactiveForeground": "#64748b",
     "tab.hoverBackground": "#0d111080",
     "tab.hoverForeground": "#10b981",
@@ -515,6 +519,48 @@
       }
     },
     {
+      "name": "Tailwind Classes",
+      "scope": "entity.other.attribute-name.class",
+      "settings": {
+        "foreground": "#60a5fa"
+      }
+    },
+    {
+      "name": "Prisma Keywords",
+      "scope": "source.prisma keyword",
+      "settings": {
+        "foreground": "#c084fc"
+      }
+    },
+    {
+      "name": "Prisma Types",
+      "scope": "source.prisma support.type",
+      "settings": {
+        "foreground": "#22d3ee"
+      }
+    },
+    {
+      "name": "Prisma Attributes",
+      "scope": "source.prisma support.function.attribute",
+      "settings": {
+        "foreground": "#60a5fa"
+      }
+    },
+    {
+      "name": "GraphQL Types",
+      "scope": "entity.name.type.graphql, support.type.graphql",
+      "settings": {
+        "foreground": "#22d3ee"
+      }
+    },
+    {
+      "name": "Docker Keywords",
+      "scope": "keyword.other.special-method.dockerfile",
+      "settings": {
+        "foreground": "#c084fc"
+      }
+    },
+    {
       "name": "Python Self",
       "scope": "variable.parameter.function.language.special.self.python, variable.parameter.function.language.special.cls.python",
       "settings": {
@@ -684,7 +730,7 @@
       "name": "Markdown Code",
       "scope": "markup.raw.block, markup.inline.raw",
       "settings": {
-        "foreground": "#22d3ee"
+        "foreground": "#e2e8f0"
       }
     },
     {
@@ -776,20 +822,6 @@
       "scope": "support.function.builtin.shell, entity.name.command.shell",
       "settings": {
         "foreground": "#60a5fa"
-      }
-    },
-    {
-      "name": "Docker Keywords",
-      "scope": "keyword.other.special-method.dockerfile",
-      "settings": {
-        "foreground": "#c084fc"
-      }
-    },
-    {
-      "name": "GraphQL Types",
-      "scope": "entity.name.type.graphql, support.type.graphql",
-      "settings": {
-        "foreground": "#22d3ee"
       }
     }
   ]

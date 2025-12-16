@@ -26,7 +26,7 @@ export const coffeeDarkPalette: AetherPalette = {
   },
 
   statusBar: {
-    bg: "#110e0d",
+    bg: "#181513",
     fg: "#c0b2a4",
     border: "#2b231f",
     itemHover: "#2b231f",
@@ -46,14 +46,14 @@ export const coffeeDarkPalette: AetherPalette = {
   },
 
   editor: {
-    bg: "#110e0d",
+    bg: "#181513",
     fg: "#c0b2a4",
     lineHighlight: "#211d1a",
     selection: "#3d2e26",
     findMatch: "#9e6744",
     cursor: "#ece2d6",
     gutter: {
-      bg: "#110e0d",
+      bg: "#181513",
       fg: "#52443d",
       activeFg: "#c0b2a4",
     },
@@ -101,7 +101,7 @@ export const coffeeDarkPalette: AetherPalette = {
   },
 
   tabs: {
-    activeBg: "#110e0d",
+    activeBg: "#181513",
     activeFg: "#c0b2a4",
     activeBorderTop: "#9e6744",
     inactiveBg: "#181513",

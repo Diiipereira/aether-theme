@@ -1,11 +1,12 @@
 import { AetherPalette } from "../types";
+import { alpha } from "../utils";
 
 export const darkPalette: AetherPalette = {
   core: {
     bg: "#0c0e12",
     fg: "#e2e8f0",
     border: "#272a36",
-    overlay: "#00000080",
+    overlay: alpha("#000000", 50),
   },
 
   activityBar: {
@@ -26,7 +27,7 @@ export const darkPalette: AetherPalette = {
   },
 
   statusBar: {
-    bg: "#101014",
+    bg: "#0c0e12",
     fg: "#e2e8f0",
     border: "#272a36",
     itemHover: "#1c1e26",
@@ -46,14 +47,14 @@ export const darkPalette: AetherPalette = {
   },
 
   editor: {
-    bg: "#101014",
+    bg: "#0c0e12",
     fg: "#e2e8f0",
     lineHighlight: "#1e222e",
     selection: "#232836",
     findMatch: "#5eead4",
     cursor: "#5eead4",
     gutter: {
-      bg: "#101014",
+      bg: "#0c0e12",
       fg: "#475569",
       activeFg: "#e2e8f0",
     },
@@ -101,7 +102,7 @@ export const darkPalette: AetherPalette = {
   },
 
   tabs: {
-    activeBg: "#101014",
+    activeBg: "#0c0e12",
     activeFg: "#e2e8f0",
     activeBorderTop: "#797392",
     inactiveBg: "#0c0e12",

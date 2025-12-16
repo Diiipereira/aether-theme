@@ -4,13 +4,21 @@ import { alpha } from "../../lib/utils";
 export const getEditorColors = (p: AetherPalette) => {
   return {
     // Editor Base
-    "editor.background": p.editor.bg,
+    "editor.background": alpha(p.editor.bg, 60),
     "editor.foreground": p.editor.fg,
     "editorCursor.foreground": p.editor.cursor,
     "editorLineNumber.foreground": p.editor.gutter.fg,
     "editorLineNumber.activeForeground": p.editor.gutter.activeFg,
     "editor.selectionBackground": p.editor.selection,
     "editor.lineHighlightBackground": p.editor.lineHighlight,
+
+    // Sticky Scroll
+    "editorStickyScroll.background": p.editor.bg,
+    "editorStickyScrollHover.background": p.editor.lineHighlight,
+
+    // Inlay Hints
+    "editorInlayHint.foreground": alpha(p.core.fg, 40),
+    "editorInlayHint.background": alpha(p.core.bg, 0),
 
     // Search & Highlights
     "editor.findMatchBackground": alpha(p.editor.findMatch, 30),
@@ -19,7 +27,7 @@ export const getEditorColors = (p: AetherPalette) => {
     "editorBracketMatch.background": p.editor.bracketMatch.bg,
 
     // Gutter & Indent
-    "editorGutter.background": p.editor.gutter.bg,
+    "editorGutter.background": alpha(p.editor.gutter.bg, 40),
     "editorGutter.modifiedBackground": p.git.modified,
     "editorGutter.addedBackground": p.git.added,
     "editorGutter.deletedBackground": p.git.deleted,

@@ -1,16 +1,17 @@
 import { AetherPalette } from "../types";
+import { alpha } from "../utils";
 
 export const darkSpacePalette: AetherPalette = {
   core: {
     bg: "#14091b",
     fg: "#f0f0f0",
     border: "#2b1836",
-    overlay: "#0a0412",
+    overlay: alpha("#0a0412", 70),
   },
 
   activityBar: {
     bg: "#14091b",
-    fg: "#c3c0ca",
+    fg: "#c4cac0",
     activeBorder: "#8a3cff",
     activeBg: "#1e0d28",
     badgeBg: "#8a3cff",
@@ -26,7 +27,7 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   statusBar: {
-    bg: "#1a0e25",
+    bg: "#14091b",
     fg: "#f0f0f0",
     border: "#2b1836",
     itemHover: "#3a2d4c",
@@ -46,14 +47,14 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   editor: {
-    bg: "#110817",
+    bg: "#14091b",
     fg: "#f0f0f0",
     lineHighlight: "#2b1836",
     selection: "#4f1c9e",
     findMatch: "#8a3cff",
     cursor: "#32e6ff",
     gutter: {
-      bg: "#110817",
+      bg: "#14091b",
       fg: "#4b3e55",
       activeFg: "#f0f0f0",
     },
@@ -101,7 +102,7 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   tabs: {
-    activeBg: "#110817",
+    activeBg: "#14091b",
     activeFg: "#f0f0f0",
     activeBorderTop: "#8a3cff",
     inactiveBg: "#14091b",
@@ -110,7 +111,7 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   scrollBar: {
-    shadow: "#000000",
+    shadow: alpha("#000000", 70),
     sliderBg: "#351747",
     sliderHover: "#351747",
     sliderActive: "#8a3cff",

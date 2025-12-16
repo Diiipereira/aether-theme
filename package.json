@@ -59,38 +59,36 @@
   "contributes": {
     "themes": [
       {
-        "label": "Coffee",
+        "label": "Aether Coffee",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee.json"
       },
       {
-        "label": "Coffee Dark",
+        "label": "Aether Coffee Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-coffee-dark.json"
       },
       {
-        "label": "Dark",
+        "label": "Aether Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-dark.json"
       },
       {
-        "label": "Dark Space",
+        "label": "Aether Dark Space",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-dark-space.json"
       },
       {
-        "label": "Emerald",
+        "label": "Aether Emerald",
         "uiTheme": "vs-dark",
         "path": "./themes/aether-emerald.json"
       },
       {
-        "label": "Light",
+        "label": "Aether Light",
         "uiTheme": "vs",
         "path": "./themes/aether-light.json"
       }
     ]
   },
-  "dependencies": {
-    "polished": "^4.3.1"
-  }
+  "dependencies": {}
 }

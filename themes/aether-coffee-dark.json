@@ -88,7 +88,7 @@
     "activityBar.inactiveForeground": "#7d6a5e80",
     "activityBarBadge.background": "#9e6744",
     "activityBarBadge.foreground": "#ece2d6",
-    "sideBar.background": "#181513",
+    "sideBar.background": "#181513bf",
     "sideBar.foreground": "#7d6a5e",
     "sideBar.border": "#2b231f",
     "sideBar.dropBackground": "#7d6a5e1a",
@@ -97,7 +97,7 @@
     "sideBarSectionHeader.foreground": "#948375",
     "sideBarSectionHeader.border": "#2b231f",
     "statusBar.foreground": "#c0b2a4",
-    "statusBar.background": "#110e0d",
+    "statusBar.background": "#181513",
     "statusBar.border": "#2b231f",
     "statusBarItem.hoverBackground": "#2b231f",
     "statusBarItem.remoteBackground": "#9e6744",
@@ -105,7 +105,7 @@
     "statusBar.debuggingBackground": "#e5ad4c",
     "statusBar.debuggingForeground": "#181513",
     "statusBar.debuggingBorder": "#e5ad4c",
-    "statusBar.noFolderBackground": "#110e0d",
+    "statusBar.noFolderBackground": "#181513",
     "statusBar.noFolderForeground": "#c0b2a4a6",
     "titleBar.activeBackground": "#181513",
     "titleBar.activeForeground": "#7d6a5e",
@@ -117,18 +117,22 @@
     "panelTitle.activeBorder": "#9e6744",
     "panelTitle.activeForeground": "#c0b2a4",
     "panelTitle.inactiveForeground": "#c0b2a499",
-    "editor.background": "#110e0d",
+    "editor.background": "#18151399",
     "editor.foreground": "#c0b2a4",
     "editorCursor.foreground": "#ece2d6",
     "editorLineNumber.foreground": "#52443d",
     "editorLineNumber.activeForeground": "#c0b2a4",
     "editor.selectionBackground": "#3d2e26",
     "editor.lineHighlightBackground": "#211d1a",
+    "editorStickyScroll.background": "#181513",
+    "editorStickyScrollHover.background": "#211d1a",
+    "editorInlayHint.foreground": "#c0b2a466",
+    "editorInlayHint.background": "#18151300",
     "editor.findMatchBackground": "#9e67444d",
     "editor.findMatchHighlightBackground": "#9e674426",
     "editorBracketMatch.border": "#9e6744",
     "editorBracketMatch.background": "#2b231f",
-    "editorGutter.background": "#110e0d",
+    "editorGutter.background": "#18151366",
     "editorGutter.modifiedBackground": "#e5ad4c",
     "editorGutter.addedBackground": "#909973",
     "editorGutter.deletedBackground": "#d17b49",
@@ -156,7 +160,7 @@
     "editorOverviewRuler.errorForeground": "#d17b49",
     "editorOverviewRuler.warningForeground": "#e5ad4c",
     "editorOverviewRuler.infoForeground": "#7aa0b9",
-    "breadcrumb.background": "#110e0d",
+    "breadcrumb.background": "#181513",
     "breadcrumb.foreground": "#c0b2a4a6",
     "breadcrumb.focusForeground": "#c0b2a4",
     "breadcrumb.activeSelectionForeground": "#c0b2a4",
@@ -175,16 +179,16 @@
     "scrollbarSlider.background": "#332924",
     "scrollbarSlider.hoverBackground": "#332924",
     "scrollbarSlider.activeBackground": "#9e6744",
-    "editorGroupHeader.tabsBackground": "#181513",
+    "editorGroupHeader.tabsBackground": "#18151399",
     "editorGroupHeader.tabsBorder": "#2b231f",
     "editorGroup.border": "#2b231f",
     "tab.activeForeground": "#c0b2a4",
     "tab.border": "#2b231f",
     "tab.activeBorderTop": "#9e6744",
-    "tab.activeBackground": "#110e0d",
-    "tab.inactiveBackground": "#181513",
+    "tab.activeBackground": "#181513bf",
+    "tab.inactiveBackground": "#18151399",
     "tab.inactiveForeground": "#7d6a5e",
-    "tab.hoverBackground": "#110e0d80",
+    "tab.hoverBackground": "#18151380",
     "tab.hoverForeground": "#c0b2a4",
     "button.background": "#9e6744",
     "button.foreground": "#ece2d6",
@@ -236,7 +240,7 @@
     "terminal.foreground": "#c0b2a4",
     "terminal.border": "#2b231f",
     "terminalCursor.foreground": "#ece2d6",
-    "terminalCursor.background": "#110e0d",
+    "terminalCursor.background": "#181513",
     "terminal.selectionBackground": "#3d2e26",
     "terminal.ansiBlack": "#110e0d",
     "terminal.ansiRed": "#d17b49",
@@ -515,6 +519,48 @@
       }
     },
     {
+      "name": "Tailwind Classes",
+      "scope": "entity.other.attribute-name.class",
+      "settings": {
+        "foreground": "#e5ad4c"
+      }
+    },
+    {
+      "name": "Prisma Keywords",
+      "scope": "source.prisma keyword",
+      "settings": {
+        "foreground": "#d17b49"
+      }
+    },
+    {
+      "name": "Prisma Types",
+      "scope": "source.prisma support.type",
+      "settings": {
+        "foreground": "#909973"
+      }
+    },
+    {
+      "name": "Prisma Attributes",
+      "scope": "source.prisma support.function.attribute",
+      "settings": {
+        "foreground": "#e5ad4c"
+      }
+    },
+    {
+      "name": "GraphQL Types",
+      "scope": "entity.name.type.graphql, support.type.graphql",
+      "settings": {
+        "foreground": "#909973"
+      }
+    },
+    {
+      "name": "Docker Keywords",
+      "scope": "keyword.other.special-method.dockerfile",
+      "settings": {
+        "foreground": "#d17b49"
+      }
+    },
+    {
       "name": "Python Self",
       "scope": "variable.parameter.function.language.special.self.python, variable.parameter.function.language.special.cls.python",
       "settings": {
@@ -684,7 +730,7 @@
       "name": "Markdown Code",
       "scope": "markup.raw.block, markup.inline.raw",
       "settings": {
-        "foreground": "#909973"
+        "foreground": "#c29d7e"
       }
     },
     {
@@ -776,20 +822,6 @@
       "scope": "support.function.builtin.shell, entity.name.command.shell",
       "settings": {
         "foreground": "#e5ad4c"
-      }
-    },
-    {
-      "name": "Docker Keywords",
-      "scope": "keyword.other.special-method.dockerfile",
-      "settings": {
-        "foreground": "#d17b49"
-      }
-    },
-    {
-      "name": "GraphQL Types",
-      "scope": "entity.name.type.graphql, support.type.graphql",
-      "settings": {
-        "foreground": "#909973"
       }
     }
   ]

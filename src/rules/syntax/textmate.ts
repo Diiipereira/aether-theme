@@ -92,7 +92,7 @@ export const getTextMateRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.operators },
   },
 
-  // HTML/CSS
+  // HTML/CSS/Tailwind
   {
     name: "HTML Tags",
     scope: "entity.name.tag",
@@ -144,6 +144,38 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope:
       "punctuation.separator.key-value.css, punctuation.terminator.rule.css",
     settings: { foreground: palette.syntax.operators },
+  },
+  {
+    name: "Tailwind Classes",
+    scope: "entity.other.attribute-name.class",
+    settings: { foreground: palette.syntax.functions },
+  },
+
+  // FRAMEWORKS & LIBS (Prisma, GraphQL, Docker)
+  {
+    name: "Prisma Keywords",
+    scope: "source.prisma keyword",
+    settings: { foreground: palette.syntax.keywords },
+  },
+  {
+    name: "Prisma Types",
+    scope: "source.prisma support.type",
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Prisma Attributes",
+    scope: "source.prisma support.function.attribute",
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "GraphQL Types",
+    scope: "entity.name.type.graphql, support.type.graphql",
+    settings: { foreground: palette.syntax.types },
+  },
+  {
+    name: "Docker Keywords",
+    scope: "keyword.other.special-method.dockerfile",
+    settings: { foreground: palette.syntax.keywords },
   },
 
   // PYTHON
@@ -270,7 +302,7 @@ export const getTextMateRules = (palette: AetherPalette) => [
   {
     name: "Markdown Code",
     scope: "markup.raw.block, markup.inline.raw",
-    settings: { foreground: palette.syntax.constants },
+    settings: { foreground: palette.syntax.variables },
   },
   {
     name: "Markdown Quote",
@@ -278,7 +310,7 @@ export const getTextMateRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.comments },
   },
 
-  // DATA (JSON/YAML/SQL)
+  // DATA (JSON/YAML/SQL/TOML)
   {
     name: "JSON Keys",
     scope: "support.type.property-name.json",
@@ -310,7 +342,7 @@ export const getTextMateRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.functions },
   },
 
-  // TOOLS (Git/Shell/Docker)
+  // TOOLS (Git/Shell)
   {
     name: "Diff Inserted",
     scope: "markup.inserted.diff",
@@ -341,15 +373,5 @@ export const getTextMateRules = (palette: AetherPalette) => [
     name: "Shell Commands",
     scope: "support.function.builtin.shell, entity.name.command.shell",
     settings: { foreground: palette.syntax.functions },
-  },
-  {
-    name: "Docker Keywords",
-    scope: "keyword.other.special-method.dockerfile",
-    settings: { foreground: palette.syntax.keywords },
-  },
-  {
-    name: "GraphQL Types",
-    scope: "entity.name.type.graphql, support.type.graphql",
-    settings: { foreground: palette.syntax.types },
   },
 ];

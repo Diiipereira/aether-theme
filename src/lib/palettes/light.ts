@@ -9,7 +9,7 @@ export const lightPalette: AetherPalette = {
   },
 
   activityBar: {
-    bg: "#f1f5f9",
+    bg: "#f8f9fc",
     fg: "#64748b",
     activeBorder: "#6366f1",
     activeBg: "#e2e8f0",
@@ -18,7 +18,7 @@ export const lightPalette: AetherPalette = {
   },
 
   sideBar: {
-    bg: "#f1f5f9",
+    bg: "#f8f9fc",
     fg: "#475569",
     border: "#e2e8f0",
     titleFg: "#334155",
@@ -26,7 +26,7 @@ export const lightPalette: AetherPalette = {
   },
 
   statusBar: {
-    bg: "#f1f5f9",
+    bg: "#f8f9fc",
     fg: "#334155",
     border: "#e2e8f0",
     itemHover: "#e2e8f0",
@@ -34,7 +34,7 @@ export const lightPalette: AetherPalette = {
   },
 
   titleBar: {
-    bg: "#f1f5f9",
+    bg: "#f8f9fc",
     fg: "#475569",
     inactiveBg: "#f8f9fc",
   },

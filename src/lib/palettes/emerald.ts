@@ -26,7 +26,7 @@ export const emeraldPalette: AetherPalette = {
   },
 
   statusBar: {
-    bg: "#111614",
+    bg: "#0d1110",
     fg: "#e2e8f0",
     border: "#1f2925",
     itemHover: "#1f2925",
