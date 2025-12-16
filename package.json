@@ -2,7 +2,7 @@
   "name": "aether-dark",
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
-  "description": "Coleção premium com temas modernos para Visual Studio Code. Legibilidade perfeita, sintaxe refinada e integração total com diversas linguagens de programação e muito mais.",
+  "description": "A premium collection of modern themes for VS Code. Designed for focus, perfect readability, and refined syntax highlighting.",
   "version": "1.3.3",
   "icon": "assets/icon.png",
   "galleryBanner": {
@@ -15,18 +15,16 @@
   "keywords": [
     "theme",
     "vscode",
-    "dark theme",
-    "typescript",
-    "developer",
+    "dark",
+    "light",
     "modern",
     "clean",
-    "purple",
-    "neon",
     "aether",
     "productivity",
-    "minimalist",
-    "syntax-highlighting",
-    "dark-mode"
+    "syntax",
+    "typescript",
+    "developer",
+    "syntax-highlighting"
   ],
   "categories": [
     "Themes"

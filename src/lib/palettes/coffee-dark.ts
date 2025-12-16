@@ -2,78 +2,78 @@ import { AetherPalette } from "../types";
 
 export const coffeeDarkPalette: AetherPalette = {
   core: {
-    bg: "#0c0b0a", // Espresso Profundo (Quase preto, muito elegante)
-    fg: "#e6dccb", // Creme / Leite de Aveia
-    border: "#26201b", // Marrom escuro para divisões sutis
-    overlay: "#000000cc",
+    bg: "#0c0b0a",
+    fg: "#e6dccb",
+    border: "#12100e",
+    overlay: "#000000",
   },
 
   activityBar: {
-    bg: "#0c0b0a",
-    fg: "#9e9285", // Cinza quente
-    activeBorder: "#d4a373", // Caramelo (Accent principal)
-    activeBg: "#161412",
+    bg: "#060504",
+    fg: "#9e9285",
+    activeBorder: "#d4a373",
+    activeBg: "#0c0b0a",
     badgeBg: "#d4a373",
-    badgeFg: "#0c0b0a", // Texto escuro no badge para contraste
+    badgeFg: "#0c0b0a",
   },
 
   sideBar: {
-    bg: "#0c0b0a",
+    bg: "#090807",
     fg: "#9e9285",
-    border: "#26201b",
+    border: "#12100e",
     titleFg: "#c7bcae",
-    sectionHeaderBg: "#161412",
+    sectionHeaderBg: "#060504",
   },
 
   statusBar: {
-    bg: "#0c0b0a",
+    bg: "#060504",
     fg: "#e6dccb",
-    border: "#26201b",
-    itemHover: "#26201b",
+    border: "#12100e",
+    itemHover: "#1f1a17",
     remoteBg: "#d4a373",
   },
 
   titleBar: {
-    bg: "#0c0b0a",
+    bg: "#060504",
     fg: "#9e9285",
-    inactiveBg: "#12100e",
+    inactiveBg: "#050404",
   },
 
   panel: {
-    bg: "#12100e",
+    bg: "#090807",
     headerFg: "#e6dccb",
-    border: "#26201b",
+    border: "#12100e",
   },
 
   editor: {
     bg: "#0c0b0a",
     fg: "#e6dccb",
-    lineHighlight: "#1a1714", // Destaque de linha sutil
-    selection: "#302822", // Seleção marrom café
+    lineHighlight: "#161412",
+    selection: "#302822",
     findMatch: "#d4a373",
-    cursor: "#e6dccb",
+    cursor: "#d4a373",
     gutter: {
       bg: "#0c0b0a",
       fg: "#5c5046",
       activeFg: "#e6dccb",
     },
     indentGuide: {
-      active: "#5c5046",
-      inactive: "#26201b",
+      active: "#d4a373",
+      inactive: "#12100e",
     },
     bracketMatch: {
-      bg: "#26201b",
-      border: "#e0c080",
+      bg: "#1f1a17",
+      border: "#6b5d52",
     },
   },
 
   peekView: {
-    border: "#d4a373", // Caramelo
-    headerBg: "#161412", // Levemente mais claro que o fundo
+    border: "#d4a373",
+    headerBg: "#090807",
     titleFg: "#e6dccb",
     descFg: "#9e9285",
-    editorBg: "#12100e", // Fundo do editor do peek
-    resultBg: "#161412", // Fundo da lista de resultados
+    editorBg: "#0f0d0c",
+    resultBg: "#090807",
     selectionBg: "#302822",
     selectionFg: "#e6dccb",
     matchHighlight: "#d4a373",
@@ -81,21 +81,21 @@ export const coffeeDarkPalette: AetherPalette = {
 
   button: {
     primary: {
-      bg: "#d4a373", // Botão Caramelo
+      bg: "#d4a373",
       fg: "#0c0b0a",
       hover: "#cfa986",
     },
     secondary: {
-      bg: "#26201b",
+      bg: "#1f1a17",
       fg: "#e6dccb",
-      hover: "#302822",
+      hover: "#2a241f",
     },
   },
 
   input: {
-    bg: "#12100e",
+    bg: "#090807",
     fg: "#e6dccb",
-    border: "#26201b",
+    border: "#12100e",
     placeholder: "#5c5046",
     focusBorder: "#d4a373",
     validation: {
@@ -105,8 +105,8 @@ export const coffeeDarkPalette: AetherPalette = {
   },
 
   list: {
-    hoverBg: "#1a1714",
-    focusBg: "#1a1714",
+    hoverBg: "#1f1a17",
+    focusBg: "#1f1a17",
     activeSelectionBg: "#302822",
     activeSelectionFg: "#e6dccb",
     inactiveSelectionBg: "#0c0b0a",
@@ -116,37 +116,37 @@ export const coffeeDarkPalette: AetherPalette = {
     activeBg: "#0c0b0a",
     activeFg: "#e6dccb",
     activeBorderTop: "#d4a373",
-    inactiveBg: "#0c0b0a",
+    inactiveBg: "#090807",
     inactiveFg: "#5c5046",
-    border: "#26201b",
+    border: "#12100e",
   },
 
   scrollBar: {
     shadow: "#000000",
-    sliderBg: "#26201b",
-    sliderHover: "#302822",
+    sliderBg: "#1f1a17",
+    sliderHover: "#2a241f",
     sliderActive: "#d4a373",
   },
 
   syntax: {
-    variables: "#e6dccb", // Creme (limpo)
-    keywords: "#d8966c", // Canela (Laranja queimado)
-    functions: "#e0c080", // Mel (Dourado suave)
-    strings: "#a7b886", // Matcha (Verde orgânico)
-    numbers: "#b095ad", // Figo (Roxo desaturado - ótimo contraste)
-    constants: "#d4a373", // Caramelo
-    types: "#d4a373", // Caramelo
-    classes: "#d4a373", // Caramelo
-    operators: "#9e9285", // Cinza Quente
-    comments: "#5c5046", // Marrom Café com Leite escuro (bem sutil)
-    tags: "#d8966c", // Canela
+    variables: "#e6dccb",
+    keywords: "#d8966c",
+    functions: "#e0c080",
+    strings: "#a7b886",
+    numbers: "#b095ad",
+    constants: "#d4a373",
+    types: "#d4a373",
+    classes: "#d4a373",
+    operators: "#9e9285",
+    comments: "#5c5046",
+    tags: "#d8966c",
   },
 
   status: {
-    info: "#8fa3a3", // Azul Petróleo suave
-    warning: "#e0c080", // Mel
-    error: "#cc6666", // Vermelho Tijolo suave
-    success: "#a7b886", // Matcha
+    info: "#8fa3a3",
+    warning: "#e0c080",
+    error: "#cc6666",
+    success: "#a7b886",
   },
 
   git: {
@@ -158,7 +158,7 @@ export const coffeeDarkPalette: AetherPalette = {
   },
 
   terminal: {
-    black: "#161412",
+    black: "#1f1a17",
     red: "#cc6666",
     green: "#a7b886",
     yellow: "#e0c080",

@@ -1,56 +1,55 @@
 import { AetherPalette } from "../types";
-import { alpha } from "../utils";
 
 export const emeraldPalette: AetherPalette = {
   core: {
     bg: "#0c1210",
     fg: "#e2e8f0",
-    border: "#1e2926",
-    overlay: alpha("#000000", 50),
+    border: "#141b18",
+    overlay: "#000000",
   },
 
   activityBar: {
-    bg: "#0c1210",
+    bg: "#050807",
     fg: "#94a3b8",
     activeBorder: "#10b981",
-    activeBg: "#121a17",
+    activeBg: "#0c1210",
     badgeBg: "#10b981",
     badgeFg: "#ffffff",
   },
 
   sideBar: {
-    bg: "#0c1210",
+    bg: "#090d0b",
     fg: "#94a3b8",
-    border: "#1e2926",
-    titleFg: "#475569",
-    sectionHeaderBg: "#0f1714",
+    border: "#141b18",
+    titleFg: "#e2e8f0",
+    sectionHeaderBg: "#050807",
   },
 
   statusBar: {
-    bg: "#0c1210",
+    bg: "#050807",
     fg: "#e2e8f0",
-    border: "#1e2926",
+    border: "#141b18",
     itemHover: "#18211e",
     remoteBg: "#10b981",
   },
 
   titleBar: {
-    bg: "#0c1210",
+    bg: "#050807",
     fg: "#94a3b8",
-    inactiveBg: "#0f1714",
+    inactiveBg: "#040605",
   },
 
   panel: {
-    bg: "#0f1714",
+    bg: "#090d0b",
     headerFg: "#94a3b8",
-    border: "#1e2926",
+    border: "#141b18",
   },
 
   editor: {
     bg: "#0c1210",
     fg: "#e2e8f0",
-    lineHighlight: "#18211e",
-    selection: "#1e2926",
+    lineHighlight: "#131a17",
+    selection: "#1c2b27",
     findMatch: "#34d399",
     cursor: "#34d399",
     gutter: {
@@ -60,22 +59,22 @@ export const emeraldPalette: AetherPalette = {
     },
     indentGuide: {
       active: "#10b981",
-      inactive: "#1e2926",
+      inactive: "#141b18",
     },
     bracketMatch: {
       bg: "#1e2926",
-      border: "#34d399",
+      border: "#50665e",
     },
   },
 
   peekView: {
     border: "#10b981",
-    headerBg: "#121a17",
+    headerBg: "#090d0b",
     titleFg: "#e2e8f0",
     descFg: "#94a3b8",
-    editorBg: "#0c1210",
-    resultBg: "#0f1714",
-    selectionBg: "#1e2926",
+    editorBg: "#0f1613",
+    resultBg: "#090d0b",
+    selectionBg: "#1c2b27",
     selectionFg: "#e2e8f0",
     matchHighlight: "#34d399",
   },
@@ -94,9 +93,9 @@ export const emeraldPalette: AetherPalette = {
   },
 
   input: {
-    bg: "#0f1714",
+    bg: "#090d0b",
     fg: "#e2e8f0",
-    border: "#1e2926",
+    border: "#141b18",
     placeholder: "#475569",
     focusBorder: "#10b981",
     validation: {
@@ -108,72 +107,72 @@ export const emeraldPalette: AetherPalette = {
   list: {
     hoverBg: "#18211e",
     focusBg: "#18211e",
-    activeSelectionBg: "#1e2926",
+    activeSelectionBg: "#1c2b27",
     activeSelectionFg: "#e2e8f0",
-    inactiveSelectionBg: "#0f1714",
+    inactiveSelectionBg: "#0c1210",
   },
 
   tabs: {
     activeBg: "#0c1210",
     activeFg: "#e2e8f0",
     activeBorderTop: "#10b981",
-    inactiveBg: "#0c1210",
+    inactiveBg: "#090d0b",
     inactiveFg: "#94a3b8",
-    border: "#1e2926",
+    border: "#141b18",
   },
 
   scrollBar: {
     shadow: "#000000",
     sliderBg: "#1e2926",
-    sliderHover: "#1e2926",
+    sliderHover: "#273632",
     sliderActive: "#10b981",
   },
 
   syntax: {
-    variables: "#fca5a5",
+    variables: "#e2e8f0",
     keywords: "#34d399",
-    functions: "#c4b5fd",
-    strings: "#6ee7b7",
-    numbers: "#c2b9b9",
-    constants: "#93c5fd",
-    types: "#93c5fd",
-    classes: "#93c5fd",
-    operators: "#e2e8f0",
+    functions: "#38bdf8",
+    strings: "#a7f3d0",
+    numbers: "#f472b6",
+    constants: "#c084fc",
+    types: "#fbbf24",
+    classes: "#fbbf24",
+    operators: "#94a3b8",
     comments: "#475569",
     tags: "#34d399",
   },
 
   status: {
-    info: "#7dd3fc",
-    warning: "#fde047",
+    info: "#38bdf8",
+    warning: "#fbbf24",
     error: "#f87171",
-    success: "#6ee7b7",
+    success: "#34d399",
   },
 
   git: {
-    added: "#6ee7b7",
-    modified: "#fde047",
+    added: "#34d399",
+    modified: "#fbbf24",
     deleted: "#f87171",
     ignored: "#475569",
-    conflict: "#d8b4fe",
+    conflict: "#c084fc",
   },
 
   terminal: {
     black: "#1e293b",
     red: "#f87171",
-    green: "#6ee7b7",
-    yellow: "#fde047",
-    blue: "#93c5fd",
-    magenta: "#c4b5fd",
-    cyan: "#34d399",
+    green: "#34d399",
+    yellow: "#fbbf24",
+    blue: "#38bdf8",
+    magenta: "#c084fc",
+    cyan: "#22d3ee",
     white: "#e2e8f0",
     brightBlack: "#475569",
     brightRed: "#fca5a5",
-    brightGreen: "#a7f3d0",
-    brightYellow: "#fef08a",
-    brightBlue: "#bfdbfe",
-    brightMagenta: "#ddd6fe",
-    brightCyan: "#6ee7b7",
+    brightGreen: "#6ee7b7",
+    brightYellow: "#fcd34d",
+    brightBlue: "#7dd3fc",
+    brightMagenta: "#e879f9",
+    brightCyan: "#67e8f9",
     brightWhite: "#ffffff",
   },
 };

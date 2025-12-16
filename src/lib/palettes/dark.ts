@@ -1,47 +1,46 @@
 import { AetherPalette } from "../types";
-import { alpha } from "../utils";
 
 export const darkPalette: AetherPalette = {
   core: {
     bg: "#0c0e12",
     fg: "#e2e8f0",
-    border: "#272a36",
-    overlay: alpha("#000000", 50),
+    border: "#0F1115",
+    overlay: "#000000",
   },
 
   activityBar: {
-    bg: "#0c0e12",
+    bg: "#08090c",
     fg: "#94a3b8",
     activeBorder: "#797392",
-    activeBg: "#13151a",
+    activeBg: "#0c0e12",
     badgeBg: "#797392",
     badgeFg: "#ffffff",
   },
 
   sideBar: {
-    bg: "#0c0e12",
+    bg: "#090a0d",
     fg: "#94a3b8",
-    border: "#272a36",
-    titleFg: "#475569",
-    sectionHeaderBg: "#101014",
+    border: "#0F1115",
+    titleFg: "#e2e8f0",
+    sectionHeaderBg: "#08090c",
   },
 
   statusBar: {
-    bg: "#0c0e12",
+    bg: "#08090c",
     fg: "#e2e8f0",
-    border: "#272a36",
+    border: "#0F1115",
     itemHover: "#1c1e26",
     remoteBg: "#797392",
   },
 
   titleBar: {
-    bg: "#0c0e12",
+    bg: "#090a0d",
     fg: "#94a3b8",
-    inactiveBg: "#0f1116",
+    inactiveBg: "#040506",
   },
 
   panel: {
-    bg: "#101014",
+    bg: "#08090c",
     headerFg: "#94a3b8",
     border: "#272a36",
   },
@@ -49,10 +48,10 @@ export const darkPalette: AetherPalette = {
   editor: {
     bg: "#0c0e12",
     fg: "#e2e8f0",
-    lineHighlight: "#1e222e",
+    lineHighlight: "#1a1c24",
     selection: "#232836",
-    findMatch: "#5eead4",
-    cursor: "#5eead4",
+    findMatch: "#797392",
+    cursor: "#b2c0f5",
     gutter: {
       bg: "#0c0e12",
       fg: "#475569",
@@ -64,20 +63,20 @@ export const darkPalette: AetherPalette = {
     },
     bracketMatch: {
       bg: "#2a2d38",
-      border: "#5eead4",
+      border: "#b2c0f5",
     },
   },
 
   peekView: {
     border: "#797392",
-    headerBg: "#13151a",
+    headerBg: "#090a0d",
     titleFg: "#e2e8f0",
     descFg: "#94a3b8",
-    editorBg: "#0c0e12",
-    resultBg: "#101014",
+    editorBg: "#0f1116",
+    resultBg: "#090a0d",
     selectionBg: "#232836",
     selectionFg: "#e2e8f0",
-    matchHighlight: "#5eead4",
+    matchHighlight: "#797392",
   },
 
   button: {
@@ -94,9 +93,9 @@ export const darkPalette: AetherPalette = {
   },
 
   input: {
-    bg: "#0f1116",
+    bg: "#090a0d",
     fg: "#e2e8f0",
-    border: "#272a36",
+    border: "#0F1115",
     placeholder: "#475569",
     focusBorder: "#797392",
     validation: {
@@ -110,22 +109,22 @@ export const darkPalette: AetherPalette = {
     focusBg: "#1c1e26",
     activeSelectionBg: "#232836",
     activeSelectionFg: "#e2e8f0",
-    inactiveSelectionBg: "#0f1116",
+    inactiveSelectionBg: "#0c0e12",
   },
 
   tabs: {
     activeBg: "#0c0e12",
     activeFg: "#e2e8f0",
     activeBorderTop: "#797392",
-    inactiveBg: "#0c0e12",
+    inactiveBg: "#090a0d",
     inactiveFg: "#94a3b8",
-    border: "#272a36",
+    border: "#0F1115",
   },
 
   scrollBar: {
     shadow: "#000000",
     sliderBg: "#2a2d38",
-    sliderHover: "#2a2d38",
+    sliderHover: "#353947",
     sliderActive: "#797392",
   },
 

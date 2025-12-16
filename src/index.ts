@@ -17,37 +17,37 @@ if (!fs.existsSync(THEME_DIR)) {
 
 const themes = [
   {
-    name: "Coffee",
+    name: "Aether Coffee",
     slug: "aether-coffee",
     palette: coffeePalette,
     type: "dark",
   },
   {
-    name: "Coffee Dark",
+    name: "Aether Coffee Dark",
     slug: "aether-coffee-dark",
     palette: coffeeDarkPalette,
     type: "dark",
   },
   {
-    name: "Dark",
+    name: "Aether Dark",
     slug: "aether-dark",
     palette: darkPalette,
     type: "dark",
   },
   {
-    name: "Dark Space",
+    name: "Aether Dark Space",
     slug: "aether-dark-space",
     palette: darkSpacePalette,
     type: "dark",
   },
   {
-    name: "Emerald",
+    name: "Aether Emerald",
     slug: "aether-emerald",
     palette: emeraldPalette,
     type: "dark",
   },
   {
-    name: "Light",
+    name: "Aether Light",
     slug: "aether-light",
     palette: lightPalette,
     type: "light",

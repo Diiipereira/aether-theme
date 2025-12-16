@@ -1,102 +1,152 @@
+<div align="center">
+  <img src="assets/logo-full.png" width="300" alt="Aether Themes Logo" />
+  
+  <p>
+    <strong>A premium collection of modern themes for Visual Studio Code.</strong><br>
+    Designed with absolute focus on visual experience, precise colors, and balanced contrast.
+  </p>
+
+  <p>
+    <a href="https://marketplace.visualstudio.com/items?itemName=diiipereira.aether-theme">
+      <img src="https://img.shields.io/visual-studio-marketplace/v/diiipereira.aether-theme?style=for-the-badge&label=VS%20Marketplace&color=9d4dff" alt="Visual Studio Marketplace Version" />
+    </a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=diiipereira.aether-theme">
+      <img src="https://img.shields.io/visual-studio-marketplace/i/diiipereira.aether-theme?style=for-the-badge&color=4fffd0" alt="Visual Studio Marketplace Installs" />
+    </a>
+    <a href="https://github.com/diiipereira/aether-theme/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/diiipereira/aether-theme?style=for-the-badge&color=211b16" alt="License" />
+    </a>
+  </p>
+</div>
+
+<br>
+
+<div style="font-size: 24px; font-weight: 700;">✨ Introduction</div>
+<br>
+
+The **Aether Themes** collection was created to provide a modern, comfortable, and premium visual experience. Whether you prefer dark, light, nature-inspired, or warm coffee tones, this collection has been crafted with you in mind.
+
+We offer comprehensive support for the most popular languages on the market, ensuring consistent syntax highlighting and a deep UI customization.
+
+<br>
+
+<div style="font-size: 24px; font-weight: 700;">🎨 Themes Preview</div>
+
+<p style="color: #94a3b8; font-style: italic;">
+  Click on the images to view in high resolution.
+</p>
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/assets/logo-full.png" width="300" alt="Aether Themes Logo" />
+  <strong>Aether Dark</strong> (Default) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Dark Space</strong> (High Immersion)
 </p>
 
-<p align="center" style="margin-top: 8px;">
-  Uma coleção premium de temas modernos para Visual Studio Code
-</p>
-
-<p align="center" style="margin-top: 10px;">
-  <img src="https://img.shields.io/badge/temas-5-blueviolet" />
-  <img src="https://img.shields.io/badge/version-1.3.0-success" />
-  <img src="https://img.shields.io/badge/made%20for-VSCode-007ACC" />
+<p align="center">
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark.png" target="_blank">
+    <img src="./images/screenshot-dark.png" width="45%" alt="Aether Dark" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark-space.png" target="_blank">
+    <img src="./images/screenshot-dark-space.png" width="45%" alt="Aether Dark Space" />
+  </a>
 </p>
 
 <br>
 
-<div style="font-size: 22px; font-weight: 700;">✨ Introdução</div>
-
-<p>
-A coleção <strong>Aether Themes</strong> foi criada com foco absoluto em uma experiência visual moderna, confortável e premium.  
-Com cores precisas, contraste equilibrado e suporte abrangente para as linguagens mais populares do mercado.
+<p align="center">
+  <strong>Aether Light</strong> (Paper/Journal) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Emerald</strong> (Nature Inspired)
 </p>
-
-<p>
-Se você gosta de temas escuros, claros ou quentes com tons de café, esta coleção foi feita pensando em você.
-</p>
-
-<br><br>
-
-<h3 align="center" style="margin: 0; padding: 0; font-size: 26px;">
-  🎨 Preview
-</h3>
-
-<hr style="border: 0; height: 1px; background: rgba(255,255,255,0.08); width: 80%; margin: 16px auto;">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/images/aether-themes.gif" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);" alt="Aether Themes Preview" />
-</p>
-
-<p align="center" style="color: #94a3b8; font-size: 14px; margin-top: 10px;">
-  Incluso na coleção:
-  <br>
-  <strong>Aether Dark</strong> • 
-  <strong>Aether Dark Space</strong> • 
-  <strong>Aether Coffee</strong> • 
-  <strong>Aether Coffee Dark</strong> <span style="color: #4ade80; font-size: 10px; vertical-align: super;">NOVO</span> • 
-  <strong>Aether Light</strong>
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-light.png" target="_blank">
+    <img src="./images/screenshot-light.png" width="45%" alt="Aether Light" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-emerald.png" target="_blank">
+    <img src="./images/screenshot-emerald.png" width="45%" alt="Aether Emerald" />
+  </a>
 </p>
 
 <br>
 
-<div style="font-size: 22px; font-weight: 700;">⭐ Destaques</div>
+<p align="center">
+  <strong>Aether Coffee</strong> (Warm & Cozy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Coffee Dark</strong> (Espresso)
+</p>
 
-<ul>
-  <li><strong>Sintaxe Refinada (Tokens):</strong> Cores dedicadas para diferenciar lógica, tipos e dados em:
-    <ul>
-      <li><code>JavaScript</code>, <code>TypeScript</code>, <code>React (JSX/TSX)</code>, <code>Svelte</code></li>
-      <li><code>Python</code>, <code>Java</code>, <code>Go</code>, <code>Rust</code>, <code>PHP</code></li>
-      <li><code>C</code>, <code>C++</code>, <code>C#</code></li>
-      <li><code>HTML</code>, <code>CSS</code>, <code>SCSS</code>, <code>Tailwind</code></li>
-      <li><code>SQL</code>, <code>JSON</code>, <code>YAML</code>, <code>TOML</code></li>
-    </ul>
-  </li>
-  <li><strong>Interface (UI) Profunda:</strong> Não é apenas o editor. Estilizamos tudo:
-    <ul>
-      <li>Botões, Inputs, Dropdowns e Badges</li>
-      <li>Terminal Integrado e Search</li>
-      <li>Barras de rolagem (Scrollbars) sutis</li>
-      <li>Diff View (Git) com cores claras para adição/remoção</li>
-    </ul>
-  </li>
-  <li><strong>Markdown Premium:</strong> Headings, Blockquotes, Links, Listas e Code Blocks com visual limpo para documentação.</li>
-  <li><strong>Semantic Highlighting:</strong> Suporte total à inteligência do VS Code para distinguir variáveis, parâmetros e propriedades readonly.</li>
-</ul>
+<p align="center">
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee.png" target="_blank">
+    <img src="./images/screenshot-coffee.png" width="45%" alt="Aether Coffee" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee-dark.png" target="_blank">
+    <img src="./images/screenshot-coffee-dark.png" width="45%" alt="Aether Coffee Dark" />
+  </a>
+</p>
 
-<br><br>
+<br>
 
-<div style="font-size: 22px; font-weight: 700;">📦 Instalação</div>
+<div style="font-size: 24px; font-weight: 700;">⭐ Highlights</div>
+<br>
 
-<p><strong>Instalar pelo Marketplace</strong></p>
+- **Refined Syntax (Tokens):** Dedicated colors to distinguish logic, types, and data in:
+  - `JavaScript`, `TypeScript`, `React (JSX/TSX)`, `Svelte`
+  - `Python`, `Java`, `Go`, `Rust`, `PHP`
+  - `C`, `C++`, `C#`
+  - `HTML`, `CSS`, `SCSS`, `Tailwind`
+  - `SQL`, `JSON`, `YAML`, `TOML`
+- **Deep UI Styling:** We don't just style the editor. We cover the entire workbench:
+  - Buttons, Inputs, Dropdowns, and Badges.
+  - Integrated Terminal and Search UI.
+  - Subtle Scrollbars.
+  - Clean Git Diff View (Added/Removed/Modified).
+- **Premium Markdown:** Clean visuals for Headings, Blockquotes, Links, Lists, and Code Blocks.
+- **Semantic Highlighting:** Full support for VS Code's semantic engine to distinguish variables, parameters, interfaces, and readonly properties.
 
-<ol>
-  <li>Abra a aba <code>Extensions</code> no VS Code</li>
-  <li>Procure por <code>Aether Themes</code></li>
-  <li>Clique em <code>Install</code></li>
-</ol>
+<br>
 
-<br><br>
+<div style="font-size: 24px; font-weight: 700;">📦 Installation</div>
+<br>
 
-<p><strong>Instalação alternativa pelo CLI</strong></p>
+**Via Marketplace**
+
+1.  Open the **Extensions** sidebar in VS Code.
+2.  Search for `Aether Themes`.
+3.  Click **Install**.
+
+<br>
+
+**Via CLI**
 
 ```sh
-code --install-extension diogo-aether.aether-dark
+    code --install-extension diiipereira.aether-theme
 ```
 
-<div style="font-size: 22px; font-weight: 700;"> ❤️ Contribuições </div>
+<br>
 
-<p>Feito por <a href="https://github.com/Diiipereira">Diogo Pereira</a> e <a href="https://github.com/ElielDouglas">Eliel Douglas</a></p>
+<div style="font-size: 24px; font-weight: 700;">🔧 Recommended Settings</div>
+<br>
 
-<div style="font-size: 22px; font-weight: 700;"> 📄 Licença </div>
+For the best visual experience, add these to your `settings.json`:
 
-<p><a href="https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENSE">MIT Licence</a> </p>
+```json
+{
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.renderLineHighlight": "all",
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
+  "editor.fontLigatures": true
+}
+```
+
+<br>
+
+<div style="font-size: 24px; font-weight: 700;">❤️ Credits</div>
+<br>
+
+Created and maintained by [Diogo Pereira](https://github.com/Diiipereira) and [Eliel Douglas](https://github.com/ElielDouglas).
+
+<br>
+
+<div style="font-size: 24px; font-weight: 700;">📄 License</div>
+<br>
+
+[MIT License](https://raw.githubusercontent.com/Diiipereira/aether-theme/main/LICENSE)

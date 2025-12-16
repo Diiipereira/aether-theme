@@ -1,8 +1,9 @@
+import { Opacity } from "../../lib/opacity";
 import { AetherPalette } from "../../lib/types";
 import { alpha } from "../../lib/utils";
 
 export const getComponentColors = (p: AetherPalette) => {
-  const mutedFg = alpha(p.core.fg, 65);
+  const mutedFg = alpha(p.core.fg, Opacity.muted);
 
   return {
     // Base Colors
@@ -11,15 +12,15 @@ export const getComponentColors = (p: AetherPalette) => {
     descriptionForeground: mutedFg,
     errorForeground: p.status.error,
     "icon.foreground": mutedFg,
-    "widget.shadow": p.core.overlay,
+    "widget.shadow": alpha(p.core.overlay, Opacity.shadow),
     "selection.background": p.editor.selection,
     "sash.hoverBorder": p.tabs.activeBorderTop,
     "progressBar.background": p.tabs.activeBorderTop,
     "window.activeBorder": p.core.border,
-    "window.inactiveBorder": alpha(p.core.border, 60),
+    "window.inactiveBorder": alpha(p.core.border, Opacity.inactive),
 
     // Scrollbar
-    "scrollbar.shadow": p.scrollBar.shadow,
+    "scrollbar.shadow": alpha(p.scrollBar.shadow, Opacity.shadow),
     "scrollbarSlider.background": p.scrollBar.sliderBg,
     "scrollbarSlider.hoverBackground": p.scrollBar.sliderHover,
     "scrollbarSlider.activeBackground": p.scrollBar.sliderActive,
@@ -32,9 +33,9 @@ export const getComponentColors = (p: AetherPalette) => {
     "tab.border": p.tabs.border,
     "tab.activeBorderTop": p.tabs.activeBorderTop,
     "tab.activeBackground": p.tabs.activeBg,
-    "tab.inactiveBackground": alpha(p.tabs.inactiveBg, 60),
+    "tab.inactiveBackground": alpha(p.tabs.inactiveBg, Opacity.inactive),
     "tab.inactiveForeground": p.tabs.inactiveFg,
-    "tab.hoverBackground": alpha(p.tabs.activeBg, 50),
+    "tab.hoverBackground": alpha(p.tabs.activeBg, Opacity.half),
     "tab.hoverForeground": p.tabs.activeFg,
 
     // Buttons & Badges
@@ -46,13 +47,16 @@ export const getComponentColors = (p: AetherPalette) => {
     "button.secondaryHoverBackground": p.button.secondary.hover,
     "badge.foreground": p.activityBar.badgeFg,
     "badge.background": p.activityBar.badgeBg,
+    "extensionButton.prominentBackground": p.button.primary.bg,
+    "extensionButton.prominentForeground": p.button.primary.fg,
+    "extensionButton.prominentHoverBackground": p.button.primary.hover,
 
     // Inputs & Forms
     "input.background": p.input.bg,
     "input.border": p.input.border,
     "input.foreground": p.input.fg,
     "input.placeholderForeground": p.input.placeholder,
-    "inputOption.activeBackground": alpha(p.input.focusBorder, 20),
+    "inputOption.activeBackground": alpha(p.input.focusBorder, Opacity.low),
     "inputOption.activeBorder": p.input.focusBorder,
     "inputOption.activeForeground": p.input.fg,
     "inputValidation.errorBackground": p.input.validation.errorBg,
@@ -68,11 +72,13 @@ export const getComponentColors = (p: AetherPalette) => {
     "checkbox.selectBackground": p.input.focusBorder,
     "checkbox.selectBorder": p.input.focusBorder,
     "radio.activeForeground": p.input.fg,
-    "radio.activeBackground": alpha(p.input.focusBorder, 20),
+    "radio.activeBackground": alpha(p.input.focusBorder, Opacity.low),
     "radio.activeBorder": p.input.focusBorder,
     "radio.inactiveForeground": mutedFg,
-    "radio.inactiveBackground": alpha(p.input.bg, 50),
-    "radio.inactiveBorder": alpha(p.input.border, 50),
+    "radio.inactiveBackground": alpha(p.input.bg, Opacity.half),
+    "radio.inactiveBorder": alpha(p.input.border, Opacity.half),
+    "pickerGroup.border": p.core.border,
+    "pickerGroup.foreground": p.tabs.activeBorderTop,
 
     // Lists & Trees
     "list.hoverBackground": p.list.hoverBg,
@@ -83,9 +89,9 @@ export const getComponentColors = (p: AetherPalette) => {
     "list.inactiveSelectionForeground": p.core.fg,
     "list.focusBackground": p.list.focusBg,
     "list.focusForeground": p.core.fg,
-    "list.dropBackground": alpha(p.list.activeSelectionBg, 40),
+    "list.dropBackground": alpha(p.list.activeSelectionBg, Opacity.medium),
     "list.highlightForeground": p.editor.findMatch,
-    "tree.indentGuidesStroke": alpha(p.core.fg, 15),
+    "tree.indentGuidesStroke": alpha(p.core.fg, Opacity.faint),
     "list.errorForeground": p.status.error,
     "list.warningForeground": p.status.warning,
 
@@ -113,12 +119,25 @@ export const getComponentColors = (p: AetherPalette) => {
     "terminal.ansiBrightCyan": p.terminal.brightCyan,
     "terminal.ansiBrightWhite": p.terminal.brightWhite,
 
+    // Notebooks
+    "notebook.cellBorderColor": alpha(p.core.border, Opacity.medium),
+    "notebook.focusedCellBorder": p.tabs.activeBorderTop,
+    "notebook.cellStatusBarItemHoverBackground": alpha(
+      p.core.fg,
+      Opacity.subtle
+    ),
+    "notebook.focusedCellBackground": alpha(p.core.bg, Opacity.none),
+    "notebook.cellEditorBackground": p.input.bg,
+    "notebookStatusErrorIcon.foreground": p.status.error,
+    "notebookStatusRunningIcon.foreground": p.status.info,
+    "notebookStatusSuccessIcon.foreground": p.status.success,
+
     // Command Center & Menus
     "commandCenter.foreground": p.core.fg,
     "commandCenter.activeForeground": p.tabs.activeFg,
     "commandCenter.background": p.input.bg,
     "commandCenter.border": p.core.border,
-    "commandCenter.activeBackground": alpha(p.input.bg, 80),
+    "commandCenter.activeBackground": alpha(p.input.bg, Opacity.solid),
     "menu.background": p.input.bg,
     "menu.foreground": p.core.fg,
     "menu.border": p.core.border,
@@ -146,12 +165,40 @@ export const getComponentColors = (p: AetherPalette) => {
     "notifications.background": p.input.bg,
     "notifications.foreground": p.core.fg,
     "notificationToast.border": p.core.border,
-    "textBlockQuote.background": alpha(p.sideBar.bg, 50),
+    "textBlockQuote.background": alpha(p.sideBar.bg, Opacity.half),
     "textBlockQuote.border": p.tabs.activeBorderTop,
     "textCodeBlock.background": p.input.bg,
     "textLink.activeForeground": p.button.primary.hover,
     "textLink.foreground": p.button.primary.bg,
-    "toolbar.hoverBackground": alpha(p.core.fg, 10),
+    "toolbar.hoverBackground": alpha(p.core.fg, Opacity.subtle),
+
+    // Settings & Welcome Page
+    "settings.headerForeground": p.core.fg,
+    "settings.modifiedItemIndicator": p.git.modified,
+    "settings.dropdownBackground": p.input.bg,
+    "settings.dropdownForeground": p.input.fg,
+    "settings.dropdownBorder": p.input.border,
+    "settings.checkboxBackground": p.input.bg,
+    "settings.checkboxForeground": p.input.fg,
+    "settings.checkboxBorder": p.input.border,
+    "settings.textInputBackground": p.input.bg,
+    "settings.textInputForeground": p.input.fg,
+    "settings.textInputBorder": p.input.border,
+    "welcomePage.background": p.core.bg,
+    "welcomePage.tileBackground": p.input.bg,
+    "welcomePage.tileHoverBackground": p.list.hoverBg,
+    "welcomePage.progress.foreground": p.tabs.activeBorderTop,
+    "walkThrough.embeddedEditorBackground": p.input.bg,
+
+    // Charts
+    "charts.foreground": p.core.fg,
+    "charts.lines": alpha(p.core.fg, Opacity.medium),
+    "charts.red": p.status.error,
+    "charts.blue": p.status.info,
+    "charts.yellow": p.status.warning,
+    "charts.green": p.status.success,
+    "charts.orange": p.git.modified,
+    "charts.purple": p.syntax.functions,
 
     // Icons & Git
     "symbolIcon.classForeground": p.syntax.classes,
@@ -182,5 +229,8 @@ export const getComponentColors = (p: AetherPalette) => {
     "editorError.foreground": p.status.error,
     "editorWarning.foreground": p.status.warning,
     "editorInfo.foreground": p.status.info,
+    "problemsErrorIcon.foreground": p.status.error,
+    "problemsWarningIcon.foreground": p.status.warning,
+    "problemsInfoIcon.foreground": p.status.info,
   };
 };

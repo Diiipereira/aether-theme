@@ -1,3 +1,4 @@
+import { Opacity } from "../../lib/opacity";
 import { AetherPalette } from "../../lib/types";
 import { alpha } from "../../lib/utils";
 
@@ -7,10 +8,10 @@ export const getLayoutColors = (p: AetherPalette) => {
     "activityBar.background": p.activityBar.bg,
     "activityBar.foreground": p.activityBar.fg,
     "activityBar.border": p.sideBar.border,
-    "activityBar.dropBackground": alpha(p.activityBar.fg, 10),
+    "activityBar.dropBackground": alpha(p.activityBar.fg, Opacity.subtle),
     "activityBar.activeBorder": p.activityBar.activeBorder,
     "activityBar.activeBackground": p.activityBar.activeBg,
-    "activityBar.inactiveForeground": alpha(p.activityBar.fg, 50),
+    "activityBar.inactiveForeground": alpha(p.activityBar.fg, Opacity.half),
     "activityBarBadge.background": p.activityBar.badgeBg,
     "activityBarBadge.foreground": p.activityBar.badgeFg,
 
@@ -18,7 +19,7 @@ export const getLayoutColors = (p: AetherPalette) => {
     "sideBar.background": p.sideBar.bg,
     "sideBar.foreground": p.sideBar.fg,
     "sideBar.border": p.sideBar.border,
-    "sideBar.dropBackground": alpha(p.sideBar.fg, 10),
+    "sideBar.dropBackground": alpha(p.sideBar.fg, Opacity.subtle),
     "sideBarTitle.foreground": p.sideBar.titleFg,
     "sideBarSectionHeader.background": p.sideBar.sectionHeaderBg,
     "sideBarSectionHeader.foreground": p.sideBar.titleFg,
@@ -35,13 +36,13 @@ export const getLayoutColors = (p: AetherPalette) => {
     "statusBar.debuggingForeground": p.core.bg,
     "statusBar.debuggingBorder": p.status.warning,
     "statusBar.noFolderBackground": p.statusBar.bg,
-    "statusBar.noFolderForeground": alpha(p.core.fg, 65),
+    "statusBar.noFolderForeground": alpha(p.core.fg, Opacity.muted),
 
     // Title Bar
     "titleBar.activeBackground": p.titleBar.bg,
     "titleBar.activeForeground": p.titleBar.fg,
     "titleBar.inactiveBackground": p.titleBar.inactiveBg,
-    "titleBar.inactiveForeground": alpha(p.titleBar.fg, 60),
+    "titleBar.inactiveForeground": alpha(p.titleBar.fg, Opacity.inactive),
     "titleBar.border": p.core.border,
 
     // Panel
@@ -49,6 +50,6 @@ export const getLayoutColors = (p: AetherPalette) => {
     "panel.border": p.panel.border,
     "panelTitle.activeBorder": p.tabs.activeBorderTop,
     "panelTitle.activeForeground": p.panel.headerFg,
-    "panelTitle.inactiveForeground": alpha(p.panel.headerFg, 60),
+    "panelTitle.inactiveForeground": alpha(p.panel.headerFg, Opacity.inactive),
   };
 };
