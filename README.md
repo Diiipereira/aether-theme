@@ -5,18 +5,6 @@
     <strong>A premium collection of modern themes for Visual Studio Code.</strong><br>
     Designed with absolute focus on visual experience, precise colors, and balanced contrast.
   </p>
-
-  <p>
-    <a href="https://marketplace.visualstudio.com/items?itemName=diiipereira.aether-theme">
-      <img src="https://img.shields.io/visual-studio-marketplace/v/diiipereira.aether-theme?style=for-the-badge&label=VS%20Marketplace&color=9d4dff" alt="Visual Studio Marketplace Version" />
-    </a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=diiipereira.aether-theme">
-      <img src="https://img.shields.io/visual-studio-marketplace/i/diiipereira.aether-theme?style=for-the-badge&color=4fffd0" alt="Visual Studio Marketplace Installs" />
-    </a>
-    <a href="https://github.com/diiipereira/aether-theme/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/diiipereira/aether-theme?style=for-the-badge&color=211b16" alt="License" />
-    </a>
-  </p>
 </div>
 
 <br>
@@ -36,51 +24,50 @@ We offer comprehensive support for the most popular languages on the market, ens
   Click on the images to view in high resolution.
 </p>
 
-<p align="center">
-  <strong>Aether Dark</strong> (Default) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Dark Space</strong> (High Immersion)
-</p>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark.png" target="_blank">
-    <img src="./images/screenshot-dark.png" width="45%" alt="Aether Dark" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark-space.png" target="_blank">
-    <img src="./images/screenshot-dark-space.png" width="45%" alt="Aether Dark Space" />
-  </a>
-</p>
-
-<br>
-
-<p align="center">
-  <strong>Aether Light</strong> (Paper/Journal) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Emerald</strong> (Nature Inspired)
-</p>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-light.png" target="_blank">
-    <img src="./images/screenshot-light.png" width="45%" alt="Aether Light" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-emerald.png" target="_blank">
-    <img src="./images/screenshot-emerald.png" width="45%" alt="Aether Emerald" />
-  </a>
-</p>
-
-<br>
-
-<p align="center">
-  <strong>Aether Coffee</strong> (Warm & Cozy) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Coffee Dark</strong> (Espresso)
-</p>
-
-<p align="center">
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee.png" target="_blank">
-    <img src="./images/screenshot-coffee.png" width="45%" alt="Aether Coffee" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee-dark.png" target="_blank">
-    <img src="./images/screenshot-coffee-dark.png" width="45%" alt="Aether Coffee Dark" />
-  </a>
-</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Aether Dark</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark.png" target="_blank">
+        <img src="./images/screenshot-dark.png" width="100%" alt="Aether Dark" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Aether Light</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-light.png" target="_blank">
+        <img src="./images/screenshot-light.png" width="100%" alt="Aether Light" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Dark Space</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-dark-space.png" target="_blank">
+        <img src="./images/screenshot-dark-space.png" width="100%" alt="Aether Dark Space" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Emerald</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-emerald.png" target="_blank">
+        <img src="./images/screenshot-emerald.png" width="100%" alt="Aether Emerald" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Aether Coffee</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee.png" target="_blank">
+        <img src="./images/screenshot-coffee.png" width="100%" alt="Aether Coffee" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+    <td width="50%" align="left" valign="bottom" style="border: 0;">
+      <strong>Coffee Dark</strong><br><br>
+      <a href="https://raw.githubusercontent.com/diiipereira/aether-theme/main/images/screenshot-coffee-dark.png" target="_blank">
+        <img src="./images/screenshot-coffee-dark.png" width="100%" alt="Aether Coffee Dark" style="box-shadow: 0 8px 24px rgba(0,0,0,0.4); border-radius: 8px;" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 <br>
 
