@@ -3,7 +3,7 @@
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
   "description": "A premium collection of modern themes for VS Code. Designed for focus, perfect readability, and refined syntax highlighting.",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#121212",

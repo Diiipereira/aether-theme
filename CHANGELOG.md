@@ -3,6 +3,22 @@
 </div>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
+  [1.3.4] — Documentation & Marketplace Polish
+</div>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
+<ul>
+  <li><strong>README:</strong> Added missing project description and improved overall clarity.</li>
+  <li><strong>Assets:</strong> Fixed and adjusted image links for correct rendering on the VS Code Marketplace.</li>
+</ul>
+
+<div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Notes</div>
+<ul>
+  <li>This release contains documentation-only updates.</li>
+  <li>No visual or functional changes were made to the themes.</li>
+</ul>
+
+<div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
   [1.3.3] — The Emerald Update
 </div>
 
