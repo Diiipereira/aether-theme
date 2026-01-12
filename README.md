@@ -104,7 +104,7 @@ We offer comprehensive support for the most popular languages on the market, ens
 **Via CLI**
 
 ```sh
-    code --install-extension diiipereira.aether-theme
+    code --install-extension diogo-aether.aether-dark
 ```
 
 <br>
