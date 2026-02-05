@@ -30,7 +30,8 @@ export const lightPalette: AetherPalette = {
     fg: "#575252",
     border: "#dcd6d0",
     itemHover: "#dcd6d0",
-    remoteBg: "#6e7996",
+    remoteBg: "#e0dad4",
+    itemActiveBg: "#dcd6d0",
   },
 
   titleBar: {
@@ -65,6 +66,18 @@ export const lightPalette: AetherPalette = {
       bg: "#e3ded9",
       border: "#8f857d",
     },
+    brackets: {
+      pair1: "#b07d62",
+      pair2: "#9c6b94",
+      pair3: "#508a8a",
+      pair4: "#c76b6b",
+      pair5: "#5a7699",
+      pair6: "#5c8c63",
+      unexpected: "#c76b6b",
+    },
+    whitespace: "#dcd6d0",
+    ruler: "#dcd6d0",
+    link: "#5a7699",
   },
 
   peekView: {
@@ -155,6 +168,25 @@ export const lightPalette: AetherPalette = {
     deleted: "#c76b6b",
     ignored: "#a69b91",
     conflict: "#9c6b94",
+  },
+
+  merge: {
+    currentHeader: "#d4e4f7",
+    currentContent: "#e8f2ff",
+    incomingHeader: "#d4f0d4",
+    incomingContent: "#e8ffe8",
+    commonHeader: "#e6e1dc",
+    commonContent: "#f0ede9",
+  },
+
+  testing: {
+    passed: "#5c8c63",
+    failed: "#c76b6b",
+    errored: "#db8ca1",
+    queued: "#b07d62",
+    unset: "#b0aba6",
+    skipped: "#9e9690",
+    border: "#6e7996",
   },
 
   terminal: {

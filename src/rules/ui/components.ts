@@ -37,6 +37,26 @@ export const getComponentColors = (p: AetherPalette) => {
     "tab.inactiveForeground": p.tabs.inactiveFg,
     "tab.hoverBackground": alpha(p.tabs.activeBg, Opacity.half),
     "tab.hoverForeground": p.tabs.activeFg,
+    "tab.unfocusedActiveBackground": alpha(p.tabs.activeBg, Opacity.solid),
+    "tab.unfocusedActiveForeground": alpha(p.tabs.activeFg, Opacity.muted),
+    "tab.unfocusedInactiveBackground": alpha(p.tabs.inactiveBg, Opacity.soft),
+    "tab.unfocusedInactiveForeground": alpha(p.tabs.inactiveFg, Opacity.muted),
+    "tab.unfocusedHoverBackground": alpha(p.tabs.activeBg, Opacity.medium),
+    "tab.unfocusedHoverForeground": alpha(p.tabs.activeFg, Opacity.muted),
+    "tab.unfocusedActiveBorder": alpha(p.tabs.activeBorderTop, Opacity.muted),
+    "tab.unfocusedActiveBorderTop": alpha(
+      p.tabs.activeBorderTop,
+      Opacity.muted
+    ),
+    "tab.unfocusedHoverBorder": alpha(p.tabs.activeBorderTop, Opacity.low),
+    "tab.activeModifiedBorder": p.git.modified,
+    "tab.inactiveModifiedBorder": alpha(p.git.modified, Opacity.muted),
+    "tab.unfocusedActiveModifiedBorder": alpha(p.git.modified, Opacity.half),
+    "tab.unfocusedInactiveModifiedBorder": alpha(
+      p.git.modified,
+      Opacity.medium
+    ),
+    "tab.lastPinnedBorder": p.core.border,
 
     // Buttons & Badges
     "button.background": p.button.primary.bg,
@@ -232,5 +252,31 @@ export const getComponentColors = (p: AetherPalette) => {
     "problemsErrorIcon.foreground": p.status.error,
     "problemsWarningIcon.foreground": p.status.warning,
     "problemsInfoIcon.foreground": p.status.info,
+
+    "testing.iconFailed": p.testing.failed,
+    "testing.iconErrored": p.testing.errored,
+    "testing.iconPassed": p.testing.passed,
+    "testing.runAction": p.testing.passed,
+    "testing.iconQueued": p.testing.queued,
+    "testing.iconUnset": p.testing.unset,
+    "testing.iconSkipped": p.testing.skipped,
+    "testing.peekBorder": p.testing.border,
+    "testing.peekHeaderBackground": p.panel.bg,
+    "testing.message.error.decorationForeground": p.testing.failed,
+    "testing.message.error.lineBackground": alpha(
+      p.testing.failed,
+      Opacity.subtle
+    ),
+
+    "banner.background": p.statusBar.bg,
+    "banner.foreground": p.statusBar.fg,
+    "banner.iconForeground": p.tabs.activeBorderTop,
+
+    "extensionBadge.remoteBackground": p.statusBar.remoteBg,
+    "extensionBadge.remoteForeground": p.core.fg,
+    "extensionIcon.starForeground": p.status.warning,
+    "extensionIcon.verifiedForeground": p.status.success,
+    "extensionIcon.preReleaseForeground": p.status.warning,
+    "extensionIcon.sponsorForeground": p.git.conflict,
   };
 };

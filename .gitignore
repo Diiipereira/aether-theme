@@ -1,3 +1,4 @@
 # Ignorar arquivos VSIX gerados pelo build
 *.vsix
 node_modules
+.vscode

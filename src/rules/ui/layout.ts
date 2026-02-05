@@ -37,6 +37,14 @@ export const getLayoutColors = (p: AetherPalette) => {
     "statusBar.debuggingBorder": p.status.warning,
     "statusBar.noFolderBackground": p.statusBar.bg,
     "statusBar.noFolderForeground": alpha(p.core.fg, Opacity.muted),
+    "statusBarItem.activeBackground": p.statusBar.itemActiveBg,
+    "statusBarItem.prominentBackground": p.button.primary.bg,
+    "statusBarItem.prominentForeground": p.button.primary.fg,
+    "statusBarItem.prominentHoverBackground": p.button.primary.hover,
+    "statusBarItem.errorBackground": p.status.error,
+    "statusBarItem.errorForeground": p.core.fg,
+    "statusBarItem.warningBackground": p.status.warning,
+    "statusBarItem.warningForeground": p.core.bg,
 
     // Title Bar
     "titleBar.activeBackground": p.titleBar.bg,

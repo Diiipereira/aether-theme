@@ -2,58 +2,59 @@ import { AetherPalette } from "../types";
 
 export const emeraldPalette: AetherPalette = {
   core: {
-    bg: "#0c1210",
+    bg: "#0d1311",
     fg: "#e2e8f0",
     border: "#141b18",
     overlay: "#000000",
   },
 
   activityBar: {
-    bg: "#050807",
+    bg: "#0a0f0d",
     fg: "#94a3b8",
     activeBorder: "#10b981",
-    activeBg: "#0c1210",
+    activeBg: "#0d1311",
     badgeBg: "#10b981",
     badgeFg: "#ffffff",
   },
 
   sideBar: {
-    bg: "#090d0b",
+    bg: "#0b110f",
     fg: "#94a3b8",
     border: "#141b18",
     titleFg: "#e2e8f0",
-    sectionHeaderBg: "#050807",
+    sectionHeaderBg: "#0a0f0d",
   },
 
   statusBar: {
-    bg: "#050807",
+    bg: "#0a0f0d",
     fg: "#e2e8f0",
     border: "#141b18",
     itemHover: "#18211e",
-    remoteBg: "#10b981",
+    remoteBg: "#0d1311",
+    itemActiveBg: "#111715",
   },
 
   titleBar: {
-    bg: "#050807",
+    bg: "#0a0f0d",
     fg: "#94a3b8",
-    inactiveBg: "#040605",
+    inactiveBg: "#080c0a",
   },
 
   panel: {
-    bg: "#090d0b",
+    bg: "#0b110f",
     headerFg: "#94a3b8",
     border: "#141b18",
   },
 
   editor: {
-    bg: "#0c1210",
+    bg: "#0d1311",
     fg: "#e2e8f0",
-    lineHighlight: "#131a17",
-    selection: "#14211d",
+    lineHighlight: "#111715",
+    selection: "#16211d",
     findMatch: "#34d399",
     cursor: "#34d399",
     gutter: {
-      bg: "#0c1210",
+      bg: "#0d1311",
       fg: "#475569",
       activeFg: "#e2e8f0",
     },
@@ -65,16 +66,28 @@ export const emeraldPalette: AetherPalette = {
       bg: "#1e2926",
       border: "#50665e",
     },
+    brackets: {
+      pair1: "#fbbf24",
+      pair2: "#38bdf8",
+      pair3: "#34d399",
+      pair4: "#f472b6",
+      pair5: "#c084fc",
+      pair6: "#22d3ee",
+      unexpected: "#f87171",
+    },
+    whitespace: "#141b18",
+    ruler: "#141b18",
+    link: "#38bdf8",
   },
 
   peekView: {
     border: "#10b981",
-    headerBg: "#090d0b",
+    headerBg: "#0b110f",
     titleFg: "#e2e8f0",
     descFg: "#94a3b8",
-    editorBg: "#0f1613",
-    resultBg: "#090d0b",
-    selectionBg: "#14211d",
+    editorBg: "#0d1311",
+    resultBg: "#0b110f",
+    selectionBg: "#16211d",
     selectionFg: "#e2e8f0",
     matchHighlight: "#34d399",
   },
@@ -86,14 +99,14 @@ export const emeraldPalette: AetherPalette = {
       hover: "#059669",
     },
     secondary: {
-      bg: "#18211e",
+      bg: "#111715",
       fg: "#e2e8f0",
-      hover: "#1e2926",
+      hover: "#16211d",
     },
   },
 
   input: {
-    bg: "#090d0b",
+    bg: "#0b110f",
     fg: "#e2e8f0",
     border: "#141b18",
     placeholder: "#475569",
@@ -105,18 +118,18 @@ export const emeraldPalette: AetherPalette = {
   },
 
   list: {
-    hoverBg: "#18211e",
-    focusBg: "#18211e",
-    activeSelectionBg: "#14211d",
+    hoverBg: "#111715",
+    focusBg: "#111715",
+    activeSelectionBg: "#16211d",
     activeSelectionFg: "#e2e8f0",
-    inactiveSelectionBg: "#0c1210",
+    inactiveSelectionBg: "#0d1311",
   },
 
   tabs: {
-    activeBg: "#0c1210",
+    activeBg: "#0d1311",
     activeFg: "#e2e8f0",
     activeBorderTop: "#10b981",
-    inactiveBg: "#090d0b",
+    inactiveBg: "#0b110f",
     inactiveFg: "#94a3b8",
     border: "#141b18",
   },
@@ -155,6 +168,25 @@ export const emeraldPalette: AetherPalette = {
     deleted: "#f87171",
     ignored: "#475569",
     conflict: "#c084fc",
+  },
+
+  merge: {
+    currentHeader: "#1e3a5f",
+    currentContent: "#0f2942",
+    incomingHeader: "#2d4a2e",
+    incomingContent: "#1a2f1b",
+    commonHeader: "#18211e",
+    commonContent: "#131a17",
+  },
+
+  testing: {
+    passed: "#34d399",
+    failed: "#f87171",
+    errored: "#fca5a5",
+    queued: "#fbbf24",
+    unset: "#475569",
+    skipped: "#94a3b8",
+    border: "#10b981",
   },
 
   terminal: {

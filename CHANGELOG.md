@@ -2,6 +2,70 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.3.6] — VS Code API 1.109 Compliance & UI Refinements</div>
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">New Features</div>
+<ul>
+  <li>
+    <strong>Full API 1.109 Coverage:</strong> Implemented all missing theme colors from VS Code API 1.109, including:
+    <ul>
+      <li>Advanced tab states (unfocused, modified, pinned borders)</li>
+      <li>Editor group drop backgrounds and empty states</li>
+      <li>Bracket pair colorization (6 color pairs + unexpected bracket)</li>
+      <li>Bracket pair guides (active and inactive states)</li>
+      <li>Testing icons (passed, failed, errored, queued, skipped)</li>
+      <li>Merge conflict colors (current, incoming, common content)</li>
+      <li>Status bar extended states (prominent, error, warning)</li>
+      <li>Search editor colors</li>
+      <li>Editor extras (whitespace, rulers, links)</li>
+      <li>Side-by-side editor borders</li>
+      <li>Banner notifications</li>
+      <li>Extension icons (star, verified, pre-release, sponsor)</li>
+    </ul>
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Visual Improvements</div>
+<ul>
+  <li>
+    <strong>Harmonized Color Transitions:</strong> Refined the color progression between Activity Bar → Sidebar → Editor in all themes for a smoother, more cohesive visual experience:
+    <ul>
+      <li>Emerald: Optimized green-tinted gradient</li>
+      <li>Dark: Adjusted to 2-point hex progression</li>
+      <li>Dark Space: Refined purple-tinted gradient</li>
+      <li>Coffee & Coffee Dark: Maintained warm brown transitions</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Status Bar Consistency:</strong> Fixed remote indicator and hover states to respect each theme's color palette instead of using a global color.
+  </li>
+  <li>
+    <strong>Bracket Colorization:</strong> Each theme now has unique, vibrant bracket pair colors that complement its palette.
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Engineering & Architecture</div>
+<ul>
+  <li>
+    <strong>Extended Type System:</strong> Added new properties to <code>AetherPalette</code> interface:
+    <ul>
+      <li><code>editor.brackets</code>: 6 pair colors + unexpected</li>
+      <li><code>editor.whitespace</code>, <code>editor.ruler</code>, <code>editor.link</code></li>
+      <li><code>statusBar.itemActiveBg</code>: Per-theme hover states</li>
+      <li><code>merge</code>: Conflict resolution colors</li>
+      <li><code>testing</code>: Test result indicators</li>
+    </ul>
+  </li>
+  <li>
+    <strong>Modular Color Management:</strong> All new colors are defined in palette files and automatically applied across all 6 themes.
+  </li>
+</ul>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.3.5] — Visual Polish & Reliability</div>
 <br>
 

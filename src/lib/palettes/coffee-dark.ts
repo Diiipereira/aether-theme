@@ -29,8 +29,9 @@ export const coffeeDarkPalette: AetherPalette = {
     bg: "#060504",
     fg: "#e6dccb",
     border: "#12100e",
-    itemHover: "#1f1a17",
-    remoteBg: "#d4a373",
+    itemHover: "#0f0d0c",
+    remoteBg: "#0c0b0a",
+    itemActiveBg: "#0f0d0c",
   },
 
   titleBar: {
@@ -65,6 +66,18 @@ export const coffeeDarkPalette: AetherPalette = {
       bg: "#1f1a17",
       border: "#6b5d52",
     },
+    brackets: {
+      pair1: "#e0c080",
+      pair2: "#d8966c",
+      pair3: "#a7b886",
+      pair4: "#cc6666",
+      pair5: "#8fa3a3",
+      pair6: "#8abeb7",
+      unexpected: "#cc6666",
+    },
+    whitespace: "#12100e",
+    ruler: "#12100e",
+    link: "#8fa3a3",
   },
 
   peekView: {
@@ -155,6 +168,25 @@ export const coffeeDarkPalette: AetherPalette = {
     deleted: "#cc6666",
     ignored: "#5c5046",
     conflict: "#b095ad",
+  },
+
+  merge: {
+    currentHeader: "#1e3a5f",
+    currentContent: "#0f2942",
+    incomingHeader: "#2d4a2e",
+    incomingContent: "#1a2f1b",
+    commonHeader: "#1f1a17",
+    commonContent: "#161412",
+  },
+
+  testing: {
+    passed: "#a7b886",
+    failed: "#cc6666",
+    errored: "#d46c6c",
+    queued: "#e0c080",
+    unset: "#5c5046",
+    skipped: "#9e9285",
+    border: "#d4a373",
   },
 
   terminal: {

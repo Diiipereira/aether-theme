@@ -2,58 +2,59 @@ import { AetherPalette } from "../types";
 
 export const darkSpacePalette: AetherPalette = {
   core: {
-    bg: "#13091c",
+    bg: "#0f0b14",
     fg: "#e3e1e6",
     border: "#1e1426",
     overlay: "#040206",
   },
 
   activityBar: {
-    bg: "#09050e",
+    bg: "#0b0710",
     fg: "#a69eb0",
     activeBorder: "#9d4dff",
-    activeBg: "#13091c",
+    activeBg: "#0f0b14",
     badgeBg: "#9d4dff",
     badgeFg: "#ffffff",
   },
 
   sideBar: {
-    bg: "#0b0612",
+    bg: "#0d0912",
     fg: "#988f9e",
     border: "#1e1426",
     titleFg: "#e3e1e6",
-    sectionHeaderBg: "#09050e",
+    sectionHeaderBg: "#0b0710",
   },
 
   statusBar: {
-    bg: "#09050e",
+    bg: "#0b0710",
     fg: "#e3e1e6",
     border: "#1e1426",
     itemHover: "#2a1636",
-    remoteBg: "#9d4dff",
+    remoteBg: "#0f0b14",
+    itemActiveBg: "#1f102e",
   },
 
   titleBar: {
-    bg: "#09050e",
+    bg: "#0b0710",
     fg: "#988f9e",
-    inactiveBg: "#040206",
+    inactiveBg: "#09050e",
   },
 
   panel: {
-    bg: "#0b0612",
+    bg: "#0d0912",
     headerFg: "#e3e1e6",
     border: "#1e1426",
   },
 
   editor: {
-    bg: "#13091c",
+    bg: "#0f0b14",
     fg: "#e3e1e6",
     lineHighlight: "#1f102e",
     selection: "#2d1645",
     findMatch: "#9d4dff",
     cursor: "#9d4dff",
     gutter: {
-      bg: "#13091c",
+      bg: "#0f0b14",
       fg: "#4e405e",
       activeFg: "#e3e1e6",
     },
@@ -65,15 +66,27 @@ export const darkSpacePalette: AetherPalette = {
       bg: "#361b4d",
       border: "#6c597a",
     },
+    brackets: {
+      pair1: "#ffcb6b",
+      pair2: "#bd5eff",
+      pair3: "#4fffd0",
+      pair4: "#ff9ccc",
+      pair5: "#7acfff",
+      pair6: "#5ee6ff",
+      unexpected: "#ff5f5f",
+    },
+    whitespace: "#1e1426",
+    ruler: "#1e1426",
+    link: "#7acfff",
   },
 
   peekView: {
     border: "#9d4dff",
-    headerBg: "#0b0612",
+    headerBg: "#0d0912",
     titleFg: "#e3e1e6",
     descFg: "#988f9e",
     editorBg: "#100817",
-    resultBg: "#0b0612",
+    resultBg: "#0d0912",
     selectionBg: "#2d1645",
     selectionFg: "#ffffff",
     matchHighlight: "#9d4dff",
@@ -93,7 +106,7 @@ export const darkSpacePalette: AetherPalette = {
   },
 
   input: {
-    bg: "#0b0612",
+    bg: "#0d0912",
     fg: "#e3e1e6",
     border: "#1e1426",
     placeholder: "#5a4b66",
@@ -109,14 +122,14 @@ export const darkSpacePalette: AetherPalette = {
     focusBg: "#251438",
     activeSelectionBg: "#2d1645",
     activeSelectionFg: "#ffffff",
-    inactiveSelectionBg: "#1f102e",
+    inactiveSelectionBg: "#0f0b14",
   },
 
   tabs: {
-    activeBg: "#13091c",
+    activeBg: "#0f0b14",
     activeFg: "#e3e1e6",
     activeBorderTop: "#9d4dff",
-    inactiveBg: "#0b0612",
+    inactiveBg: "#0d0912",
     inactiveFg: "#6e637a",
     border: "#1e1426",
   },
@@ -155,6 +168,25 @@ export const darkSpacePalette: AetherPalette = {
     deleted: "#ff5f5f",
     ignored: "#5a4b66",
     conflict: "#ff70d9",
+  },
+
+  merge: {
+    currentHeader: "#1e3a5f",
+    currentContent: "#0f2942",
+    incomingHeader: "#2d4a2e",
+    incomingContent: "#1a2f1b",
+    commonHeader: "#3a3a3a",
+    commonContent: "#2a2a2a",
+  },
+
+  testing: {
+    passed: "#4fffd0",
+    failed: "#ff5f5f",
+    errored: "#ff8080",
+    queued: "#ffcb6b",
+    unset: "#5a4b66",
+    skipped: "#a69eb0",
+    border: "#9d4dff",
   },
 
   terminal: {

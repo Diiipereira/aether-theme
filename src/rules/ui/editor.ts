@@ -42,6 +42,58 @@ export const getEditorColors = (p: AetherPalette) => {
     ),
     "editor.symbolHighlightBackground": alpha(p.editor.findMatch, Opacity.low),
 
+    "editorBracketHighlight.foreground1": p.editor.brackets.pair1,
+    "editorBracketHighlight.foreground2": p.editor.brackets.pair2,
+    "editorBracketHighlight.foreground3": p.editor.brackets.pair3,
+    "editorBracketHighlight.foreground4": p.editor.brackets.pair4,
+    "editorBracketHighlight.foreground5": p.editor.brackets.pair5,
+    "editorBracketHighlight.foreground6": p.editor.brackets.pair6,
+    "editorBracketHighlight.unexpectedBracket.foreground":
+      p.editor.brackets.unexpected,
+
+    "editorBracketPairGuide.background1": alpha(
+      p.editor.brackets.pair1,
+      Opacity.faint
+    ),
+    "editorBracketPairGuide.background2": alpha(
+      p.editor.brackets.pair2,
+      Opacity.faint
+    ),
+    "editorBracketPairGuide.background3": alpha(
+      p.editor.brackets.pair3,
+      Opacity.faint
+    ),
+    "editorBracketPairGuide.activeBackground1": alpha(
+      p.editor.brackets.pair1,
+      Opacity.soft
+    ),
+    "editorBracketPairGuide.activeBackground2": alpha(
+      p.editor.brackets.pair2,
+      Opacity.soft
+    ),
+    "editorBracketPairGuide.activeBackground3": alpha(
+      p.editor.brackets.pair3,
+      Opacity.soft
+    ),
+
+    "editorWhitespace.foreground": p.editor.whitespace,
+    "editorRuler.foreground": p.editor.ruler,
+    "editorLink.activeForeground": p.editor.link,
+
+    "editorGroup.border": p.core.border,
+    "editorGroup.dropBackground": alpha(p.editor.selection, Opacity.subtle),
+    "editorGroup.emptyBackground": p.core.bg,
+    "editorGroup.focusedEmptyBorder": p.tabs.activeBorderTop,
+    "editorPane.background": p.core.bg,
+    "sideBySideEditor.horizontalBorder": p.core.border,
+    "sideBySideEditor.verticalBorder": p.core.border,
+
+    "searchEditor.findMatchBackground": alpha(
+      p.editor.findMatch,
+      Opacity.highlight
+    ),
+    "searchEditor.textInputBorder": p.input.border,
+
     // Snippets & Linked Editing
     "editor.snippetTabstopHighlightBackground": alpha(
       p.editor.selection,
@@ -68,8 +120,27 @@ export const getEditorColors = (p: AetherPalette) => {
     "diffEditor.removedTextBackground": alpha(p.git.deleted, Opacity.faint),
     "diffEditor.border": p.core.border,
     "merge.border": p.core.border,
-    "merge.currentContentBackground": alpha(p.git.conflict, Opacity.subtle),
-    "merge.incomingContentBackground": alpha(p.git.modified, Opacity.subtle),
+    "merge.currentHeaderBackground": alpha(p.merge.currentHeader, Opacity.soft),
+    "merge.currentContentBackground": alpha(
+      p.merge.currentContent,
+      Opacity.soft
+    ),
+    "merge.incomingHeaderBackground": alpha(
+      p.merge.incomingHeader,
+      Opacity.soft
+    ),
+    "merge.incomingContentBackground": alpha(
+      p.merge.incomingContent,
+      Opacity.soft
+    ),
+    "merge.commonHeaderBackground": alpha(p.merge.commonHeader, Opacity.soft),
+    "merge.commonContentBackground": alpha(
+      p.merge.commonContent,
+      Opacity.soft
+    ),
+    "editorOverviewRuler.currentContentForeground": p.merge.currentHeader,
+    "editorOverviewRuler.incomingContentForeground": p.merge.incomingHeader,
+    "editorOverviewRuler.commonContentForeground": p.merge.commonHeader,
 
     // Minimap
     "minimap.findMatchHighlight": p.editor.findMatch,

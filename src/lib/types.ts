@@ -31,6 +31,7 @@ export interface AetherPalette {
     border: string;
     itemHover: string;
     remoteBg: string;
+    itemActiveBg: string;
   };
 
   titleBar: {
@@ -66,6 +67,18 @@ export interface AetherPalette {
       bg: string;
       border: string;
     };
+    brackets: {
+      pair1: string;
+      pair2: string;
+      pair3: string;
+      pair4: string;
+      pair5: string;
+      pair6: string;
+      unexpected: string;
+    };
+    whitespace: string;
+    ruler: string;
+    link: string;
   };
 
   peekView: {
@@ -159,6 +172,25 @@ export interface AetherPalette {
     deleted: string;
     ignored: string;
     conflict: string;
+  };
+
+  merge: {
+    currentHeader: string;
+    currentContent: string;
+    incomingHeader: string;
+    incomingContent: string;
+    commonHeader: string;
+    commonContent: string;
+  };
+
+  testing: {
+    passed: string;
+    failed: string;
+    errored: string;
+    queued: string;
+    unset: string;
+    skipped: string;
+    border: string;
   };
 
   // 7. TERMINAL
