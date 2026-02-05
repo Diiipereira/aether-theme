@@ -49,7 +49,7 @@ export const coffeeDarkPalette: AetherPalette = {
     bg: "#0c0b0a",
     fg: "#e6dccb",
     lineHighlight: "#161412",
-    selection: "#302822",
+    selection: "#29211c",
     findMatch: "#d4a373",
     cursor: "#d4a373",
     gutter: {
@@ -74,7 +74,7 @@ export const coffeeDarkPalette: AetherPalette = {
     descFg: "#9e9285",
     editorBg: "#0f0d0c",
     resultBg: "#090807",
-    selectionBg: "#302822",
+    selectionBg: "#29211c",
     selectionFg: "#e6dccb",
     matchHighlight: "#d4a373",
   },
@@ -107,7 +107,7 @@ export const coffeeDarkPalette: AetherPalette = {
   list: {
     hoverBg: "#1f1a17",
     focusBg: "#1f1a17",
-    activeSelectionBg: "#302822",
+    activeSelectionBg: "#29211c",
     activeSelectionFg: "#e6dccb",
     inactiveSelectionBg: "#0c0b0a",
   },
@@ -138,7 +138,7 @@ export const coffeeDarkPalette: AetherPalette = {
     types: "#d4a373",
     classes: "#d4a373",
     operators: "#9e9285",
-    comments: "#5c5046",
+    comments: "#9e9285",
     tags: "#d8966c",
   },
 

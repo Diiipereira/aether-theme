@@ -2,8 +2,36 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.3.5] — Visual Polish & Reliability</div>
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Visual Improvements & Accessibility</div>
+<ul>
+  <li>
+    <strong>Selection Contrast Fix:</strong> Adjusted <code>editor.selection</code> and <code>list.activeSelection</code> colors across <strong>all themes</strong> (Coffee, Dark, Emerald, Space, Light). Selected text and comments are now perfectly readable.
+  </li>
+  <li>
+    <strong>Readable Comments:</strong> Lightened the base comment color in dark themes to ensure they don't "disappear" against the selection background.
+  </li>
+  <li>
+    <strong>Smart Italics:</strong> Refined syntax rules in <code>textmate.ts</code>. Code blocks inside comments are no longer italicized, improving readability for commented-out code. Italics now apply strictly to <code>docstrings</code> and line comments.
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Engineering & Build</div>
+<ul>
+  <li>
+    <strong>Strict Color Validation:</strong> Updated the <code>alpha()</code> utility to explicitly throw build errors if hex codes do not have exactly 6 digits.
+  </li>
+  <li>
+    <strong>Enhanced Testing:</strong> The <code>test-theme.ts</code> script now utilizes Regex to validate all generated hex codes, preventing broken themes from being packaged or published.
+  </li>
+</ul>
+
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.3.4] — Documentation & Marketplace Polish
+  [v1.3.4] — Documentation & Marketplace Polish
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
@@ -19,7 +47,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.3.3] — The Emerald Update
+  [v1.3.3] — The Emerald Update
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">New Features</div>
@@ -28,7 +56,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.3.2] — Stability, Polish & Typos
+  [v1.3.2] — Stability, Polish & Typos
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed & Fixed</div>
@@ -44,7 +72,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.3.1] — Description adjustment in the package.json file
+  [v1.3.1] — Description adjustment in the package.json file
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
@@ -53,7 +81,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.3.0] — The Semantic Update & Coffee Dark
+  [v1.3.0] — The Semantic Update & Coffee Dark
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">New Features</div>
@@ -72,7 +100,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 30px;">
-  [1.2.3] — Logo Refinement, Markdown Fixes & Theme Improvements
+  [v1.2.3] — Logo Refinement, Markdown Fixes & Theme Improvements
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Fixed</div>
@@ -88,7 +116,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.2.2] — README Restructuring
+  [v1.2.2] — README Restructuring
 </div>
 
 <div style="font-size: 18px; font-weight: 600; margin-top: 10px;">Changed</div>
@@ -100,7 +128,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.2.1] — Maintenance Update
+  [v1.2.1] — Maintenance Update
 </div>
 
 <ul>
@@ -108,7 +136,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.2.0] — Complete Theme Refinement
+  [v1.2.0] — Complete Theme Refinement
 </div>
 
 <ul>
@@ -119,7 +147,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.1.5] — Correction in All Themes
+  [v1.1.5] — Correction in All Themes
 </div>
 
 <ul>
@@ -127,7 +155,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.1.4] — Correcting Import
+  [v1.1.4] — Correcting Import
 </div>
 
 <ul>
@@ -135,7 +163,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.1.3] — Version Update
+  [v1.1.3] — Version Update
 </div>
 
 <ul>
@@ -143,7 +171,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.1.2] — New Themes Added
+  [v1.1.2] — New Themes Added
 </div>
 
 <ul>
@@ -152,7 +180,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.0.2] — Fix Modal Dark Theme
+  [v1.0.2] — Fix Modal Dark Theme
 </div>
 
 <ul>
@@ -161,7 +189,7 @@
 </ul>
 
 <div style="font-size: 24px; font-weight: 700; margin-top: 40px;">
-  [1.0.0] — First Release
+  [v1.0.0] — First Release
 </div>
 
 <ul>

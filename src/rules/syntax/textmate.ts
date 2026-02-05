@@ -1,7 +1,6 @@
 import { AetherPalette } from "../../lib/types";
 
 export const getTextMateRules = (palette: AetherPalette) => [
-  // GLOBAL
   {
     name: "Keywords",
     scope: ["keyword", "storage.type", "storage.modifier", "variable.language"],
@@ -87,16 +86,19 @@ export const getTextMateRules = (palette: AetherPalette) => [
     settings: { foreground: palette.syntax.constants },
   },
   {
-    name: "Comments",
+    name: "Comments Base",
+    scope: "comment",
+    settings: { foreground: palette.syntax.comments },
+  },
+  {
+    name: "Comments Italic",
     scope: [
-      "comment",
+      "comment.line",
       "punctuation.definition.comment",
       "string.quoted.docstring",
     ],
-    settings: { foreground: palette.syntax.comments, fontStyle: "italic" },
+    settings: { fontStyle: "italic" },
   },
-
-  // JS/TS
   {
     name: "JS/TS Imports & Exports",
     scope: [
@@ -139,8 +141,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "punctuation.definition.template-expression",
     settings: { foreground: palette.syntax.operators },
   },
-
-  // HTML/CSS/Tailwind
   {
     name: "HTML Tags",
     scope: "entity.name.tag",
@@ -193,8 +193,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "entity.other.attribute-name.class",
     settings: { foreground: palette.syntax.functions },
   },
-
-  // C# / .NET
   {
     name: "C# Namespaces",
     scope: "entity.name.type.namespace.cs",
@@ -220,8 +218,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "keyword.other.using.cs",
     settings: { foreground: palette.syntax.keywords },
   },
-
-  // PYTHON
   {
     name: "Python Self/Cls",
     scope: [
@@ -235,8 +231,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: ["meta.function.decorator.python", "entity.name.function.decorator"],
     settings: { foreground: palette.syntax.functions },
   },
-
-  // JAVA/PHP/GO/RUST
   {
     name: "Java/PHP Annotations",
     scope: ["storage.type.annotation", "meta.attribute.php"],
@@ -276,8 +270,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "support.function.macro.rust",
     settings: { foreground: palette.syntax.functions },
   },
-
-  // MARKDOWN
   {
     name: "Markdown Headings",
     scope: [
@@ -327,8 +319,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "punctuation.definition.list.begin.markdown",
     settings: { foreground: palette.syntax.operators },
   },
-
-  // DATA (JSON/YAML/SQL)
   {
     name: "JSON/YAML Keys",
     scope: [
@@ -353,8 +343,6 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "support.function.sql",
     settings: { foreground: palette.syntax.functions },
   },
-
-  // TOOLS
   {
     name: "Diff Inserted",
     scope: "markup.inserted.diff",
