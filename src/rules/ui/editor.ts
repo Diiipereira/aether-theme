@@ -189,6 +189,64 @@ export const getEditorColors = (p: AetherPalette) => {
       Opacity.inactive
     ),
 
+    // Selection extras
+    "editor.selectionHighlightBackground": alpha(
+      p.editor.selection,
+      Opacity.soft
+    ),
+    "editor.inactiveSelectionBackground": alpha(
+      p.editor.selection,
+      Opacity.medium
+    ),
+
+    // Hover Widget
+    "editorHoverWidget.background": p.input.bg,
+    "editorHoverWidget.foreground": p.input.fg,
+    "editorHoverWidget.border": p.input.border,
+    "editorHoverWidget.statusBarBackground": alpha(p.core.bg, Opacity.solid),
+    "editorHoverWidget.highlightForeground": p.editor.findMatch,
+
+    // Ghost Text & Inline Suggestions (Copilot, etc.)
+    "editorGhostText.foreground": alpha(p.core.fg, Opacity.medium),
+    "editorGhostText.background": alpha(p.core.bg, Opacity.none),
+    "editorGhostText.border": alpha(p.core.bg, Opacity.none),
+
+    // Sticky Scroll shadow
+    "editorStickyScroll.shadow": alpha(p.core.overlay, Opacity.shadow),
+
+    // Overview Ruler background
+    "editorOverviewRuler.background": p.editor.bg,
+
+    // Diff Editor - line backgrounds
+    "diffEditor.insertedLineBackground": alpha(p.git.added, Opacity.subtle),
+    "diffEditor.removedLineBackground": alpha(p.git.deleted, Opacity.subtle),
+    "diffEditor.diagonalFill": alpha(p.core.fg, Opacity.faint),
+    "diffEditorGutter.insertedLineBackground": alpha(
+      p.git.added,
+      Opacity.low
+    ),
+    "diffEditorGutter.removedLineBackground": alpha(
+      p.git.deleted,
+      Opacity.low
+    ),
+    "diffEditorOverview.insertedForeground": p.git.added,
+    "diffEditorOverview.removedForeground": p.git.deleted,
+
+    // Marker Navigation (error/warning peek)
+    "editorMarkerNavigation.background": p.input.bg,
+    "editorMarkerNavigationError.background": alpha(
+      p.status.error,
+      Opacity.subtle
+    ),
+    "editorMarkerNavigationWarning.background": alpha(
+      p.status.warning,
+      Opacity.subtle
+    ),
+    "editorMarkerNavigationInfo.background": alpha(
+      p.status.info,
+      Opacity.subtle
+    ),
+
     // Breadcrumbs
     "breadcrumb.background": p.editor.bg,
     "breadcrumb.foreground": alpha(p.core.fg, Opacity.muted),

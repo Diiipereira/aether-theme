@@ -244,6 +244,17 @@ export const getComponentColors = (p: AetherPalette) => {
     "gitDecoration.addedResourceForeground": p.git.added,
     "gitDecoration.modifiedResourceForeground": p.git.modified,
     "gitDecoration.deletedResourceForeground": p.git.deleted,
+    "gitDecoration.renamedResourceForeground": p.status.info,
+    "gitDecoration.untrackedResourceForeground": p.git.added,
+    "gitDecoration.stageModifiedResourceForeground": alpha(
+      p.git.modified,
+      Opacity.solid
+    ),
+    "gitDecoration.stageDeletedResourceForeground": alpha(
+      p.git.deleted,
+      Opacity.solid
+    ),
+    "gitDecoration.submoduleResourceForeground": p.status.info,
     "gitDecoration.conflictingResourceForeground": p.git.conflict,
     "gitDecoration.ignoredResourceForeground": p.git.ignored,
     "editorError.foreground": p.status.error,
@@ -267,6 +278,76 @@ export const getComponentColors = (p: AetherPalette) => {
       p.testing.failed,
       Opacity.subtle
     ),
+
+    // Debug Console
+    "debugConsole.infoForeground": p.status.info,
+    "debugConsole.warningForeground": p.status.warning,
+    "debugConsole.errorForeground": p.status.error,
+    "debugConsole.sourceForeground": p.syntax.variables,
+    "debugTokenExpression.name": p.syntax.variables,
+    "debugTokenExpression.value": p.core.fg,
+    "debugTokenExpression.string": p.syntax.strings,
+    "debugTokenExpression.boolean": p.syntax.constants,
+    "debugTokenExpression.number": p.syntax.numbers,
+    "debugTokenExpression.error": p.status.error,
+
+    // Notification Center
+    "notificationCenterHeader.background": alpha(p.input.bg, Opacity.solid),
+    "notificationCenterHeader.foreground": p.core.fg,
+    "notificationLink.foreground": p.button.primary.bg,
+
+    // Panel Sections
+    "panelSection.border": p.panel.border,
+    "panelSection.dropBackground": alpha(p.panel.headerFg, Opacity.subtle),
+    "panelSectionHeader.background": alpha(p.core.bg, Opacity.none),
+    "panelSectionHeader.foreground": p.panel.headerFg,
+
+    // Tab drag-and-drop
+    "tab.dragAndDropBorder": p.tabs.activeBorderTop,
+
+    // Keybinding Table
+    "keybindingTable.headerBackground": alpha(p.input.bg, Opacity.solid),
+    "keybindingTable.rowsBackground": alpha(p.input.bg, Opacity.half),
+
+    // Terminal extras
+    "terminal.tab.activeBorder": p.tabs.activeBorderTop,
+    "terminal.findMatchBackground": alpha(p.editor.findMatch, Opacity.highlight),
+    "terminal.findMatchHighlightBackground": alpha(
+      p.editor.findMatch,
+      Opacity.faint
+    ),
+    "terminal.inactiveSelectionBackground": alpha(
+      p.editor.selection,
+      Opacity.half
+    ),
+
+    // SCM
+    "scm.providerBorder": p.core.border,
+
+    // Inline Chat & AI features
+    "inlineChat.background": p.input.bg,
+    "inlineChat.border": p.input.border,
+    "inlineChat.foreground": p.input.fg,
+    "inlineChat.shadow": alpha(p.core.overlay, Opacity.shadow),
+    "chat.requestBackground": alpha(p.input.bg, Opacity.half),
+    "chat.requestBorder": p.core.border,
+    "chat.slashCommandBackground": alpha(p.tabs.activeBorderTop, Opacity.low),
+    "chat.slashCommandForeground": p.tabs.activeFg,
+
+    // Profile Badge
+    "profileBadge.background": p.activityBar.badgeBg,
+    "profileBadge.foreground": p.activityBar.badgeFg,
+
+    // Ports
+    "ports.iconRunningProcessForeground": p.status.success,
+
+    // Multi Diff Editor
+    "multiDiffEditor.headerBackground": p.panel.bg,
+    "multiDiffEditor.border": p.core.border,
+
+    // Comments View
+    "commentsView.resolvedIcon": p.status.success,
+    "commentsView.unresolvedIcon": p.status.warning,
 
     "banner.background": p.statusBar.bg,
     "banner.foreground": p.statusBar.fg,

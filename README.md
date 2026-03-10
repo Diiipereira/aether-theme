@@ -75,18 +75,24 @@ We offer comprehensive support for the most popular languages on the market, ens
 <br>
 
 - **Refined Syntax (Tokens):** Dedicated colors to distinguish logic, types, and data in:
-  - `JavaScript`, `TypeScript`, `React (JSX/TSX)`, `Svelte`
+  - `JavaScript`, `TypeScript`, `React (JSX/TSX)`, `Svelte`, `Vue`
   - `Python`, `Java`, `Go`, `Rust`, `PHP`
-  - `C`, `C++`, `C#`
-  - `HTML`, `CSS`, `SCSS`, `Tailwind`
-  - `SQL`, `JSON`, `YAML`, `TOML`
+  - `Ruby`, `Kotlin`, `Swift`, `Dart`, `Scala`
+  - `C`, `C++`, `C#`, `Haskell`, `Elixir`, `Lua`, `R`
+  - `HTML`, `CSS`, `SCSS`, `Tailwind`, `XML`
+  - `GraphQL`, `SQL`, `JSON`, `YAML`, `TOML`
+  - `Markdown`, `Shell/Bash`, `Docker`, `Diff`
 - **Deep UI Styling:** We don't just style the editor. We cover the entire workbench:
   - Buttons, Inputs, Dropdowns, and Badges.
   - Integrated Terminal and Search UI.
-  - Subtle Scrollbars.
-  - Clean Git Diff View (Added/Removed/Modified).
+  - Subtle Scrollbars and Sticky Scroll.
+  - Clean Git Diff View (Added/Removed/Modified/Renamed/Untracked/Staged).
+  - Debug Console and Token Expression colors.
+  - Inline Chat and AI suggestion colors (Ghost Text, Copilot).
+  - Notification Center and Marker Navigation.
 - **Premium Markdown:** Clean visuals for Headings, Blockquotes, Links, Lists, and Code Blocks.
 - **Semantic Highlighting:** Full support for VS Code's semantic engine to distinguish variables, parameters, interfaces, and readonly properties.
+- **WCAG AA Contrast:** All themes meet minimum contrast requirements for comfortable long-session coding.
 
 <br>
 

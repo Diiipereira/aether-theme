@@ -377,4 +377,324 @@ export const getTextMateRules = (palette: AetherPalette) => [
     scope: "keyword.other.special-method.dockerfile",
     settings: { foreground: palette.syntax.keywords },
   },
+
+  // ─── Ruby ──────────────────────────────────────────────────────────────────
+  {
+    name: "Ruby Classes & Modules",
+    scope: [
+      "entity.name.type.class.ruby",
+      "entity.name.type.module.ruby",
+      "entity.name.class.ruby",
+    ],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Ruby Methods",
+    scope: ["entity.name.function.ruby", "support.function.ruby"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Ruby Symbols",
+    scope: [
+      "constant.other.symbol.ruby",
+      "constant.other.symbol.hashkey.ruby",
+    ],
+    settings: { foreground: palette.syntax.constants },
+  },
+  {
+    name: "Ruby Variables (instance/class)",
+    scope: [
+      "variable.other.readwrite.instance.ruby",
+      "variable.other.readwrite.class.ruby",
+    ],
+    settings: { foreground: palette.syntax.variables },
+  },
+  {
+    name: "Ruby Keywords",
+    scope: ["keyword.control.ruby", "keyword.other.special-method.ruby"],
+    settings: { foreground: palette.syntax.keywords },
+  },
+  {
+    name: "Ruby Regex",
+    scope: "string.regexp.ruby",
+    settings: { foreground: palette.syntax.strings },
+  },
+
+  // ─── Kotlin ────────────────────────────────────────────────────────────────
+  {
+    name: "Kotlin Classes & Interfaces",
+    scope: [
+      "entity.name.type.class.kotlin",
+      "entity.name.type.interface.kotlin",
+      "entity.name.type.object.kotlin",
+    ],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Kotlin Functions",
+    scope: ["entity.name.function.kotlin", "support.function.kotlin"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Kotlin Keywords",
+    scope: [
+      "keyword.control.kotlin",
+      "storage.type.kotlin",
+      "storage.modifier.kotlin",
+    ],
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── Swift ─────────────────────────────────────────────────────────────────
+  {
+    name: "Swift Types & Classes",
+    scope: [
+      "entity.name.type.swift",
+      "support.type.swift",
+      "entity.name.type.class.swift",
+    ],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Swift Functions",
+    scope: ["entity.name.function.swift", "support.function.swift"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Swift Keywords",
+    scope: [
+      "keyword.control.swift",
+      "storage.type.swift",
+      "storage.modifier.swift",
+    ],
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── Dart ──────────────────────────────────────────────────────────────────
+  {
+    name: "Dart Classes",
+    scope: ["support.class.dart", "entity.name.type.class.dart"],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Dart Functions",
+    scope: ["entity.name.function.dart", "support.function.dart"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Dart Keywords",
+    scope: [
+      "keyword.control.dart",
+      "storage.type.dart",
+      "storage.modifier.dart",
+    ],
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── Scala ─────────────────────────────────────────────────────────────────
+  {
+    name: "Scala Classes",
+    scope: ["entity.name.class.scala", "entity.name.type.class.scala"],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Scala Functions",
+    scope: "entity.name.function.scala",
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Scala Keywords",
+    scope: ["keyword.control.scala", "storage.type.scala"],
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── Lua ───────────────────────────────────────────────────────────────────
+  {
+    name: "Lua Functions",
+    scope: ["entity.name.function.lua", "support.function.lua"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Lua Keywords",
+    scope: "keyword.control.lua",
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── R ─────────────────────────────────────────────────────────────────────
+  {
+    name: "R Functions",
+    scope: ["entity.name.function.r", "support.function.r"],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "R Keywords",
+    scope: "keyword.control.r",
+    settings: { foreground: palette.syntax.keywords },
+  },
+  {
+    name: "R Constants",
+    scope: "constant.language.r",
+    settings: { foreground: palette.syntax.constants },
+  },
+
+  // ─── Elixir ────────────────────────────────────────────────────────────────
+  {
+    name: "Elixir Modules",
+    scope: [
+      "entity.name.type.class.elixir",
+      "entity.name.type.module.elixir",
+    ],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Elixir Functions & Macros",
+    scope: [
+      "entity.name.function.elixir",
+      "entity.name.function.macro.elixir",
+    ],
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Elixir Keywords",
+    scope: "keyword.control.elixir",
+    settings: { foreground: palette.syntax.keywords },
+  },
+  {
+    name: "Elixir Atoms",
+    scope: [
+      "variable.other.constant.elixir",
+      "constant.other.symbol.elixir",
+    ],
+    settings: { foreground: palette.syntax.constants },
+  },
+
+  // ─── Haskell ───────────────────────────────────────────────────────────────
+  {
+    name: "Haskell Types & Namespaces",
+    scope: [
+      "entity.name.type.haskell",
+      "storage.type.haskell",
+      "entity.name.namespace.haskell",
+    ],
+    settings: { foreground: palette.syntax.types },
+  },
+  {
+    name: "Haskell Functions",
+    scope: "entity.name.function.haskell",
+    settings: { foreground: palette.syntax.functions },
+  },
+  {
+    name: "Haskell Keywords",
+    scope: "keyword.other.haskell",
+    settings: { foreground: palette.syntax.keywords },
+  },
+
+  // ─── XML ───────────────────────────────────────────────────────────────────
+  {
+    name: "XML Tags",
+    scope: ["entity.name.tag.xml", "entity.name.tag.localname.xml"],
+    settings: { foreground: palette.syntax.tags },
+  },
+  {
+    name: "XML Namespaces",
+    scope: [
+      "entity.name.tag.namespace.xml",
+      "entity.other.attribute-name.namespace.xml",
+    ],
+    settings: { foreground: palette.syntax.types },
+  },
+  {
+    name: "XML Attributes",
+    scope: [
+      "entity.other.attribute-name.xml",
+      "entity.other.attribute-name.localname.xml",
+    ],
+    settings: { foreground: palette.syntax.variables, fontStyle: "italic" },
+  },
+
+  // ─── GraphQL ───────────────────────────────────────────────────────────────
+  {
+    name: "GraphQL Types",
+    scope: ["support.type.graphql", "entity.name.type.graphql"],
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "GraphQL Keywords",
+    scope: [
+      "keyword.operation.graphql",
+      "keyword.type.graphql",
+      "storage.type.graphql",
+    ],
+    settings: { foreground: palette.syntax.keywords },
+  },
+  {
+    name: "GraphQL Variables",
+    scope: ["variable.graphql", "variable.other.property.graphql"],
+    settings: { foreground: palette.syntax.variables },
+  },
+  {
+    name: "GraphQL Fragments",
+    scope: "entity.name.fragment.graphql",
+    settings: { foreground: palette.syntax.functions },
+  },
+
+  // ─── Svelte ────────────────────────────────────────────────────────────────
+  {
+    name: "Svelte Component Tags",
+    scope: "entity.name.tag.svelte",
+    settings: { foreground: palette.syntax.classes },
+  },
+  {
+    name: "Svelte Directives",
+    scope: [
+      "support.type.svelte",
+      "entity.other.attribute-name.svelte",
+      "punctuation.definition.keyword.svelte",
+    ],
+    settings: { foreground: palette.syntax.keywords, fontStyle: "italic" },
+  },
+
+  // ─── Vue ───────────────────────────────────────────────────────────────────
+  {
+    name: "Vue Directives",
+    scope: [
+      "entity.other.attribute-name.directive.vue",
+      "entity.other.attribute-name.html.vue",
+    ],
+    settings: { foreground: palette.syntax.keywords, fontStyle: "italic" },
+  },
+  {
+    name: "Vue Template Tags",
+    scope: "entity.name.tag.template.vue",
+    settings: { foreground: palette.syntax.classes },
+  },
+
+  // ─── Generic (multi-language) ──────────────────────────────────────────────
+  {
+    name: "Regex Patterns",
+    scope: "string.regexp",
+    settings: { foreground: palette.syntax.strings },
+  },
+  {
+    name: "Symbols (Ruby / Elixir)",
+    scope: "constant.other.symbol",
+    settings: { foreground: palette.syntax.constants },
+  },
+  {
+    name: "Modules & Namespaces",
+    scope: [
+      "entity.name.type.module",
+      "entity.name.namespace",
+      "storage.modifier.module",
+    ],
+    settings: { foreground: palette.syntax.types },
+  },
+  {
+    name: "Generic Type Parameters",
+    scope: [
+      "punctuation.definition.typeparameters.begin",
+      "punctuation.definition.typeparameters.end",
+    ],
+    settings: { foreground: palette.syntax.types },
+  },
 ];

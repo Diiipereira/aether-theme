@@ -2,6 +2,114 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.4.0] — Color Quality Overhaul, Extended API Coverage & Language Expansion</div>
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Color Quality — All Themes</div>
+<ul>
+  <li>
+    <strong>Syntax Differentiation:</strong> Resolved critical color collisions across all 6 themes. <code>types</code>, <code>classes</code>, and <code>constants</code> now use distinct colors in every theme — previously up to 3 categories shared the same hex value.
+  </li>
+  <li>
+    <strong>Operators vs. Comments:</strong> Fixed identical colors for operators and comments in Aether Light and Aether Coffee Dark — now visually distinct and semantically clear.
+  </li>
+  <li>
+    <strong>Emerald Variables Fix:</strong> <code>syntax.variables</code> in Aether Emerald was identical to the base foreground color, making variables invisible. Now uses a distinct pale teal (<code>#b8d4c8</code>).
+  </li>
+  <li>
+    <strong>Dark theme Numbers:</strong> Replaced the gray/beige <code>#c2b9b9</code> with vibrant amber <code>#fbbf24</code> — consistent with industry standards and much easier to spot at a glance.
+  </li>
+  <li>
+    <strong>WCAG AA Compliance:</strong> Aether Light operators and comments now meet the WCAG AA minimum contrast ratio (4.5:1) against the editor background.
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Theme Differentiation — Coffee & Coffee Dark</div>
+<ul>
+  <li>
+    <strong>Aether Coffee</strong> redesigned as a "mid-afternoon café" experience: warm amber-orange accent (<code>#d4914a</code>), sage green functions, golden strings, rose numbers. Medium-dark backgrounds with clear depth.
+  </li>
+  <li>
+    <strong>Aether Coffee Dark</strong> redesigned as "midnight espresso": ultra-dark backgrounds (near-black <code>#080706</code>), cooler golden accent (<code>#c89050</code>), teal/steel blue types and classes. The two Coffee themes are now clearly distinct.
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Aether Light — Full Rework</div>
+<ul>
+  <li>Warmer, more refined background palette (<code>#f5f1ed</code>) with improved UI depth.</li>
+  <li>Stronger activityBar → sidebar → editor gradient (darkest to lightest).</li>
+  <li>All syntax colors reworked for clarity: mauve keywords, steel-blue functions, teal/navy types vs. classes, copper numbers.</li>
+  <li>Terminal colors redesigned to work naturally against light backgrounds.</li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">UI Coherence — All Themes</div>
+<ul>
+  <li>
+    <strong>Gradient/Depth:</strong> Refined the activityBar → sidebar → editor background progression in all dark themes for a clearer visual hierarchy. Gutter and indent guides now feel more integrated with each theme's color identity.
+  </li>
+  <li>
+    <strong>Remote indicator:</strong> Status bar remote indicator now uses each theme's primary accent color for instant recognition.
+  </li>
+  <li>
+    <strong>Terminal:</strong> <code>terminal.black</code> now maps to the editor background (ideal for TUI apps), <code>terminal.white</code> maps to the muted foreground, and <code>terminal.brightWhite</code> maps to the full foreground — consistent across all themes.
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">API Coverage — New Workbench Colors</div>
+<ul>
+  <li><strong>Editor:</strong> <code>editor.selectionHighlightBackground</code>, <code>editor.inactiveSelectionBackground</code></li>
+  <li><strong>Hover Widget:</strong> <code>editorHoverWidget.background/foreground/border/statusBarBackground/highlightForeground</code></li>
+  <li><strong>Ghost Text / Copilot:</strong> <code>editorGhostText.foreground/background/border</code></li>
+  <li><strong>Sticky Scroll:</strong> <code>editorStickyScroll.shadow</code></li>
+  <li><strong>Diff Editor:</strong> <code>diffEditor.insertedLineBackground</code>, <code>diffEditor.removedLineBackground</code>, <code>diffEditor.diagonalFill</code>, <code>diffEditorGutter.*</code>, <code>diffEditorOverview.*</code></li>
+  <li><strong>Marker Navigation:</strong> <code>editorMarkerNavigation.background</code> + error/warning/info variants</li>
+  <li><strong>Git Decorations:</strong> <code>renamed</code>, <code>untracked</code>, <code>stageModified</code>, <code>stageDeleted</code>, <code>submodule</code> resource foregrounds</li>
+  <li><strong>Debug:</strong> <code>debugConsole.infoForeground/warningForeground/errorForeground/sourceForeground</code>, full <code>debugTokenExpression.*</code> suite</li>
+  <li><strong>Notifications:</strong> <code>notificationCenterHeader.background/foreground</code>, <code>notificationLink.foreground</code></li>
+  <li><strong>Panel:</strong> <code>panelSection.border</code>, <code>panelSection.dropBackground</code>, <code>panelSectionHeader.background/foreground</code></li>
+  <li><strong>Terminal:</strong> <code>terminal.tab.activeBorder</code>, <code>terminal.findMatchBackground</code>, <code>terminal.findMatchHighlightBackground</code>, <code>terminal.inactiveSelectionBackground</code></li>
+  <li><strong>AI / Inline Chat:</strong> <code>inlineChat.background/border/foreground/shadow</code>, <code>chat.requestBackground/requestBorder/slashCommandBackground/slashCommandForeground</code></li>
+  <li><strong>Misc:</strong> <code>tab.dragAndDropBorder</code>, <code>keybindingTable.*</code>, <code>scm.providerBorder</code>, <code>profileBadge.*</code>, <code>ports.iconRunningProcessForeground</code>, <code>multiDiffEditor.*</code>, <code>commentsView.*</code></li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Language Coverage — New Syntax Scopes</div>
+<ul>
+  <li>Token count expanded from <strong>54 → 106 scopes</strong>.</li>
+  <li>
+    <strong>New languages (high priority):</strong> Ruby, Kotlin, Swift, Dart — with dedicated scopes for classes, functions, keywords, variables, and language-specific constructs (Ruby symbols, Swift types, Dart modifiers, etc.)
+  </li>
+  <li>
+    <strong>New languages (medium priority):</strong> Scala, Lua, R, Elixir (including macros and atoms), Haskell (types, namespaces), XML (tags, namespaces, attributes), GraphQL (types, operations, variables, fragments), Svelte (component tags, directives), Vue (directives, template tags)
+  </li>
+  <li>
+    <strong>Generic multi-language scopes:</strong> <code>string.regexp</code> (regex literals), <code>constant.other.symbol</code> (Ruby/Elixir symbols), <code>entity.name.type.module</code> / <code>entity.name.namespace</code> (modules across languages), type parameter punctuation
+  </li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Total Stats (v1.4.0)</div>
+<ul>
+  <li>UI workbench colors per theme: <strong>~454</strong> (was ~387)</li>
+  <li>TextMate token scopes: <strong>106</strong> (was 54)</li>
+  <li>Semantic token colors: <strong>24</strong> (was 19)</li>
+  <li>Languages with dedicated scopes: <strong>30+</strong> (was ~15)</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.3.6] — VS Code API 1.109 Compliance & UI Refinements</div>
 <br>
 
