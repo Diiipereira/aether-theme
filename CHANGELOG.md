@@ -2,6 +2,36 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.5.0] — VS Code 1.128 API Sync (Chat, Inline Edits, Git Graph & Terminal)</div>
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">API Coverage — New Workbench Colors</div>
+<p>Synced the theme with the VS Code color registry through the July 2026 (1.128) releases. Added <strong>136 new workbench colors</strong> per theme (454 → 590), all derived from each theme's existing palette so every one of the 6 themes stays consistent. No keys removed.</p>
+<ul>
+  <li><strong>Chat / AI:</strong> <code>chat.avatarBackground/Foreground</code>, <code>chat.editedFileForeground</code>, <code>chat.linesAddedForeground</code>, <code>chat.linesRemovedForeground</code>, <code>chat.requestCodeBorder</code>, <code>chat.requestBubbleBackground/HoverBackground</code>, <code>chat.checkpointSeparator</code>, <code>chat.thinkingShimmer</code>, <code>chatManagement.sashBorder</code>, <code>inlineChatInput.background/border/focusBorder/placeholderForeground</code>, <code>inlineChatDiff.inserted/removed</code>, <code>interactive.active/inactiveCodeBorder</code></li>
+  <li><strong>Inline Edits (Copilot NES):</strong> full <code>inlineEdit.*</code> suite — original/modified backgrounds, changed line/text bands, borders, tab-accept borders, and the <code>inlineEdit.gutterIndicator.*</code> primary/secondary/successful states</li>
+  <li><strong>Source Control Graph:</strong> <code>scmGraph.foreground1–5</code>, <code>scmGraph.historyItemRef/RemoteRef/BaseRefColor</code>, and the hover additions/deletions/label foregrounds</li>
+  <li><strong>Inline Git Blame:</strong> <code>git.blame.editorDecorationForeground</code></li>
+  <li><strong>Terminal:</strong> <code>terminalCommandDecoration.default/success/errorBackground</code>, <code>terminalStickyScroll.*</code>, <code>terminalOverviewRuler.*</code>, <code>terminalCommandGuide.foreground</code>, <code>terminal.hoverHighlight/dropBackground</code>, find-match borders, initial hint, and the <code>terminalSymbolIcon.*</code> suggest-widget icon set</li>
+  <li><strong>Editor:</strong> <code>editorMultiCursor.primary/secondary.foreground</code>, <code>editorStickyScrollGutter.background</code>, <code>editor.placeholder.foreground</code>, secondary diff gutter bands, comment gutter glyphs, <code>editor.stackFrame/focusedStackFrameHighlightBackground</code>, <code>editor.inlineValuesForeground/Background</code></li>
+  <li><strong>Comments &amp; Review:</strong> <code>editorCommentsWidget.*</code>, <code>peekViewEditorStickyScroll.background</code></li>
+  <li><strong>Debug:</strong> <code>debugToolBar.border</code>, <code>debugView.exception/stateLabel*</code>, <code>debugView.valueChangedHighlight</code>, <code>debugTokenExpression.type</code></li>
+  <li><strong>Testing:</strong> coverage colors (<code>testing.covered*</code>, <code>testing.uncovered*</code>, <code>testing.coverCountBadge*</code>) and <code>testing.message.info.*</code></li>
+  <li><strong>Widgets:</strong> <code>editorActionList.*</code> (Quick Fix menu), <code>editorWidget.resizeBorder</code>, <code>editorSuggestWidget.focusHighlight/selected*</code>, <code>editorSuggestWidgetStatus.foreground</code>, <code>toolbar.activeBackground</code></li>
+</ul>
+
+<br>
+
+<div style="font-size: 18px; font-weight: 700;">Engineering</div>
+<ul>
+  <li><strong>Build tooling:</strong> Fixed the <code>test-theme.ts</code> validator, which incorrectly flagged <code>fontStyle</code> ("italic"/"bold") and <code>scope</code> values as invalid hex colors — validation now skips non-color keys and passes cleanly across all 6 themes.</li>
+  <li><strong>Compatibility:</strong> Bumped minimum engine from <code>^1.70.0</code> to <code>^1.90.0</code>. New color keys are gracefully ignored by older builds, so themes still render on prior versions.</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.4.0] — Color Quality Overhaul, Extended API Coverage & Language Expansion</div>
 <br>
 

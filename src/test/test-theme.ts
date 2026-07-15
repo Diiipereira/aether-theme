@@ -5,14 +5,16 @@ const themesDir = path.join(__dirname, "../../themes");
 const files = fs.readdirSync(themesDir);
 const hexRegex =
   /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{4}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$/;
+const NON_COLOR_KEYS = new Set(["name", "type", "fontStyle", "scope"]);
 
 function validateColors(obj: any, filePath: string) {
   for (const key in obj) {
+    if (NON_COLOR_KEYS.has(key)) continue;
     const value = obj[key];
     if (typeof value === "object" && value !== null) {
       validateColors(value, filePath);
     } else if (typeof value === "string") {
-      if (key !== "name" && key !== "type" && !hexRegex.test(value)) {
+      if (!hexRegex.test(value)) {
         console.error(
           `❌ ERRO em ${filePath}: Cor inválida detectada: "${value}" na chave "${key}"`
         );

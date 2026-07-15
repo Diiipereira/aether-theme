@@ -273,5 +273,85 @@ export const getEditorColors = (p: AetherPalette) => {
       p.peekView.matchHighlight,
       Opacity.highlight
     ),
+    "peekViewEditorStickyScroll.background": p.peekView.editorBg,
+
+    "editorMultiCursor.primary.foreground": p.editor.cursor,
+    "editorMultiCursor.secondary.foreground": alpha(
+      p.editor.cursor,
+      Opacity.inactive
+    ),
+
+    "editorStickyScrollGutter.background": p.editor.gutter.bg,
+    "editor.placeholder.foreground": alpha(p.core.fg, Opacity.medium),
+
+    "editorGutter.modifiedSecondaryBackground": alpha(
+      p.git.modified,
+      Opacity.half
+    ),
+    "editorGutter.addedSecondaryBackground": alpha(p.git.added, Opacity.half),
+    "editorGutter.deletedSecondaryBackground": alpha(
+      p.git.deleted,
+      Opacity.half
+    ),
+    "editorGutter.foldingControlForeground": alpha(p.core.fg, Opacity.muted),
+    "editorGutter.commentRangeForeground": alpha(p.core.fg, Opacity.medium),
+    "editorGutter.commentGlyphForeground": p.core.fg,
+    "editorGutter.commentUnresolvedGlyphForeground": p.status.warning,
+
+    "editor.stackFrameHighlightBackground": alpha(
+      p.status.warning,
+      Opacity.faint
+    ),
+    "editor.focusedStackFrameHighlightBackground": alpha(
+      p.status.success,
+      Opacity.faint
+    ),
+    "editor.inlineValuesForeground": alpha(p.core.fg, Opacity.medium),
+    "editor.inlineValuesBackground": alpha(p.core.bg, Opacity.none),
+
+    "editorCommentsWidget.resolvedBorder": p.status.success,
+    "editorCommentsWidget.unresolvedBorder": p.status.warning,
+    "editorCommentsWidget.rangeBackground": alpha(p.status.info, Opacity.subtle),
+    "editorCommentsWidget.rangeActiveBackground": alpha(
+      p.status.info,
+      Opacity.low
+    ),
+    "editorCommentsWidget.replyInputBackground": p.input.bg,
+
+    "inlineEdit.originalBackground": alpha(p.git.deleted, Opacity.subtle),
+    "inlineEdit.modifiedBackground": alpha(p.git.added, Opacity.subtle),
+    "inlineEdit.originalChangedLineBackground": alpha(
+      p.git.deleted,
+      Opacity.low
+    ),
+    "inlineEdit.originalChangedTextBackground": alpha(
+      p.git.deleted,
+      Opacity.faint
+    ),
+    "inlineEdit.modifiedChangedLineBackground": alpha(p.git.added, Opacity.low),
+    "inlineEdit.modifiedChangedTextBackground": alpha(
+      p.git.added,
+      Opacity.faint
+    ),
+    "inlineEdit.originalBorder": alpha(p.git.deleted, Opacity.medium),
+    "inlineEdit.modifiedBorder": alpha(p.git.added, Opacity.medium),
+    "inlineEdit.tabWillAcceptModifiedBorder": p.git.added,
+    "inlineEdit.tabWillAcceptOriginalBorder": p.git.deleted,
+    "inlineEdit.gutterIndicator.primaryBackground": p.tabs.activeBorderTop,
+    "inlineEdit.gutterIndicator.primaryForeground": p.core.bg,
+    "inlineEdit.gutterIndicator.primaryBorder": p.tabs.activeBorderTop,
+    "inlineEdit.gutterIndicator.secondaryBackground": alpha(
+      p.core.fg,
+      Opacity.low
+    ),
+    "inlineEdit.gutterIndicator.secondaryForeground": p.core.fg,
+    "inlineEdit.gutterIndicator.secondaryBorder": alpha(
+      p.core.border,
+      Opacity.half
+    ),
+    "inlineEdit.gutterIndicator.successfulBackground": p.status.success,
+    "inlineEdit.gutterIndicator.successfulForeground": p.core.bg,
+    "inlineEdit.gutterIndicator.successfulBorder": p.status.success,
+    "inlineEdit.gutterIndicator.background": alpha(p.core.fg, Opacity.subtle),
   };
 };
