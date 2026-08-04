@@ -14,6 +14,18 @@ export const getLayoutColors = (p: AetherPalette) => {
     "activityBar.inactiveForeground": alpha(p.activityBar.fg, Opacity.half),
     "activityBarBadge.background": p.activityBar.badgeBg,
     "activityBarBadge.foreground": p.activityBar.badgeFg,
+    "activityBar.dropBorder": p.activityBar.activeBorder,
+    "activityBar.activeFocusBorder": p.activityBar.activeBorder,
+    "activityBarTop.background": p.activityBar.bg,
+    "activityBarTop.foreground": p.activityBar.fg,
+    "activityBarTop.inactiveForeground": alpha(p.activityBar.fg, Opacity.half),
+    "activityBarTop.activeBorder": p.activityBar.activeBorder,
+    "activityBarTop.activeBackground": p.activityBar.activeBg,
+    "activityBarTop.dropBorder": p.activityBar.activeBorder,
+    "activityWarningBadge.background": p.status.warning,
+    "activityWarningBadge.foreground": p.core.bg,
+    "activityErrorBadge.background": p.status.error,
+    "activityErrorBadge.foreground": p.core.bg,
 
     // Side Bar
     "sideBar.background": p.sideBar.bg,
@@ -24,6 +36,12 @@ export const getLayoutColors = (p: AetherPalette) => {
     "sideBarSectionHeader.background": p.sideBar.sectionHeaderBg,
     "sideBarSectionHeader.foreground": p.sideBar.titleFg,
     "sideBarSectionHeader.border": p.sideBar.border,
+    "sideBarActivityBarTop.border": p.sideBar.border,
+    "sideBarTitle.background": p.sideBar.bg,
+    "sideBarTitle.border": p.sideBar.border,
+    "sideBarStickyScroll.background": p.sideBar.bg,
+    "sideBarStickyScroll.border": p.sideBar.border,
+    "sideBarStickyScroll.shadow": alpha(p.core.overlay, Opacity.shadow),
 
     // Status Bar
     "statusBar.foreground": p.statusBar.fg,
@@ -59,5 +77,15 @@ export const getLayoutColors = (p: AetherPalette) => {
     "panelTitle.activeBorder": p.tabs.activeBorderTop,
     "panelTitle.activeForeground": p.panel.headerFg,
     "panelTitle.inactiveForeground": alpha(p.panel.headerFg, Opacity.inactive),
+    "panelTitle.border": p.panel.border,
+    "panel.dropBorder": p.tabs.activeBorderTop,
+    "panelTitleBadge.background": p.activityBar.badgeBg,
+    "panelTitleBadge.foreground": p.activityBar.badgeFg,
+    "panelInput.border": p.input.border,
+    "panelStickyScroll.background": p.panel.bg,
+    "panelStickyScroll.border": p.panel.border,
+    "panelStickyScroll.shadow": alpha(p.core.overlay, Opacity.shadow),
+    "outputView.background": p.panel.bg,
+    "outputViewStickyScroll.background": p.panel.bg,
   };
 };

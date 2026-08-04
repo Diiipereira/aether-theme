@@ -57,6 +57,15 @@ export const getComponentColors = (p: AetherPalette) => {
       Opacity.medium
     ),
     "tab.lastPinnedBorder": p.core.border,
+    "tab.selectedBackground": p.tabs.activeBg,
+    "tab.selectedForeground": p.tabs.activeFg,
+    "tab.selectedBorderTop": p.tabs.activeBorderTop,
+    "tab.hoverBorder": alpha(p.tabs.activeBorderTop, Opacity.half),
+    "editorGroupHeader.border": p.core.border,
+    "editorGroupHeader.noTabsBackground": p.titleBar.bg,
+    "editorGroup.dropIntoPromptForeground": p.core.fg,
+    "editorGroup.dropIntoPromptBackground": p.input.bg,
+    "editorGroup.dropIntoPromptBorder": p.core.border,
 
     // Buttons & Badges
     "button.background": p.button.primary.bg,
@@ -112,8 +121,22 @@ export const getComponentColors = (p: AetherPalette) => {
     "list.dropBackground": alpha(p.list.activeSelectionBg, Opacity.medium),
     "list.highlightForeground": p.editor.findMatch,
     "tree.indentGuidesStroke": alpha(p.core.fg, Opacity.faint),
+    "tree.inactiveIndentGuidesStroke": alpha(p.core.fg, Opacity.subtle),
+    "tree.tableColumnsBorder": alpha(p.core.border, Opacity.half),
+    "tree.tableOddRowsBackground": alpha(p.core.fg, Opacity.subtle),
     "list.errorForeground": p.status.error,
     "list.warningForeground": p.status.warning,
+    "list.activeSelectionIconForeground": p.list.activeSelectionFg,
+    "list.inactiveSelectionIconForeground": p.core.fg,
+    "list.focusHighlightForeground": p.editor.findMatch,
+    "list.deemphasizedForeground": alpha(p.core.fg, Opacity.half),
+    "list.filterMatchBackground": alpha(p.editor.findMatch, Opacity.low),
+    "list.filterMatchBorder": alpha(p.editor.findMatch, Opacity.medium),
+    "list.dropBetweenBackground": p.tabs.activeBorderTop,
+    "listFilterWidget.background": p.input.bg,
+    "listFilterWidget.outline": alpha(p.input.focusBorder, Opacity.none),
+    "listFilterWidget.noMatchesOutline": p.status.error,
+    "listFilterWidget.shadow": alpha(p.core.overlay, Opacity.shadow),
 
     // Terminal
     "terminal.background": p.panel.bg,

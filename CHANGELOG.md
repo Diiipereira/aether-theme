@@ -2,6 +2,22 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.5.1] — Modern UI Support (VS Code 1.129 card layout)</div>
+<br>
+
+<p>VS Code 1.129 introduced an experimental <strong>Modern UI</strong> (<code>workbench.experimental.modernUI</code>) — a card-like layout where the sidebar, panel, editor groups and tabs become distinct surfaces with rounded corners, visible borders and gaps. This exposes many surface/border colors that themes previously never had to define, which left parts of the new UI looking mismatched. This release adds <strong>51 new workbench colors</strong> per theme (590 → 641), all derived from each theme's existing palette. No keys removed.</p>
+<ul>
+  <li><strong>Card surfaces &amp; sticky scroll:</strong> <code>sideBarTitle.background/border</code>, <code>sideBarActivityBarTop.border</code>, <code>sideBarStickyScroll.background/border/shadow</code>, <code>panelStickyScroll.*</code>, <code>panelTitle.border</code>, <code>panel.dropBorder</code>, <code>panelInput.border</code>, <code>outputView.background</code>, <code>outputViewStickyScroll.background</code></li>
+  <li><strong>Activity Bar (top layout &amp; badges):</strong> <code>activityBarTop.background/foreground/inactiveForeground/activeBorder/activeBackground/dropBorder</code>, <code>activityBar.dropBorder</code>, <code>activityBar.activeFocusBorder</code>, <code>activityWarningBadge.*</code>, <code>activityErrorBadge.*</code>, <code>panelTitleBadge.*</code></li>
+  <li><strong>Tabs as surfaces:</strong> <code>tab.selectedBackground/Foreground/BorderTop</code>, <code>tab.hoverBorder</code>, <code>editorGroupHeader.border</code>, <code>editorGroupHeader.noTabsBackground</code>, <code>editorGroup.dropIntoPrompt*</code></li>
+  <li><strong>Tree &amp; list icons:</strong> <code>list.activeSelectionIconForeground</code>, <code>list.inactiveSelectionIconForeground</code>, <code>list.focusHighlightForeground</code>, <code>list.deemphasizedForeground</code>, <code>list.filterMatchBackground/Border</code>, <code>list.dropBetweenBackground</code>, <code>listFilterWidget.*</code>, <code>tree.inactiveIndentGuidesStroke</code>, <code>tree.tableColumnsBorder</code>, <code>tree.tableOddRowsBackground</code></li>
+</ul>
+<p><em>Note:</em> the window controls (minimize / maximize / close) have no dedicated theme colors — their glyphs inherit <code>titleBar.activeForeground</code>, which is already defined, so the Modern UI restyling of that area needs no theme change.</p>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.5.0] — VS Code 1.128 API Sync (Chat, Inline Edits, Git Graph & Terminal)</div>
 <br>
 
