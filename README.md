@@ -132,6 +132,20 @@ For the best visual experience, add these to your `settings.json`:
 
 <br>
 
+**Modern UI**
+
+VS Code's Modern UI turns each workbench area into a floating card, and every palette in this collection was rebuilt around it in v1.6.0. It ships as an experimental flag that is **off by default and rolled out gradually**, so it can be active on one machine and not on another. Pin it explicitly to get it everywhere:
+
+```json
+{
+  "workbench.experimental.modernUI": true
+}
+```
+
+Run `Developer: Reload Window` afterwards. Being experimental, it may change or be removed in a future release, and VS Code forks generally don't have the flag at all. All six themes are fully supported in the classic UI too, so leaving this off costs you nothing.
+
+<br>
+
 **Window Controls — Modern UI only (Windows & Linux)**
 
 With VS Code's Modern UI enabled (`workbench.experimental.modernUI`), the minimize / maximize / close buttons are drawn natively by Electron. VS Code feeds that native overlay a hardcoded background — `#252526` for every dark theme and `#F3F3F3` for every light one — instead of `titleBar.activeBackground`. The result is a gray patch in the corner of the title bar that no theme can override.

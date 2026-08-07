@@ -2,6 +2,19 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.6.1] — Setup Documentation</div>
+<br>
+
+<p>Documentation only — no palette, token or color changes. Released so the notes reach the Marketplace and Open VSX listings.</p>
+<ul>
+  <li><strong>Modern UI:</strong> documented <code>workbench.experimental.modernUI</code>. It is experimental, ships off by default and is rolled out gradually, so it can be active on one machine and not on another — pinning it in <code>settings.json</code> is what makes the v1.6.0 card layout show up consistently.</li>
+  <li><strong>Window controls:</strong> documented <code>window.controlsStyle</code>. With the Modern UI on, VS Code hands the minimize / maximize / close buttons to Electron's native overlay and feeds it a hardcoded background — <code>#252526</code> on every dark theme, <code>#F3F3F3</code> on every light one — instead of <code>titleBar.activeBackground</code>. No theme key reaches that overlay, so <code>"window.controlsStyle": "custom"</code> is the fix: VS Code then draws the buttons itself and they follow the palette. Windows and Linux only, and only needed while the Modern UI is enabled.</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.6.0] — Modern UI Palette Overhaul (VS Code 1.132)</div>
 <br>
 
