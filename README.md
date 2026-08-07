@@ -132,6 +132,24 @@ For the best visual experience, add these to your `settings.json`:
 
 <br>
 
+**Window Controls — Modern UI only (Windows & Linux)**
+
+With VS Code's Modern UI enabled (`workbench.experimental.modernUI`), the minimize / maximize / close buttons are drawn natively by Electron. VS Code feeds that native overlay a hardcoded background — `#252526` for every dark theme and `#F3F3F3` for every light one — instead of `titleBar.activeBackground`. The result is a gray patch in the corner of the title bar that no theme can override.
+
+This setting makes VS Code render the controls itself, so they follow the theme:
+
+```json
+{
+  "window.controlsStyle": "custom"
+}
+```
+
+Use `"hidden"` to remove them entirely.
+
+You only need this on VS Code with the Modern UI turned on. In the classic UI — and in VS Code forks that don't ship the Modern UI, such as the builds installing from Open VSX — the window controls already follow the theme, so leave this setting alone. It has no effect on macOS.
+
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">❤️ Credits</div>
 <br>
 
