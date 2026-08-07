@@ -2,6 +2,46 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.6.0] — Modern UI Palette Overhaul (VS Code 1.132)</div>
+<br>
+
+<p>The Modern UI stopped being just a layout change. In 1.132 it <strong>derives several surfaces itself</strong>, from keys the themes were not setting — so parts of the UI ignored the palette entirely and fell back to grays. All six palettes were rebuilt around that behaviour, and <strong>111 new workbench colors</strong> were added per theme (641 → 752). No keys removed.</p>
+
+<div style="font-size: 18px; font-weight: 700;">What the theme does not control</div>
+<p>Verified against <code>workbench.desktop.main.css</code> of VS Code 1.132.0. These are computed by the workbench, not read from a theme key:</p>
+<ul>
+  <li><strong>Active tab:</strong> <code>color-mix(foreground 22%, transparent)</code> over the canvas — 16% on light themes. No <code>tab.*</code> key affects it, so a near-white <code>foreground</code> produces a gray pill regardless of the palette.</li>
+  <li><strong>Inactive tabs:</strong> <code>background: transparent !important</code>. They have no fill by design; only the label shows, at <code>foreground</code> 50%.</li>
+  <li><strong>Activity Bar icons:</strong> the selected one uses <code>foreground</code>, the rest use <code>icon.foreground</code>. <code>activityBar.foreground</code> only applies to the classic UI.</li>
+  <li><strong>Window canvas:</strong> painted with <code>editor.background</code> — the same key as the code area, which is why the editor card is separated by <code>surface.border</code> rather than by a background of its own.</li>
+</ul>
+
+<div style="font-size: 18px; font-weight: 700;">New Workbench Colors</div>
+<ul>
+  <li><strong>Card surfaces:</strong> <code>surface.background</code>, <code>surface.foreground</code>, <code>surface.border</code> — shared by the sidebar, panel, auxiliary bar and editor cards — plus <code>widget.border</code> and <code>panelSectionHeader.border</code></li>
+  <li><strong>Agents / AI panel:</strong> <code>agentsPanel.*</code>, <code>agentsChatInput.*</code>, <code>agentsBadge.*</code>, <code>agentsUnreadBadge.*</code>, <code>agentsNewSessionButton.*</code>, <code>agentsUpdateButton.*</code>, <code>agentsVoice.*</code>, <code>agentsGradient.tintColor</code>, <code>agentStatusIndicator.background</code>, <code>agentSession*</code>, <code>agentFeedback*</code>, <code>agents.background</code></li>
+  <li><strong>Chat:</strong> <code>chat.voiceGlowBaseColor</code>, <code>chat.dictationActiveMicGlow</code>, <code>chat.inputWorkingBorderColor1–3</code></li>
+  <li><strong>Lists:</strong> <code>list.focusOutline</code>, <code>list.focusAndSelectionOutline</code>, <code>list.inactiveFocusOutline</code>, <code>list.inactiveFocusBackground</code>, <code>list.invalidItemForeground</code> — the chat session list draws focus as an outline, not a fill</li>
+  <li><strong>Status Bar:</strong> the full hover/focus set (<code>statusBarItem.*HoverBackground/HoverForeground</code>, <code>statusBar.focusBorder</code>, <code>statusBarItem.focusBorder</code>, <code>statusBarItem.offline*</code>, <code>statusBarItem.compactHoverBackground</code>) — the bar is transparent in Modern UI, so only these states paint</li>
+  <li><strong>Chrome:</strong> <code>commandCenter.activeBorder/inactiveBorder/inactiveForeground/debuggingBackground</code>, <code>menubar.selection*</code>, <code>menu.selectionBorder</code>, <code>button.border/secondaryBorder/separator</code>, <code>tab.activeBorder</code>, <code>actionBar.toggledBackground</code>, <code>toolbar.hoverOutline</code></li>
+  <li><strong>Widgets &amp; forms:</strong> <code>notifications.border</code>, <code>notificationCenter.border</code>, <code>notifications{Error,Warning,Info}Icon.foreground</code>, <code>inputValidation.warning*/info*</code>, <code>inputOption.hoverBackground</code>, <code>quickInputTitle.background</code>, <code>quickInputList.focusIcon/HighlightForeground</code>, <code>textPreformat.*</code>, <code>textSeparator.foreground</code>, <code>extensionButton.*</code>, <code>welcomePage.tileBorder</code>, <code>welcomePage.progress.background</code>, <code>settings.focusedRow*</code>, <code>settings.rowHoverBackground</code>, <code>settings.numberInput*</code>, sash borders</li>
+</ul>
+
+<div style="font-size: 18px; font-weight: 700;">Palette Changes</div>
+<p>Every theme received an explicit icon foreground, a depth scale (cards below the canvas, widgets level with the editor), a <code>foreground</code> calibrated so the derived tab pill carries the theme hue, buttons and badges with light text above WCAG AA, and a real border hierarchy instead of a single value reused for every role.</p>
+<ul>
+  <li><strong>Emerald:</strong> mint <code>foreground</code> so the active tab reads green instead of gray; button and badge moved to a deeper fill that supports light text</li>
+  <li><strong>Dark:</strong> dropped the violet cast inherited from Dark Space. Neutral graphite base, blue accent, and a syntax set rebuilt without purple</li>
+  <li><strong>Dark Space:</strong> three different border values unified, four near-identical backgrounds collapsed into one, pure white removed, comments raised from 2.01:1</li>
+  <li><strong>Light:</strong> warmer canvas — chroma 8 → 17 — so it reads as cream rather than off-white; comments raised from 2.45:1</li>
+  <li><strong>Coffee:</strong> syntax chroma cut (keywords 138 → 99, strings 136 → 77) to stop the palette vibrating against the warm base; <code>#2c2318</code> had been serving nine roles; button contrast was 3.36:1</li>
+  <li><strong>Coffee Dark:</strong> comments were at 1.32:1 and borders at 1.03:1 — both effectively invisible. Canvas chroma was 2, leaving no coffee tone at all. <code>#0e0c0a</code> had been serving ten roles and <code>#080706</code> five, three of which were states that must stay visible</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.5.1] — Modern UI Support (VS Code 1.129 card layout)</div>
 <br>
 
