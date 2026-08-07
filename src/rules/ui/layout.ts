@@ -3,7 +3,17 @@ import { AetherPalette } from "../../lib/types";
 import { alpha } from "../../lib/utils";
 
 export const getLayoutColors = (p: AetherPalette) => {
+  const surfaceBg = p.surface?.bg ?? p.sideBar.bg;
+  const surfaceFg = p.surface?.fg ?? p.sideBar.fg;
+  const surfaceBorder = p.surface?.border ?? p.core.border;
+
   return {
+    // Surface (Modern UI)
+    "surface.background": surfaceBg,
+    "surface.foreground": surfaceFg,
+    "surface.border": surfaceBorder,
+    "widget.border": surfaceBorder,
+
     // Activity Bar
     "activityBar.background": p.activityBar.bg,
     "activityBar.foreground": p.activityBar.fg,
@@ -63,6 +73,22 @@ export const getLayoutColors = (p: AetherPalette) => {
     "statusBarItem.errorForeground": p.core.fg,
     "statusBarItem.warningBackground": p.status.warning,
     "statusBarItem.warningForeground": p.core.bg,
+    "statusBar.focusBorder": p.statusBar.remoteBg,
+    "statusBar.noFolderBorder": p.statusBar.border,
+    "statusBarItem.focusBorder": p.statusBar.remoteBg,
+    "statusBarItem.hoverForeground": p.statusBar.fg,
+    "statusBarItem.compactHoverBackground": p.statusBar.itemActiveBg,
+    "statusBarItem.prominentHoverForeground": p.button.primary.fg,
+    "statusBarItem.remoteHoverBackground": p.button.primary.hover,
+    "statusBarItem.remoteHoverForeground": p.button.primary.fg,
+    "statusBarItem.errorHoverBackground": p.statusBar.itemHover,
+    "statusBarItem.errorHoverForeground": p.status.error,
+    "statusBarItem.warningHoverBackground": p.statusBar.itemHover,
+    "statusBarItem.warningHoverForeground": p.status.warning,
+    "statusBarItem.offlineBackground": p.status.error,
+    "statusBarItem.offlineForeground": p.core.bg,
+    "statusBarItem.offlineHoverBackground": p.statusBar.itemHover,
+    "statusBarItem.offlineHoverForeground": p.status.error,
 
     // Title Bar
     "titleBar.activeBackground": p.titleBar.bg,
@@ -87,5 +113,6 @@ export const getLayoutColors = (p: AetherPalette) => {
     "panelStickyScroll.shadow": alpha(p.core.overlay, Opacity.shadow),
     "outputView.background": p.panel.bg,
     "outputViewStickyScroll.background": p.panel.bg,
+    "panelSectionHeader.border": p.panel.border,
   };
 };

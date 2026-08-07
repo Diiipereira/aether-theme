@@ -5,6 +5,14 @@ export interface AetherPalette {
     fg: string;
     border: string;
     overlay: string;
+    iconFg?: string;
+  };
+
+  // 1.1 SURFACE (cards da Modern UI)
+  surface?: {
+    bg?: string;
+    fg?: string;
+    border?: string;
   };
 
   // 2. LAYOUT MODULES (Estrutura da Janela)
