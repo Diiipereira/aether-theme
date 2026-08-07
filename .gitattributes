@@ -1,0 +1,7 @@
+# Text files are stored and checked out with LF on every platform.
+# The theme generator and Prettier both write LF, so without this
+# core.autocrlf=true on Windows rewrites the files on every build and
+# they show up as modified with no real change.
+* text=auto eol=lf
+
+*.png binary
