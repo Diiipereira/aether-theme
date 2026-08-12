@@ -158,7 +158,7 @@ export const darkPalette: AetherPalette = {
     types: "#4ec9b0",
     classes: "#56b6c2",
     operators: "#8b9199",
-    comments: "#5c646e",
+    comments: "#616974",
     tags: "#5eb0ef",
   },
 

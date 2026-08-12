@@ -2,6 +2,30 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.6.2] — Contrast Fixes</div>
+<br>
+
+<p>A full contrast pass over all six themes. The worst pairing measured <strong>1.03:1</strong> — the same luminance on both sides, effectively invisible on screen.</p>
+
+<div style="font-size: 18px; font-weight: 700;">Fixed</div>
+<ul>
+  <li><strong>Commit graph ref badges:</strong> the branch and remote pills in the Source Control graph painted their label in a light tone over a light accent fill. Worst case was <strong>1.05:1</strong> on Dark Space, where the branch name was unreadable. Every theme now reads between 4.58 and 12.10.</li>
+  <li><strong>Status bar remote and error indicators:</strong> the remote badge was <strong>1.03:1</strong> on Emerald and the error counter <strong>1.87:1</strong>. Both now pick the readable text tone for their palette — vivid accents take dark text, deep accents take light.</li>
+  <li><strong>Light palette:</strong> the whole accent family read too light on the cream canvas. Six syntax colors were below AA — comments 3.71, numbers 3.97, types 4.24, strings 4.27, errors 4.28, keywords 4.49 — and all now clear 4.5 with the hue preserved to within 1°. The same tones feed status, git, terminal and bracket colors, so those were corrected with them.</li>
+  <li><strong>Secondary text:</strong> ghost text, inlay hints and inline debug values sat at <strong>2.10:1</strong> on Light, where translucent text loses far more contrast than it does on a dark ground. Breadcrumbs, the inactive title bar and disabled controls raised alongside them.</li>
+  <li><strong>Inactive tab labels:</strong> raised on Light, Coffee and Coffee Dark. The active tab stays roughly 2.8× stronger, so the hierarchy is unchanged — the inactive label is simply legible now.</li>
+</ul>
+
+<div style="font-size: 18px; font-weight: 700;">Color Keys</div>
+<ul>
+  <li>Added <code>testing.message.error.badgeBackground</code>, <code>badgeForeground</code> and <code>badgeBorder</code>, which replace the <code>testing.message.error.decorationForeground</code> that VS Code retired.</li>
+  <li>Dropped <code>activityBar.dropBackground</code>, <code>scm.providerBorder</code> and <code>chatManagement.sashBorder</code> — VS Code no longer registers them.</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.6.1] — Setup Documentation</div>
 <br>
 

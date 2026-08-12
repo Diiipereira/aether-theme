@@ -1,9 +1,9 @@
 import { Opacity } from "../../lib/opacity";
 import { AetherPalette } from "../../lib/types";
-import { alpha } from "../../lib/utils";
+import { alpha, readableOn } from "../../lib/utils";
 
 export const getComponentColors = (p: AetherPalette) => {
-  const mutedFg = alpha(p.core.fg, Opacity.muted);
+  const mutedFg = p.core.mutedFg ?? alpha(p.core.fg, Opacity.muted);
 
   return {
     // Base Colors
@@ -40,7 +40,7 @@ export const getComponentColors = (p: AetherPalette) => {
     "tab.unfocusedActiveBackground": alpha(p.tabs.activeBg, Opacity.solid),
     "tab.unfocusedActiveForeground": alpha(p.tabs.activeFg, Opacity.muted),
     "tab.unfocusedInactiveBackground": alpha(p.tabs.inactiveBg, Opacity.soft),
-    "tab.unfocusedInactiveForeground": alpha(p.tabs.inactiveFg, Opacity.muted),
+    "tab.unfocusedInactiveForeground": alpha(p.tabs.inactiveFg, Opacity.solid),
     "tab.unfocusedHoverBackground": alpha(p.tabs.activeBg, Opacity.medium),
     "tab.unfocusedHoverForeground": alpha(p.tabs.activeFg, Opacity.muted),
     "tab.unfocusedActiveBorder": alpha(p.tabs.activeBorderTop, Opacity.muted),
@@ -352,7 +352,13 @@ export const getComponentColors = (p: AetherPalette) => {
     "testing.iconSkipped": p.testing.skipped,
     "testing.peekBorder": p.testing.border,
     "testing.peekHeaderBackground": p.panel.bg,
-    "testing.message.error.decorationForeground": p.testing.failed,
+    "testing.message.error.badgeBackground": p.testing.failed,
+    "testing.message.error.badgeForeground": readableOn(
+      p.testing.failed,
+      p.button.primary.fg,
+      p.core.bg
+    ),
+    "testing.message.error.badgeBorder": alpha(p.testing.failed, Opacity.half),
     "testing.message.error.lineBackground": alpha(
       p.testing.failed,
       Opacity.subtle
@@ -400,8 +406,6 @@ export const getComponentColors = (p: AetherPalette) => {
       Opacity.half
     ),
 
-    // SCM
-    "scm.providerBorder": p.core.border,
 
     // Inline Chat & AI features
     "inlineChat.background": p.input.bg,
@@ -433,7 +437,11 @@ export const getComponentColors = (p: AetherPalette) => {
     "banner.iconForeground": p.tabs.activeBorderTop,
 
     "extensionBadge.remoteBackground": p.statusBar.remoteBg,
-    "extensionBadge.remoteForeground": p.core.fg,
+    "extensionBadge.remoteForeground": readableOn(
+      p.statusBar.remoteBg,
+      p.button.primary.fg,
+      p.core.bg
+    ),
     "extensionIcon.starForeground": p.status.warning,
     "extensionIcon.verifiedForeground": p.status.success,
     "extensionIcon.preReleaseForeground": p.status.warning,
@@ -463,7 +471,7 @@ export const getComponentColors = (p: AetherPalette) => {
     "scmGraph.historyItemBaseRefColor": p.syntax.constants,
     "scmGraph.historyItemHoverAdditionsForeground": p.git.added,
     "scmGraph.historyItemHoverDeletionsForeground": p.git.deleted,
-    "scmGraph.historyItemHoverLabelForeground": p.core.fg,
+    "scmGraph.historyItemHoverLabelForeground": p.scmGraph?.labelFg ?? p.core.bg,
     "scmGraph.historyItemHoverDefaultLabelForeground": p.core.fg,
     "scmGraph.historyItemHoverDefaultLabelBackground": alpha(
       p.core.fg,
@@ -523,7 +531,6 @@ export const getComponentColors = (p: AetherPalette) => {
     "chat.requestBubbleHoverBackground": p.list.hoverBg,
     "chat.checkpointSeparator": alpha(p.core.border, Opacity.solid),
     "chat.thinkingShimmer": p.tabs.activeBorderTop,
-    "chatManagement.sashBorder": p.core.border,
     "chat.voiceGlowBaseColor": p.tabs.activeBorderTop,
     "chat.dictationActiveMicGlow": p.tabs.activeBorderTop,
     "chat.inputWorkingBorderColor1": p.tabs.activeBorderTop,

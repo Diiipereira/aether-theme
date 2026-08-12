@@ -6,6 +6,7 @@ export const Opacity = {
   soft: 25,
   highlight: 30,
   medium: 40,
+  hint: 45,
   half: 50,
   inactive: 60,
   muted: 65,

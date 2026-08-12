@@ -6,16 +6,23 @@ export interface AetherPalette {
     border: string;
     overlay: string;
     iconFg?: string;
+    mutedFg?: string;
+    hintFg?: string;
   };
 
-  // 1.1 SURFACE (cards da Modern UI)
+  // 1.1 SURFACE (Modern UI cards)
   surface?: {
     bg?: string;
     fg?: string;
     border?: string;
   };
 
-  // 2. LAYOUT MODULES (Estrutura da Janela)
+  // 1.2 SCM GRAPH (commit graph ref badges)
+  scmGraph?: {
+    labelFg?: string;
+  };
+
+  // 2. LAYOUT MODULES (Window structure)
   activityBar: {
     bg: string;
     fg: string;
@@ -54,7 +61,7 @@ export interface AetherPalette {
     border: string;
   };
 
-  // 3. EDITOR (Área de código)
+  // 3. EDITOR (Code area)
   editor: {
     bg: string;
     fg: string;
@@ -101,7 +108,7 @@ export interface AetherPalette {
     matchHighlight: string;
   };
 
-  // 4. UI COMPONENTS (Elementos interativos)
+  // 4. UI COMPONENTS (Interactive elements)
   button: {
     primary: {
       bg: string;
@@ -151,7 +158,7 @@ export interface AetherPalette {
     sliderActive: string;
   };
 
-  // 5. SYNTAX HIGHLIGHTING (Coloração do código)
+  // 5. SYNTAX HIGHLIGHTING (Code coloring)
   syntax: {
     keywords: string;
     functions: string;

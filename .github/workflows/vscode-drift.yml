@@ -1,0 +1,57 @@
+name: VS Code color drift
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  drift:
+    name: Detect color registry changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Download latest stable VS Code
+        run: |
+          curl -fsSL -o vscode.tar.gz \
+            "https://update.code.visualstudio.com/latest/linux-x64/stable"
+          mkdir -p vscode && tar -xzf vscode.tar.gz -C vscode --strip-components=1
+
+      - name: Compare color registry against baseline
+        id: drift
+        run: |
+          set +e
+          npm run --silent drift -- \
+            --bundle vscode/resources/app/out/vs/workbench/workbench.desktop.main.js \
+            > drift.txt 2>&1
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat drift.txt
+
+      - name: Open or update tracking issue
+        if: steps.drift.outputs.status == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TITLE="VS Code color registry changed"
+          BODY="$(printf 'The scheduled scan found changes in the VS Code color registry.\n\n```\n%s\n```\n\nAssigning a palette color to each new key is a manual step — see CONTRIBUTING notes in the CHANGELOG for how new keys are wired into `src/rules/`.' "$(cat drift.txt)")"
+          EXISTING="$(gh issue list --label vscode-drift --state open --json number --jq '.[0].number')"
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create vscode-drift --color FBCA04 --description "VS Code added or removed theme color keys" 2>/dev/null || true
+            gh issue create --title "$TITLE" --label vscode-drift --body "$BODY"
+          fi

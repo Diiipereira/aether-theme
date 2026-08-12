@@ -32,6 +32,9 @@ jobs:
       - name: Type check
         run: npx tsc --noEmit -p tsconfig.json
 
+      - name: Lint
+        run: npm run lint
+
       - name: Build themes
         run: npm run build
 
@@ -40,6 +43,9 @@ jobs:
 
       - name: Validate theme colors
         run: npm test
+
+      - name: Audit contrast
+        run: npm run audit
 
   package:
     name: Package extension

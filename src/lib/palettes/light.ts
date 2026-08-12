@@ -5,6 +5,8 @@ export const lightPalette: AetherPalette = {
     bg: "#f4ede3",
     fg: "#413a33",
     iconFg: "#7a6f62",
+    mutedFg: "#6a6055",
+    hintFg: "#857e76",
     border: "#dcd0be",
     overlay: "#000000",
   },
@@ -13,6 +15,10 @@ export const lightPalette: AetherPalette = {
     bg: "#ebe2d4",
     fg: "#413a33",
     border: "#d4c6b0",
+  },
+
+  scmGraph: {
+    labelFg: "#fbf6f0",
   },
 
   activityBar: {
@@ -43,7 +49,7 @@ export const lightPalette: AetherPalette = {
 
   titleBar: {
     bg: "#ebe2d4",
-    fg: "#5c5349",
+    fg: "#403a33",
     inactiveBg: "#e5dbcb",
   },
 
@@ -76,10 +82,10 @@ export const lightPalette: AetherPalette = {
     brackets: {
       pair1: "#b07d62",
       pair2: "#9c6b94",
-      pair3: "#3d7a7a",
+      pair3: "#387070",
       pair4: "#c76b6b",
       pair5: "#4a6a8a",
-      pair6: "#4a7a5c",
+      pair6: "#457156",
       unexpected: "#c76b6b",
     },
     whitespace: "#dcd0be",
@@ -120,7 +126,7 @@ export const lightPalette: AetherPalette = {
     focusBorder: "#5a6680",
     validation: {
       errorBg: "#f2dede",
-      errorBorder: "#b5504f",
+      errorBorder: "#a84a49",
     },
   },
 
@@ -137,7 +143,7 @@ export const lightPalette: AetherPalette = {
     activeFg: "#332d27",
     activeBorderTop: "#5a6680",
     inactiveBg: "#dcd0be",
-    inactiveFg: "#7a6f62",
+    inactiveFg: "#645a50",
     border: "#d4c6b0",
   },
 
@@ -150,31 +156,31 @@ export const lightPalette: AetherPalette = {
 
   syntax: {
     variables: "#4a3f3c",
-    keywords: "#8b5e83",
+    keywords: "#855a7e",
     functions: "#4a6a8a",
-    strings: "#4a7a5c",
-    numbers: "#a06840",
+    strings: "#457156",
+    numbers: "#8e5c39",
     constants: "#7a5a9c",
-    types: "#3d7a7a",
+    types: "#387070",
     classes: "#4a5e8a",
     operators: "#706560",
-    comments: "#847869",
-    tags: "#8b5e83",
+    comments: "#706659",
+    tags: "#855a7e",
   },
 
   status: {
-    info: "#3d7a7a",
-    warning: "#a06840",
-    error: "#b5504f",
-    success: "#4a7a5c",
+    info: "#387070",
+    warning: "#8e5c39",
+    error: "#a84a49",
+    success: "#457156",
   },
 
   git: {
-    added: "#4a7a5c",
-    modified: "#a06840",
-    deleted: "#b5504f",
+    added: "#457156",
+    modified: "#8e5c39",
+    deleted: "#a84a49",
     ignored: "#a1937f",
-    conflict: "#8b5e83",
+    conflict: "#855a7e",
   },
 
   merge: {
@@ -187,10 +193,10 @@ export const lightPalette: AetherPalette = {
   },
 
   testing: {
-    passed: "#4a7a5c",
-    failed: "#b5504f",
+    passed: "#457156",
+    failed: "#a84a49",
     errored: "#c26b78",
-    queued: "#a06840",
+    queued: "#8e5c39",
     unset: "#a1937f",
     skipped: "#8f8271",
     border: "#5a6680",
@@ -198,12 +204,12 @@ export const lightPalette: AetherPalette = {
 
   terminal: {
     black: "#413a33",
-    red: "#b5504f",
-    green: "#4a7a5c",
-    yellow: "#a06840",
+    red: "#a84a49",
+    green: "#457156",
+    yellow: "#8e5c39",
     blue: "#4a6a8a",
-    magenta: "#8b5e83",
-    cyan: "#3d7a7a",
+    magenta: "#855a7e",
+    cyan: "#387070",
     white: "#ebe2d4",
     brightBlack: "#7a6f62",
     brightRed: "#c96b6a",

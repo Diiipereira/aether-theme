@@ -68,9 +68,9 @@ themes.forEach((themeConfig) => {
 
   try {
     fs.writeFileSync(OUTPUT_PATH, JSON.stringify(themeJson, null, 2));
-    console.log(`✅ ${themeConfig.name} gerado...`);
+    console.log(`✅ ${themeConfig.name} generated`);
   } catch (error) {
-    console.error(`❌ Erro ao gerar ${themeConfig.name}:`, error);
+    console.error(`❌ Failed to generate ${themeConfig.name}:`, error);
     process.exit(1);
   }
 });

@@ -20,7 +20,7 @@ export const getEditorColors = (p: AetherPalette) => {
     "editorStickyScrollHover.background": p.editor.lineHighlight,
 
     // Inlay Hints
-    "editorInlayHint.foreground": alpha(p.core.fg, Opacity.medium),
+    "editorInlayHint.foreground": p.core.hintFg ?? alpha(p.core.fg, Opacity.hint),
     "editorInlayHint.background": alpha(p.core.bg, Opacity.none),
 
     // Search & Highlights
@@ -207,7 +207,7 @@ export const getEditorColors = (p: AetherPalette) => {
     "editorHoverWidget.highlightForeground": p.editor.findMatch,
 
     // Ghost Text & Inline Suggestions (Copilot, etc.)
-    "editorGhostText.foreground": alpha(p.core.fg, Opacity.medium),
+    "editorGhostText.foreground": p.core.hintFg ?? alpha(p.core.fg, Opacity.hint),
     "editorGhostText.background": alpha(p.core.bg, Opacity.none),
     "editorGhostText.border": alpha(p.core.bg, Opacity.none),
 
@@ -249,7 +249,7 @@ export const getEditorColors = (p: AetherPalette) => {
 
     // Breadcrumbs
     "breadcrumb.background": p.editor.bg,
-    "breadcrumb.foreground": alpha(p.core.fg, Opacity.muted),
+    "breadcrumb.foreground": p.core.mutedFg ?? alpha(p.core.fg, Opacity.muted),
     "breadcrumb.focusForeground": p.core.fg,
     "breadcrumb.activeSelectionForeground": p.core.fg,
     "breadcrumbPicker.background": p.input.bg,
@@ -306,7 +306,7 @@ export const getEditorColors = (p: AetherPalette) => {
       p.status.success,
       Opacity.faint
     ),
-    "editor.inlineValuesForeground": alpha(p.core.fg, Opacity.medium),
+    "editor.inlineValuesForeground": p.core.hintFg ?? alpha(p.core.fg, Opacity.hint),
     "editor.inlineValuesBackground": alpha(p.core.bg, Opacity.none),
 
     "editorCommentsWidget.resolvedBorder": p.status.success,

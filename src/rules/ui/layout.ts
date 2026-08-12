@@ -1,6 +1,6 @@
 import { Opacity } from "../../lib/opacity";
 import { AetherPalette } from "../../lib/types";
-import { alpha } from "../../lib/utils";
+import { alpha, readableOn } from "../../lib/utils";
 
 export const getLayoutColors = (p: AetherPalette) => {
   const surfaceBg = p.surface?.bg ?? p.sideBar.bg;
@@ -18,7 +18,6 @@ export const getLayoutColors = (p: AetherPalette) => {
     "activityBar.background": p.activityBar.bg,
     "activityBar.foreground": p.activityBar.fg,
     "activityBar.border": p.sideBar.border,
-    "activityBar.dropBackground": alpha(p.activityBar.fg, Opacity.subtle),
     "activityBar.activeBorder": p.activityBar.activeBorder,
     "activityBar.activeBackground": p.activityBar.activeBg,
     "activityBar.inactiveForeground": alpha(p.activityBar.fg, Opacity.half),
@@ -59,18 +58,27 @@ export const getLayoutColors = (p: AetherPalette) => {
     "statusBar.border": p.statusBar.border,
     "statusBarItem.hoverBackground": p.statusBar.itemHover,
     "statusBarItem.remoteBackground": p.statusBar.remoteBg,
-    "statusBarItem.remoteForeground": p.statusBar.fg,
+    "statusBarItem.remoteForeground": readableOn(
+      p.statusBar.remoteBg,
+      p.button.primary.fg,
+      p.core.bg
+    ),
     "statusBar.debuggingBackground": p.status.warning,
     "statusBar.debuggingForeground": p.core.bg,
     "statusBar.debuggingBorder": p.status.warning,
     "statusBar.noFolderBackground": p.statusBar.bg,
-    "statusBar.noFolderForeground": alpha(p.core.fg, Opacity.muted),
+    "statusBar.noFolderForeground":
+      p.core.mutedFg ?? alpha(p.core.fg, Opacity.muted),
     "statusBarItem.activeBackground": p.statusBar.itemActiveBg,
     "statusBarItem.prominentBackground": p.button.primary.bg,
     "statusBarItem.prominentForeground": p.button.primary.fg,
     "statusBarItem.prominentHoverBackground": p.button.primary.hover,
     "statusBarItem.errorBackground": p.status.error,
-    "statusBarItem.errorForeground": p.core.fg,
+    "statusBarItem.errorForeground": readableOn(
+      p.status.error,
+      p.button.primary.fg,
+      p.core.bg
+    ),
     "statusBarItem.warningBackground": p.status.warning,
     "statusBarItem.warningForeground": p.core.bg,
     "statusBar.focusBorder": p.statusBar.remoteBg,

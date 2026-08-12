@@ -137,7 +137,7 @@ export const coffeeDarkPalette: AetherPalette = {
     activeFg: "#f0e6d6",
     activeBorderTop: "#c89050",
     inactiveBg: "#2f2214",
-    inactiveFg: "#8a7862",
+    inactiveFg: "#98846c",
     border: "#3d2f1f",
   },
 

@@ -3,7 +3,7 @@
   "publisher": "diogo-aether",
   "displayName": "Aether Themes",
   "description": "A premium collection of modern themes for VS Code. Designed for focus, perfect readability, and refined syntax highlighting.",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "icon": "assets/icon.png",
   "galleryBanner": {
     "color": "#121212",
@@ -42,18 +42,25 @@
   },
   "scripts": {
     "build": "ts-node src/index.ts",
-    "package": "npm run build && vsce package",
-    "publish": "npm run build && vsce publish",
     "watch": "ts-node-dev --respawn src/index.ts",
-    "test": "ts-node src/test/test-theme.ts"
+    "test": "ts-node src/test/test-theme.ts",
+    "lint": "eslint .",
+    "audit": "ts-node scripts/audit-contrast.ts",
+    "drift": "ts-node scripts/color-ids.ts",
+    "package": "npm run build && vsce package",
+    "publish": "npm run build && vsce publish"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^20.10.0",
     "@vscode/vsce": "^2.22.0",
+    "eslint": "^10.8.1",
+    "eslint-config-prettier": "^10.1.8",
     "ovsx": "^1.0.2",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.67.0"
   },
   "contributes": {
     "themes": [

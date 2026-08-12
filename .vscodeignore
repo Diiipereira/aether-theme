@@ -1,14 +1,20 @@
-# tudo isso será ignorado no pacote
+# everything below is excluded from the published package
 
 .vscode/**
 .vscode-test/**
+.github/**
 src/**
+scripts/**
 node_modules/**
 out/**
+dist/**
 .gitignore
+.gitattributes
 .vscodeignore
+eslint.config.mjs
 tsconfig.json
 package-lock.json
 npm-debug.log
 *.map
+*.vsix
 **/*.ts
