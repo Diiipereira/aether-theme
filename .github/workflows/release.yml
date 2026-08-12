@@ -1,24 +1,55 @@
 name: Release
 
+# Publishing is triggered by the version in package.json changing on main.
+# Bumping the version and pushing is the release; no tag is typed by hand.
 on:
   push:
-    tags:
-      - "v*"
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: release-${{ github.ref }}
+  group: release
   cancel-in-progress: false
 
 jobs:
-  publish:
-    name: Publish to VS Code Marketplace
+  check:
+    name: Check for a new version
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+      release: ${{ steps.check.outputs.release }}
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compare package.json against existing tags
+        id: check
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if git rev-parse "v$VERSION" >/dev/null 2>&1; then
+            echo "v$VERSION already tagged — nothing to publish."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "v$VERSION is new — releasing."
+            echo "release=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    name: Publish v${{ needs.check.outputs.version }}
+    runs-on: ubuntu-latest
+    needs: check
+    if: needs.check.outputs.release == 'true'
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -28,18 +59,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Verify tag matches package.json version
-        run: |
-          TAG="${GITHUB_REF_NAME#v}"
-          PKG="$(node -p "require('./package.json').version")"
-          echo "Tag: $TAG | package.json: $PKG"
-          if [ "$TAG" != "$PKG" ]; then
-            echo "::error::Tag ($TAG) does not match package.json version ($PKG). Bump package.json or retag."
-            exit 1
-          fi
-
       - name: Type check
         run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build themes
         run: npm run build
@@ -49,6 +73,18 @@ jobs:
 
       - name: Validate theme colors
         run: npm test
+
+      - name: Audit contrast
+        run: npm run audit
+
+      - name: Tag the release
+        env:
+          VERSION: ${{ needs.check.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag "v$VERSION"
+          git push origin "v$VERSION"
 
       - name: Publish to VS Code Marketplace
         run: npx @vscode/vsce publish --no-dependencies
