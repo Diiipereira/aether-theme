@@ -3,6 +3,8 @@
     "target": "ES2020",
     "module": "CommonJS",
     "strict": true,
+    // TypeScript 6 (shipped with VS Code 1.133) no longer auto-includes @types
+    "types": ["node"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
