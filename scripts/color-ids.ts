@@ -1,6 +1,5 @@
 /**
- * Diffs a VS Code build's registered color IDs against the committed baseline.
- * Reports only what was added or removed since the last review.
+ * Diffs a VS Code build's color IDs against the committed baseline.
  *
  *   npx ts-node scripts/color-ids.ts --bundle <path>            check
  *   npx ts-node scripts/color-ids.ts --bundle <path> --update   rewrite baseline
@@ -20,17 +19,21 @@ function arg(name: string): string | undefined {
   return i === -1 ? undefined : process.argv[i + 1];
 }
 
-// registerColor(id, defaults, localize(n, null)) after minification
+// Minified registerColor(id, defaults, localize(n, null)). Context keys and icons
+// share that shape: reject `new X(...)`, and require a color default when dotless.
 function extractFromBundle(source: string): Set<string> {
   const re =
-    /\("([a-zA-Z][A-Za-z0-9]*(?:\.[A-Za-z0-9]+)*)",(?:\{[^{}]{0,600}\}|[^,()]{0,120}|[A-Za-z0-9_$.]+\([^()]{0,120}\)),\s*[a-zA-Z_$]\(\d+,\s*null\)/g;
+    /(?<!\bnew\s{0,3}[A-Za-z0-9_$]{1,6})\("([a-zA-Z][A-Za-z0-9]*(?:\.[A-Za-z0-9]+)*)",(\{[^{}]{0,600}\}|[^,()]{0,120}|[A-Za-z0-9_$.]+\([^()]{0,120}\)),\s*[a-zA-Z_$]\(\d+,\s*null\)/g;
+  const colorDefault = /\b(?:dark|light|hcDark|hcLight)\s*:/;
   const ids = new Set<string>();
   let m: RegExpExecArray | null;
-  while ((m = re.exec(source))) ids.add(m[1]);
+  while ((m = re.exec(source))) {
+    const [, id, defaults] = m;
+    if (id.includes(".") || colorDefault.test(defaults)) ids.add(id);
+  }
   return ids;
 }
 
-// colors declared by bundled extensions under contributes.colors
 function extractFromExtensions(appRoot: string): Set<string> {
   const ids = new Set<string>();
   const dir = path.join(appRoot, "extensions");
@@ -40,18 +43,19 @@ function extractFromExtensions(appRoot: string): Set<string> {
     const pkg = path.join(dir, ext, "package.json");
     if (!fs.existsSync(pkg)) continue;
     try {
-      const json = JSON.parse(fs.readFileSync(pkg, "utf8")) as ExtensionManifest;
+      const json = JSON.parse(
+        fs.readFileSync(pkg, "utf8"),
+      ) as ExtensionManifest;
       for (const c of json.contributes?.colors ?? [])
         if (c.id !== undefined) ids.add(c.id);
     } catch {
-      // an unreadable extension manifest must not abort the scan
+      // a broken manifest must not abort the scan
     }
   }
   return ids;
 }
 
-// Some IDs are built in a loop and escape the regex. A literal match is enough:
-// if VS Code drops the color, the literal goes with it.
+// IDs built in a loop escape the regex; a literal match is enough to confirm them.
 function confirmByLiteral(source: string, candidates: string[]): string[] {
   return candidates.filter((id) => source.includes(`"${id}"`));
 }
@@ -79,7 +83,7 @@ function main() {
     process.exit(2);
   }
 
-  // .../resources/app/out/vs/workbench/workbench.desktop.main.js -> .../resources/app
+  // out/vs/workbench/workbench.desktop.main.js -> resources/app
   const appRoot = path.resolve(path.dirname(bundle), "..", "..", "..");
   const version = (() => {
     try {
