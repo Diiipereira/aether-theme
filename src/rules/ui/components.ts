@@ -62,6 +62,16 @@ export const getComponentColors = (p: AetherPalette) => {
     "tab.selectedForeground": p.tabs.activeFg,
     "tab.selectedBorderTop": p.tabs.activeBorderTop,
     "tab.hoverBorder": alpha(p.tabs.activeBorderTop, Opacity.half),
+
+    // Modern UI tabs and activity bar; the other modern* keys inherit these
+    "modernTab.activeBackground": p.tabs.activeBg,
+    "modernTab.activeForeground": p.tabs.activeFg,
+    "modernTab.hoverBackground": alpha(p.tabs.activeBg, Opacity.half),
+    "modernTab.hoverForeground": p.tabs.activeFg,
+    "modernEditorTab.inactiveBackground": alpha(
+      p.tabs.inactiveBg,
+      Opacity.inactive
+    ),
     "editorGroupHeader.border": p.core.border,
     "editorGroupHeader.noTabsBackground": p.titleBar.bg,
     "editorGroup.dropIntoPromptForeground": p.core.fg,
@@ -416,6 +426,11 @@ export const getComponentColors = (p: AetherPalette) => {
     "chat.requestBorder": p.core.border,
     "chat.slashCommandBackground": alpha(p.tabs.activeBorderTop, Opacity.low),
     "chat.slashCommandForeground": p.tabs.activeFg,
+    "chat.findMatchBackground": alpha(p.editor.findMatch, Opacity.highlight),
+    "chat.findMatchHighlightBackground": alpha(
+      p.editor.findMatch,
+      Opacity.faint
+    ),
 
     // Profile Badge
     "profileBadge.background": p.activityBar.badgeBg,

@@ -2,6 +2,22 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.6.3] — Modern UI Colors</div>
+<br>
+
+<p>VS Code 1.134 exposed theme keys for the Modern UI. Until now its tabs and activity bar were painted from values no theme could reach.</p>
+
+<div style="font-size: 18px; font-weight: 700;">Added</div>
+<ul>
+  <li><strong>Modern UI tabs and activity bar:</strong> <code>modernTab.activeBackground</code>, <code>activeForeground</code>, <code>hoverBackground</code> and <code>hoverForeground</code>. Left at their defaults, the active tab and the hovered tab resolve to the same color in all six themes, so neither can be told from the other. Each palette now sets an opaque active tab against a half-transparent hover, matching the classic tab style. <code>modernEditorTab.*</code> and <code>modernActivityBar.*</code> inherit from these.</li>
+  <li><strong>Inactive editor tabs:</strong> <code>modernEditorTab.inactiveBackground</code>, which VS Code leaves fully transparent by default.</li>
+  <li><strong>Chat search:</strong> <code>chat.findMatchBackground</code> and <code>chat.findMatchHighlightBackground</code>, on the same accent the editor and terminal already use for find matches.</li>
+</ul>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.6.2] — Contrast Fixes</div>
 <br>
 
