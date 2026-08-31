@@ -1,5 +1,5 @@
 {
-  "vscodeVersion": "1.134.0",
+  "vscodeVersion": "1.135.0",
   "ids": [
     "a.pointer.prominent",
     "a.pointer.prominent.message",
@@ -600,8 +600,10 @@
     "minimapSlider.hoverBackground",
     "modernActivityBar.activeBackground",
     "modernActivityBar.activeForeground",
+    "modernActivityBar.background",
     "modernActivityBar.hoverBackground",
     "modernActivityBar.hoverForeground",
+    "modernActivityBar.inactiveBackground",
     "modernEditorTab.activeActionBackground",
     "modernEditorTab.activeBackground",
     "modernEditorTab.activeForeground",
