@@ -1,5 +1,5 @@
 {
-  "vscodeVersion": "1.135.0",
+  "vscodeVersion": "1.136.1",
   "ids": [
     "a.pointer.prominent",
     "a.pointer.prominent.message",
@@ -601,9 +601,14 @@
     "modernActivityBar.activeBackground",
     "modernActivityBar.activeForeground",
     "modernActivityBar.background",
+    "modernActivityBar.border",
     "modernActivityBar.hoverBackground",
     "modernActivityBar.hoverForeground",
     "modernActivityBar.inactiveBackground",
+    "modernActivityBarItem.activeBackground",
+    "modernActivityBarItem.activeForeground",
+    "modernActivityBarItem.hoverBackground",
+    "modernActivityBarItem.hoverForeground",
     "modernEditorTab.activeActionBackground",
     "modernEditorTab.activeBackground",
     "modernEditorTab.activeForeground",
