@@ -19,19 +19,24 @@ function arg(name: string): string | undefined {
   return i === -1 ? undefined : process.argv[i + 1];
 }
 
-// Minified registerColor(id, defaults, localize(n, null)). Context keys and icons
-// share that shape: reject `new X(...)`, and require a color default when dotless.
+// Minified registerColor(id, defaults, localize(n, null)). Menus, context keys,
+// icons and size tokens share that shape, so keep only calls to the function
+// that registers editor.background.
 function extractFromBundle(source: string): Set<string> {
   const re =
-    /(?<!\bnew\s{0,3}[A-Za-z0-9_$]{1,6})\("([a-zA-Z][A-Za-z0-9]*(?:\.[A-Za-z0-9]+)*)",(\{[^{}]{0,600}\}|[^,()]{0,120}|[A-Za-z0-9_$.]+\([^()]{0,120}\)),\s*[a-zA-Z_$]\(\d+,\s*null\)/g;
-  const colorDefault = /\b(?:dark|light|hcDark|hcLight)\s*:/;
-  const ids = new Set<string>();
+    /(?<![A-Za-z0-9_$.])([A-Za-z_$][A-Za-z0-9_$]*)\("([a-zA-Z][A-Za-z0-9]*(?:\.[A-Za-z0-9]+)*)",(?:\{[^{}]{0,600}\}|[^,()]{0,120}|[A-Za-z0-9_$.]+\([^()]{0,120}\)),\s*[a-zA-Z_$]\(\d+,\s*null\)/g;
+  const calls: [string, string][] = [];
   let m: RegExpExecArray | null;
-  while ((m = re.exec(source))) {
-    const [, id, defaults] = m;
-    if (id.includes(".") || colorDefault.test(defaults)) ids.add(id);
+  while ((m = re.exec(source))) calls.push([m[1], m[2]]);
+
+  const registerColor = calls.find(([, id]) => id === "editor.background")?.[0];
+  if (registerColor === undefined) {
+    console.error("❌ registerColor not found: editor.background is missing");
+    process.exit(2);
   }
-  return ids;
+  return new Set(
+    calls.filter(([fn]) => fn === registerColor).map(([, id]) => id),
+  );
 }
 
 function extractFromExtensions(appRoot: string): Set<string> {
