@@ -691,6 +691,7 @@
     "chat.requestBorder": "#2b2117",
     "chat.slashCommandBackground": "#c8905033",
     "chat.slashCommandForeground": "#f0e6d6",
+    "chat.mcpCompatibilityWarningForeground": "#b3a46e",
     "chat.findMatchBackground": "#c890504d",
     "chat.findMatchHighlightBackground": "#c8905026",
     "profileBadge.background": "#6c4e2b",

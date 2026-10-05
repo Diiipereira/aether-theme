@@ -2,6 +2,15 @@
   📜 Changelog
 </div>
 
+<div style="font-size: 24px; font-weight: 700;">[v1.6.4] — MCP Warning Color</div>
+<br>
+
+<p>Added <code>chat.mcpCompatibilityWarningForeground</code>, which VS Code ships as a fixed amber. It now follows each palette's own warning color.</p>
+
+<br>
+<hr>
+<br>
+
 <div style="font-size: 24px; font-weight: 700;">[v1.6.3] — Modern UI Colors</div>
 <br>
 

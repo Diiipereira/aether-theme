@@ -426,6 +426,7 @@ export const getComponentColors = (p: AetherPalette) => {
     "chat.requestBorder": p.core.border,
     "chat.slashCommandBackground": alpha(p.tabs.activeBorderTop, Opacity.low),
     "chat.slashCommandForeground": p.tabs.activeFg,
+    "chat.mcpCompatibilityWarningForeground": p.status.warning,
     "chat.findMatchBackground": alpha(p.editor.findMatch, Opacity.highlight),
     "chat.findMatchHighlightBackground": alpha(
       p.editor.findMatch,
